@@ -1,0 +1,96 @@
+Sicherheitsnachweis
+Sicherheitsnachweis
+Gemäss Verordnung über elektrische Niederspannungsinstallationen (NIV, SR 734,27)
+Rapport-Nr.
+Ort der Installation
+Bearbeiten...
+Standort
+Gemeinde
+Parzelle-Nr.
+Gebäude-Nr.
+EGID
+Gebäudeart
+Bemerkung
+ZEV
+Anlage
+Bearbeiten...
+Stockw., Lage
+Stromkunde
+Zähler-Nr.
+Anlagen-Nr.
+Nutzung und Kontrollperiode(n)
+Jahre
+Adressen / Geschäftspartner
+Bearbeiten...
+Elektro-Installateur
+Bewilligungs-Nr.
+Name
+Adresse
+Unabhängiges Kontrollorgan
+Bewilligungs-Nr.
+Name
+Adresse
+Eigentümer
+Name
+Adresse
+E-Mail
+Telefon
+Verwaltung
+Name
+Adresse
+E-Mail
+Telefon
+Kontrollumfang
+Bearbeiten...
+Installateur
+Schlusskontrolle (SK)
+Auftrag zur SK erteilt an:
+Auftrag zur AK durch Installateur erteilt
+Kontrolldatum SK
+Unabhängiges Kontrollorgan
+Abnahmekontrolle (AK)
+Periodische Kontrolle (PK)
+Kontrolldatum AK/PK
+Prüfgrund
+Neuanlage
+Bestehende Anlage
+Bestehende Anlage
+Änderung
+Erweiterung
+Kontrollumfang / ausgeführte Installation
+Plomben wurden entfernt
+Inst.-Anzeige
+Nr. / Jahr, Datum
+Technische Angaben
+Schutz-System
+TN-S
+TN-C
+TN-C-S
+Anschlussüberstromunterbrecher
+Art, Charakteristik
+I<sub>N</sub>
+Überstrom-Schutzorgan am Anschlusspkt d. Inst.
+Bezeichnung
+Art, Charakteristik
+I<sub>N</sub>
+Messungen
+I<sub>K Anf. L-PE</sub>
+I<sub>K Ende L-PE</sub>
+I<sub>K Anf. L-N</sub>
+I<sub>K Ende L-N</sub>
+R<sub>ISO</sub> / I<sub>Leck</sub>
+Besonderheiten
+Beilagen und Verteiler
+Beilagen
+Mess- + Prüfprotokoll
+Mess- + Prüfprotokoll Photovoltaik
+Verteiler
+SiNa + Zusatzdokumente an Eigentümer/Verw.
+SiNa an Netzbetreiberin/Inspektorat
+Netzbetreiberin / Inspektorat
+Bemerkungen
+Massgebend für nächste PK
+Eingang am
+Unterschrift des EW's
+Datum
+Unterschrift

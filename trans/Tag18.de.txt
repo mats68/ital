@@ -1,0 +1,321 @@
+Techn. Anschlussgesuch
+Technisches Anschlussgesuch (TAG)
+VNB Objekt-Nr.
+Meldungs-Nr. VNB
+Ort der Installation
+Bearbeiten...
+Standort
+Gemeinde
+Parzelle-Nr.
+neu
+bestehend
+Anlage / Gebäudeteil
+Bearbeiten...
+Zähler-Nr.
+Netzanschluss (HAK)
+A
+neu
+bestehend
+Adressen / Geschäftspartner
+Einreichendes Unternehmen
+Name
+Adresse
+Sachbearbeiter
+Name
+E-Mail
+Telefon
+Fax
+Eigentümer (Betriebsinhaber)
+Name
+Adresse
+E-Mail
+Telefon
+Sprache
+De
+Fr
+It
+Termine
+Voraussichtliche Inbetriebnahme
+Geräte
+Elektrische Wärme / Wärmepumpe (WP)
+Neuanlage
+Änderung/Erweiterung
+Kantonale Genehmigung vorhanden
+Ja
+Art des Gerätes/Anlage
+Gerätehersteller
+Art des Betriebs
+monovalent
+bivalent
+Gerätetyp
+Gerätedaten Seite AC
+Anschluss
+3x400V
+1x230V
+Andere
+Nennstrom Gerät
+A
+Anlaufstrom Gerät (10ms)
+A
+Anzahl Geräte
+Stk
+Nennleistung Gerät
+kW/kVA
+Nennleistung Total
+kW/kVA
+Spitzenleistung Total
+kW/kVA
+Spezifikationen
+Anlaufart
+Direktanlauf
+Widerstandsanlasser
+Inverter
+Frequenzumformer
+Sanftanlasser
+Elektrische Zusatzheizung
+Nein
+Ja
+Wenn Ja, Leistung
+Wärmepumpentyp
+Sole / Wasser
+Wasser / Wasser
+Luft / Luft
+Luft / Wasser
+Art der Wassererwärmung
+elektrisch
+Wärmepumpenboiler
+Wärmepumpe
+Sonnenkollektoren
+Warmwasserspeicher
+Anzahl
+Stk
+Inhalt
+I
+Gesamtleistung
+kW
+Energieerzeugungsanlagen (EEA)
+Neuanlage
+Änderung/Erweiterung
+Art des Gerätes/Anlage
+Gerätehersteller
+Art des Betriebs
+Netzverbund
+Inselbetrieb
+Notstromanlage
+Gerätetyp
+Eigenverbrauch
+Nein
+Ja
+Wenn Ja
+einzel
+mehrere
+Zusammenschluss zum Eigenverbrauch (ZEV)
+Nein
+Ja
+Wenn Ja, Vorsicherung des VNB ZEV-Zählers
+A
+Notstromanlage zeitweise mit Netz verbunden
+Nein
+Ja
+Umschaltung Netzverbund/Notstrom und umgekehrt mit Netzunterbruch
+Nein
+Ja
+Teilnahme an der Systemdienstleistung
+Nein
+Ja
+Anbieter
+Gerätedaten Seite AC
+Anschluss
+3x400V
+1x230V
+Andere
+Anzahl Geräte
+Stk
+Nennleistung Gerät
+kVA
+Nennleistung Total
+kVA
+*Max. Leistungsabgabe ans Netz
+kVA
+(*Gesamtsystem inkl. bereits installierter Leistung und allfällig installiertem Energiespeicher mit Rückspeisung in das Verteilnetz)
+Einspeisebegrenzung
+Nein
+Ja
+cos Φ im Betrieb
+Photovoltaik: Leistung DC (bei einem Zubau die Angaben der Erweiterung) / Datenblätter (WR und Module) müssen nicht eingereicht werden.
+Leistung Total
+kWp
+Energieträger
+Sonne (PV)
+Wasser
+Wind
+WWK Anlage / BHKW
+Biogas
+Anlagen mit Netzrückwirkungen
+Neuanlage
+Änderung/Erweiterung
+Art des Gerätes/Anlage
+Gerätehersteller
+Gerätetyp
+Gerätedaten Seite AC
+Anschluss
+3x400V
+1x230V
+Andere
+Nennstrom Gerät
+A
+Anlaufstrom Gerät (10ms)
+A
+Anzahl Geräte
+Stk
+Anz. Anläufe pro Min.
+Nennleistung Gerät
+kVA
+Nennleistung Total
+kVA
+Spitzenleistung Total
+kVA
+cos Φ im Betrieb
+Spezifikationen
+Anlaufart
+Direktanlauf
+Widerstandsanlasser
+Inverter
+Sanftanlasser
+Frequenzumformer
+weitere Anlaufhilfen
+Blindstromkompensation
+Ohne
+Bestehend
+Neuanlage
+Energiespeicher
+Neuanlage
+Änderung/Erweiterung
+Art des Gerätes/Anlage
+Gerätehersteller
+Art des Betriebs
+Netzverbund
+Inselbetrieb
+Notstromfähig
+Gerätetyp
+Notstromanlage zeitweise mit Netz verbunden
+Nein
+Ja
+Umschaltung Netzverbund/Notstrom
+Nein
+Ja
+Gerätedaten Seite AC
+Anschluss
+3x400V
+1x230V
+nur DC
+Nennstrom Gerät
+A
+Anzahl Geräte
+Stk
+Nennleistung Gerät
+kVA
+Nennleistung Total
+kVA
+Spitzenleistung Total
+kVA
+cos Φ im Betrieb
+Spezifikationen
+Integration des Energiespeichers
+AC (im AC Teil der Installation)
+DC (im DC Teil der Installation)
+Elektrische Leistung (Systemleistung)
+kW
+Speicherkapazität
+kWh
+Betriebsart des Speichers
+keine Ladung des Speichers aus dem Verteilnetz
+keine Entladung des Speichers ins Verteilnetz
+Regelbare Leistung durch
+VNB
+Betreiber
+Teilnahme an der Systemdienstleistung
+Anbieter
+Schnittstelle Speicher zum VNB vorhanden
+andere Betriebsart > gemäss Beilage
+Ladestationen für Elektrofahrzeuge
+Neuanlage
+Änderung/Erweiterung
+Art des Gerätes/Anlage
+Gerätehersteller
+Art des Betriebs
+Ladung Kabel
+Ladung induktiv
+Gerätetyp
+Gerätedaten Seite AC
+Anschluss
+3x400V
+1x230V
+Nennstrom Gerät
+A
+Anzahl Geräte
+Stk
+Nennleistung Gerät
+kVA
+Nennleistung Total
+kVA
+Spitzenleistung Total
+kVA
+cos Φ im Betrieb
+Spezifikationen
+AC Ladung des Fahrzeuges
+DC Ladung des Fahrzeuges
+Max. Netzentnahmeleistung
+kVA
+Max. Netzeinspeiseleistung
+kVA
+Regelbare Leistung durch VNB
+kVA
+bis
+kVA
+Regelbare Leistung durch Betreiber
+kVA
+bis
+kVA
+Wirkleistung steuerbar
+Nein
+Ja
+Schnittstelle Ladesäule zu VNB vorhanden
+Nein
+Ja
+Weitere allgemeine Angaben
+Bemerkungen des einreichenden Unternehmens
+Entscheid VNB
+Elektrische Wärme / WP
+Anlage bewilligt
+Anlage bewilligt mit Massnahmen
+Bemerkungen
+EEA
+Anlage bewilligt
+Anlage bewilligt mit Massnahmen
+cos Φ
+Andere
+Bemerkungen
+Anlagen mit Netzrückwirkungen
+Anlage bewilligt
+Anlage bewilligt mit Massnahmen
+Bemerkungen
+Energiespeicher
+Anlage bewilligt
+Anlage bewilligt mit Massnahmen
+Bemerkungen
+Ladestationen für Elektrofahrzeuge
+Anlage bewilligt
+Anlage bewilligt mit Massnahmen
+Bemerkungen
+Weitere Bemerkungen des VNB
+Rundsteuerfrequenz VNB
+Hz
+Kurzschlussleistung am Verknüpfungspunkt SkV
+kVA
+Anlagenleistung Sa
+kVA
+Bemerkungen
+Unterschrift VNB
+Datum
+Unterschrift

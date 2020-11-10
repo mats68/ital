@@ -1,0 +1,96 @@
+Prova di sicurezza
+Prova di sicurezza
+Secondo l'ordinanza sugli impianti elettrici a bassa tensione (NIV, RS 734.27)
+Rapporto n.
+Luogo di installazione
+Modificare...
+Posizione
+comunità locale
+Pacco n.
+Numero civico.
+EGID
+Tipo di edificio
+commento
+ZEV
+investimento
+Modificare...
+Stockw., Posizione
+Cliente di elettricità
+Contatore n.
+Impianto n.
+Periodo / i di utilizzo e controllo
+Anni
+Indirizzi / partner commerciali
+Modificare...
+Elettricista
+Permesso n.
+Cognome
+indirizzo
+Organismo di controllo indipendente
+Permesso n.
+Cognome
+indirizzo
+proprietario
+Cognome
+indirizzo
+e-mail
+Telefono
+amministrazione
+Cognome
+indirizzo
+e-mail
+Telefono
+Ambito di controllo
+Modificare...
+Idraulico
+Ispezione finale (SK)
+Ordine per SK dato a:
+Ordine per AK effettuato dall'installatore
+Data di controllo SK
+Organismo di controllo indipendente
+Controllo dell'accettazione (AK)
+Controllo periodico (PK)
+Data di controllo AK / PK
+Motivo del test
+Nuova installazione
+Impianto esistente
+Impianto esistente
+modifica
+estensione
+Ambito del controllo / installazione eseguita
+I sigilli sono stati rimossi
+Inst. Display
+No. / anno, data
+Specifiche tecniche
+Sistema di protezione
+TN-S
+TN-C
+TN-C-S
+Interruttore automatico di collegamento
+Tipo, caratteristico
+I <sub> N </sub>
+Dispositivo di protezione da sovracorrente nel punto di connessione d. Inst.
+designazione
+Tipo, caratteristico
+I <sub> N </sub>
+Misurazioni
+I <sub> K req. L-PE </sub>
+I <sub> K end L-PE </sub>
+I <sub> K req. L-N </sub>
+I <sub> K end L-N </sub>
+R <sub> ISO </sub> / I <sub> Leak </sub>
+particolarità
+Inserti e distributori
+Contorni
+Rapporto di misurazione + test
+Misurazione + rapporto di prova fotovoltaico
+Distributore
+SiNa + documenti aggiuntivi al proprietario / amministratore.
+SiNa all'operatore / ispettorato di rete
+Operatore di rete / ispettorato
+Osservazioni
+Rilevante per la prossima PK
+ingresso a
+Firma dell'EW
+Data
+firma

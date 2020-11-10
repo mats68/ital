@@ -3,9 +3,9 @@
 var fs = require('fs')
 const lineReader = require('line-reader');
 
-var input_file = 'MppPV20.cshtml'
-var input_de = 'trans/MppPV20.de.txt'
-var input_it = 'trans/MppPV20.it.txt'
+var input_file = 'Tag18.cshtml'
+var input_de = 'trans/Tag18.de.txt'
+var input_it = 'trans/Tag18.it.txt'
 
 var output_str = ''
 var arr_de = []

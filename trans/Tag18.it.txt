@@ -1,0 +1,321 @@
+Applicazione di connessione tecnica
+Applicazione di connessione tecnica (TAG)
+Oggetto VNB n.
+Messaggio n. VNB
+Luogo di installazione
+Modificare...
+Posizione
+comunità locale
+Pacco n.
+Nuovo
+esistente
+Pianta / parte dell'edificio
+Modificare...
+Contatore n.
+Collegamento alla rete (HAK)
+UN.
+Nuovo
+esistente
+Indirizzi / partner commerciali
+Azienda di presentazione
+Cognome
+indirizzo
+impiegato
+Cognome
+e-mail
+Telefono
+fax
+Proprietario (imprenditore)
+Cognome
+indirizzo
+e-mail
+Telefono
+linguaggio
+De
+P.
+It
+Eventi
+Messa in servizio prevista
+attrezzature
+Calore elettrico / pompa di calore (WP)
+Nuova installazione
+Modifica / estensione
+Permesso cantonale disponibile
+sì
+Tipo di dispositivo / sistema
+Produttore del dispositivo
+Tipo di operazione
+monovalente
+bivalente
+Tipo di dispositivo
+Pagina dati dispositivo AC
+connessione
+3x400V
+1x230V
+Altro
+Dispositivo corrente nominale
+UN.
+Avvio del dispositivo corrente (10 ms)
+UN.
+Numero di dispositivi
+Pc
+Dispositivo di potenza nominale
+kW / kVA
+Potenza nominale totale
+kW / kVA
+Massime prestazioni totali
+kW / kVA
+Specifiche
+Tipo di avvio
+Avviamento diretto
+Starter di resistenza
+Inverter
+Convertitore di frequenza
+Partenza morbida
+Riscaldamento elettrico aggiuntivo
+No
+sì
+Se sì, prestazioni
+Tipo di pompa di calore
+Salamoia / acqua
+Acqua acqua
+Aria / aria
+Aria Acqua
+Tipo di riscaldamento dell'acqua
+elettrico
+Caldaia a pompa di calore
+Pompa di calore
+Pannelli solari
+Serbatoio dell'acqua calda
+numero
+Pc
+soddisfare
+IO.
+Prestazioni complessive
+kW
+Impianti di produzione di energia (EEA)
+Nuova installazione
+Modifica / estensione
+Tipo di dispositivo / sistema
+Produttore del dispositivo
+Tipo di operazione
+Rete
+Funzionamento dell'isola
+Sistema di alimentazione di emergenza
+Tipo di dispositivo
+autoconsumo
+No
+sì
+Se è così
+single
+parecchi
+Associazione per l'autoconsumo (ZEV)
+No
+sì
+Se sì, fusibile di backup del misuratore ZEV VNB
+UN.
+Sistema di alimentazione di emergenza temporaneamente connesso alla rete
+No
+sì
+Commutazione rete / alimentazione di emergenza e viceversa in caso di mancanza di alimentazione
+No
+sì
+Partecipazione al servizio di sistema
+No
+sì
+fornitori
+Pagina dati dispositivo AC
+connessione
+3x400V
+1x230V
+Altro
+Numero di dispositivi
+Pc
+Dispositivo di potenza nominale
+kVA
+Potenza nominale totale
+kVA
+* Max. Potenza in uscita alla rete
+kVA
+(* Sistema completo comprensivo di potenza già installata ed eventuale accumulo di energia installato con riscontro nella rete di distribuzione)
+Limitazione dell'immissione in rete
+No
+sì
+cos Φ in funzione
+Fotovoltaico: non è necessario presentare potenza DC (in caso di estensione, i dettagli dell'estensione) / schede tecniche (inverter e moduli).
+Prestazioni totali
+kWp
+Fonte di energia
+Sole (PV)
+acqua
+vento
+Impianto WWK / CHP
+Biogas
+Sistemi con perturbazioni di rete
+Nuova installazione
+Modifica / estensione
+Tipo di dispositivo / sistema
+Produttore del dispositivo
+Tipo di dispositivo
+Pagina dati dispositivo AC
+connessione
+3x400V
+1x230V
+Altro
+Dispositivo corrente nominale
+UN.
+Avvio del dispositivo corrente (10 ms)
+UN.
+Numero di dispositivi
+Pc
+Numero Avvia al min.
+Dispositivo di potenza nominale
+kVA
+Potenza nominale totale
+kVA
+Massime prestazioni totali
+kVA
+cos Φ in funzione
+Specifiche
+Tipo di avvio
+Avviamento diretto
+Starter di resistenza
+Inverter
+Partenza morbida
+Convertitore di frequenza
+ulteriori aiuti all'avviamento
+Compensazione della corrente reattiva
+Senza
+Esistente
+Nuova installazione
+Accumulo di energia
+Nuova installazione
+Modifica / estensione
+Tipo di dispositivo / sistema
+Produttore del dispositivo
+Tipo di operazione
+Rete
+Funzionamento dell'isola
+Capacità di alimentazione di emergenza
+Tipo di dispositivo
+Sistema di alimentazione di emergenza temporaneamente connesso alla rete
+No
+sì
+Rete di commutazione / alimentazione di emergenza
+No
+sì
+Pagina dati dispositivo AC
+connessione
+3x400V
+1x230V
+Solo DC
+Dispositivo corrente nominale
+UN.
+Numero di dispositivi
+Pc
+Dispositivo di potenza nominale
+kVA
+Potenza nominale totale
+kVA
+Massime prestazioni totali
+kVA
+cos Φ in funzione
+Specifiche
+Integrazione dell'accumulo di energia
+AC (nella parte AC dell'installazione)
+DC (nella parte DC dell'installazione)
+Potenza elettrica (potenza del sistema)
+kW
+Capacità di memoria
+kWh
+Modalità operativa della memoria
+nessun addebito dello stoccaggio dalla rete di distribuzione
+nessuno scarico dell'unità di stoccaggio nella rete di distribuzione
+Prestazioni controllabili tramite
+VNB
+operatore
+Partecipazione al servizio di sistema
+fornitori
+Interfaccia di memoria per il VNB disponibile
+altra modalità di funzionamento> secondo l'allegato
+Stazioni di ricarica per veicoli elettrici
+Nuova installazione
+Modifica / estensione
+Tipo di dispositivo / sistema
+Produttore del dispositivo
+Tipo di operazione
+Cavo di ricarica
+Carica induttiva
+Tipo di dispositivo
+Pagina dati dispositivo AC
+connessione
+3x400V
+1x230V
+Dispositivo corrente nominale
+UN.
+Numero di dispositivi
+Pc
+Dispositivo di potenza nominale
+kVA
+Potenza nominale totale
+kVA
+Massime prestazioni totali
+kVA
+cos Φ in funzione
+Specifiche
+Ricarica AC del veicolo
+Ricarica CC del veicolo
+Max. Consumo energetico
+kVA
+Max. Potenza di immissione in rete
+kVA
+Potenza regolabile tramite DSO
+kVA
+per
+kVA
+Prestazioni regolabili dall'operatore
+kVA
+per
+kVA
+Potenza attiva controllabile
+No
+sì
+Disponibile interfaccia tra stazione di ricarica e VNB
+No
+sì
+Ulteriori informazioni generali
+Commenti della società presentatrice
+Decisione del DSO
+Calore elettrico / HP
+Impianto approvato
+Impianto approvato con provvedimenti
+Osservazioni
+EEA
+Impianto approvato
+Impianto approvato con provvedimenti
+cos Φ
+Altro
+Osservazioni
+Sistemi con perturbazioni di rete
+Impianto approvato
+Impianto approvato con provvedimenti
+Osservazioni
+Accumulo di energia
+Impianto approvato
+Impianto approvato con provvedimenti
+Osservazioni
+Stazioni di ricarica per veicoli elettrici
+Impianto approvato
+Impianto approvato con provvedimenti
+Osservazioni
+Ulteriori commenti del DSO
+Frequenza di controllo ondulazione VNB
+Hz
+Potenza di cortocircuito nel punto di connessione SkV
+kVA
+Performance dell'impianto Sa
+kVA
+Osservazioni
+Firma del DSO
+Data
+firma

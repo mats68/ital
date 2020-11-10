@@ -1,0 +1,273 @@
+Mess- und Prüfprotokoll PV
+Mess- und Prüfprotokoll PV
+Nr.
+Rapport-Nr.
+Ort der Installation
+Bearbeiten...
+Standort
+Gemeinde
+Parzelle-Nr.
+Gebäude-Nr.
+EGID
+Gebäudeart
+Bemerkung
+ZEV
+Planvorlage Nr.
+vom
+Beglaubig. Nr.
+vom
+Anlage
+Bearbeiten...
+Stockw., Lage
+Stromkunde
+Zähler-Nr.
+Anlagen-Nr.
+Nutzung und Kontrollperiode(n)
+Jahre
+Adressen / Geschäftspartner
+Bearbeiten...
+Auftragnehmer
+Installateur
+Kontrolleur
+Bewilligungs-Nr.
+Name
+Adresse
+Auftraggeber
+Eigentümer
+Verwaltung
+Stromkunde der Anlage
+Installateur
+Anderer
+Name
+Adresse
+E-Mail
+Telefon
+Kontrollumfang
+Bearbeiten...
+Installateur
+Schlusskontrolle
+Kontrolldatum SK
+Unabhängiges Kontrollorgan
+Abnahmekontrolle
+Periodische Kontrolle
+Stichprobenkontrolle (VNB)
+Kontrolldatum AK/PK/StK
+Prüfgrund
+Neuanlage
+Bestehende Anlage
+Bestehende Anlage
+Änderung
+Erweiterung
+Kontrollumfang / ausgeführte Installation
+Nr. / Jahr, Datum
+Prüfergebnis Kategorie 1
+Norm
+Die Funktionsprüfungen und Messungen der Kategorie 1 sind bei jeder PVA zwingend vorzunehmen (s. Funktionsprüfungen).
+Keine Mängel festgestellt
+Prüfergebnis Kategorie 2
+Norm
+Zusätzliche Funktionsprüfungen und Messungen der Kategorie 2 (folgender Abschnitt) sind fakultativ und mit dem Eigentümer zu vereinbaren. 
+Prüfergebnis Ergänzungen Kategorie 1
+Aufnahme U/I-Kennlinie (Bericht beiliegend)
+Aufnahme mit IR-Verfahren (Bericht beiliegend)
+Aufnahme mit EL-Verfahren (Bericht beiliegend)
+Prüfergebnis zusätzliche Kategorien
+Prüfung Spannung gegen Erde (Bericht beiliegend)
+Prüfung Sperrdioden (Bericht beiliegend)
+Prüfung Riso im Nasszustand (Bericht beiliegend)
+Angaben zum installierten System
+Projekt
+Nennleistung des Systems (bei STC)
+kW DC
+kVA AC
+Anlagenbeschrieb
+Flachdach
+Schrägdach
+Fassade
+integriert
+freistehend
+Ausrichtung
+°
+Neigung
+°
+Anlagentyp
+Netzverbund
+Inselanlage
+Kurzbeschrieb
+Termine
+Datum Inbetriebnahme
+Montagezeitraum von
+bis
+Geräteangaben
+Angaben PV-Module
+Bearbeiten
+Total Nennleistung = Summe von P<sub>mpp</sub> * Anzahl
+Typ Nr.
+Hersteller
+Modultyp
+P<sub>mpp</sub><br>[W]
+U<sub>mpp</sub><br>[V]
+I<sub>mpp</sub><br>[A]
+U<sub>oc</sub><br>[V]
+I<sub>sc</sub><br>[A]
+I<sub>rück</sub><br>[A]
+Anzahl<br>[St.]
+Total Nennleistung
+W
+Total Anzahl
+Stück
+Angaben Wechselrichter / Mikrowechselrichter / Leistungsoptimierer
+Bearbeiten
+Total Nennleistung = Summe von P<sub>AC</sub> * Anzahl
+Typ Nr.
+Hersteller
+Modell
+(freies Feld)
+P<sub>AC</sub><br>[kVA]
+Galv. Trenn.
+Hybrid
+Anzahl<br>[St.]
+Total Nennleistung
+kVA
+Total Anzahl
+Stück
+Angaben zum PV-Array und PV-Strang
+Bearbeiten
+Angaben zum PV-Array
+Angaben zum Strang
+Strang Nr.
+Modultyp Nr.
+Anz. Module<BR>je Strang
+Verschaltet<BR>auf WR Nr.
+Teilarray Nr.<BR>(S/O/N/W)
+Typ
+Querschnitt<BR>[mm²]
+Angaben zum Blitz- und Überspannungskonzept
+Blitzschutzanlage vorhanden
+Geforderte Blitzschutzklasse
+I
+II
+III
+Überspannungs- und Blitzschutzkonzept vorhanden gemäss
+Direkte Anbindung Generator an LPS
+Sichtprüfung des Systems (Ziffer 5.2)
+Besichtigung Gleichstromseite
+Richtige Auswahl und Anordnung aller Systemkomponenten und Montagesysteme (Umgebungsbedingungen)
+Dachbefestigungsteile und Kabeleinführung witterungsbeständig
+Vorgaben BSM / STP eingehalten (Konstruktion/Material)
+Installierte Schutz- und SPA-Leiter parallel und nahe DC-Leitungen
+Querschnitt SPA für PVA
+mm²
+(mind. 10 mm²)
+Querschnitt Haupt-SPA
+mm²
+Installierte Überspannungs-Schutzeinrichtungen entsprechen dem Schutzkonzept
+Minimale Fläche der Leitungsschleifen sichergestellt
+Trennungsabstände eingehalten
+Alle DC-Komponenten für Dauerbetrieb mit Umax/Imax ausgelegt
+PV-Module für Systemspannung bemessen (Uocmax)
+Trennvorrichtungen für PV-Arraystränge und Teilarrays vorhanden
+DC-Lasttrennschalter vorhanden
+Besichtigung Wechselstromseite
+Anschluss aller Trenn- und Schalteinrichtungen korrekt (PV-Installation = Last / Netz = Einspeisung)
+AC-Lasttrennschalter vorhanden
+RCD Typ B vorhanden
+RCD Typ
+vorhanden
+Schutz durch RCD im WR eingebaut
+Betriebs- und Schutzparameter WR gemäss separatem Blatt (Einstellungen NA-Schutz)
+Besichtigung Aufschriften und Kennzeichnung
+Alle Stromkreise, Schutzeinrichtungen, Schalter und Anschlussklemmen mit dauerhaften Aufschriften (Kleber) gem. NIN versehen
+Warnhinweise gemäss
+vorhanden
+auf WR (Typ C)
+Solar-DC (Typ B)
+auf SGK / HAK (Typ A)
+Informationen vor Ort vorhanden
+Prinzipschema
+Abschaltverfahren
+Kontaktdaten Installateur
+Funktionsprüfungen
+Funktionsprüfung und Messungen Kategorie 1
+Datum
+Zeit
+Umgebungsbedingungen / Wetter
+sonnig
+bewölkt
+wechselhaft
+Einstrahlung
+W/m²
+Temperatur
+°C
+Gleichstromseite
+El. Durchgängigkeit geprüft
+Schutzleiter DC
+und/oder
+SPA-Leiter
+SPA Array-Rahmen
+Maximale Generatorspannung unter Berücksichtigung der Umgebungsbedingungen; Bestimmung mit Hilfe von
+modulspezifischem Temperaturkoeffizient /
+Korrekturfaktor Tk:
+Bearbeiten
+Strang Nr.
+Polarität<br>geprüft
+Verpolung<br>GAK
+U<sub>OC Gen. max</sub><br>n x U<sub>OC</sub> x T<sub>k</sub>
+I<sub>SC STC</sub><br>x 1.25
+U<sub>OC</sub><br>[V]
+I<sub>SC</sub><br>[A]
+R<sub>ISO</sub><br>[MΩ]
+U<sub>mpp</sub><br>[V]
+I<sub>mpp</sub><br>[A]
+R<sub>PA</sub><br>[Ω]
+Funktionsprüfung Schaltgeräte DC-Seite erfolgt
+Funktionsprüfung andere Steuereinrichtungen DC-Seite erfolgt
+Wechselstromseite
+Bearbeiten
+WR Nr.
+Zuordnung Stränge
+Seriennummer
+Eingestellter Gridcode
+Prüfung Netzausfall
+Blindleist. Einstellung
+Blindleist. Wert
+Bemerkungen
+Stationäre elektrische Speichersysteme
+Diese Systeme müssen der SNR 460712 entsprechen => Technische Informationen zum Speicher liegen als separates Blatt vor.
+DC-gekoppelt
+AC-gekoppelt
+Messungen
+Verwendete Messgeräte
+Norm
+(Fabrikat und Typ)
+Prüfung durchgeführt nach
+Messungen
+ab Anlagenschalter AC (NIV Art. 14)
+vollständige Installation (NIV Art. 7/9)
+Eigener Spaltentitel
+Bearbeiten
+Stromkreis
+Ort / Anlageteil
+Leitung / Kabel
+Überstromschutzeinr.
+Messungen (gemessener Wert)
+Fehlerstromschutzeinrichtung (RCD)
+Weiteres
+Schaltgerätekombination
+L-PE
+L-N
+Nr.
+Bezeichnung
+Art/Typ
+Leiteranz.&nbsp;/ Quer.[mm²]
+Art Charakt.
+I<sub>N</sub> [A]
+I<sub>K Anf.</sub> [A]
+I<sub>K Ende</sub> [A]
+I<sub>K Anf.</sub> [A]
+I<sub>K Ende</sub> [A]
+R<sub>ISO</sub> [MΩ] I<sub>Leck</sub> [mA]
+Leitfähigk. Schutzl. [Ω]
+I<sub>N</sub>/Typ [A]
+IΔN [mA]
+Auslösezeit [ms&nbsp;/&nbsp;ok]

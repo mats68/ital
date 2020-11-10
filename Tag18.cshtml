@@ -1,0 +1,2700 @@
+﻿@model Brunner.M2Web.Entities.FormEntities.Tag18
+@{
+    string documentLang = ViewBag.DocumentLang;
+    var documentCultureInfo = new System.Globalization.CultureInfo(documentLang);
+    var trans = new FormTrans(documentCultureInfo);
+    ViewBag.Title = trans.GetText("Techn. Anschlussgesuch", "Demande de racc. technique");
+    Layout = "~/Views/Shared/_LayoutForm19.cshtml";
+    var projectId = Model.InstallationDocuments.First().Installation.ProjectId;
+    var projectDisplayName = Model.InstallationDocuments.First().Installation.Project.DisplayName;
+    var installationId = Model.InstallationDocuments.First().InstallationId;
+    bool fixiert = ViewBag.Fixed;
+}
+@*Styles für Untertabelle*@
+@Styles.Render("~/datatable")
+
+@*JavaScript validieren*@
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+@section breadcrumb {
+    <ul class="breadcrumb" style="margin-bottom: 5px;">
+        <li>@Html.ActionLink("Lnk_Dashboard".Translate(), "Index", "Home")</li>
+        <li>@Html.ActionLink("Lnk_Project".Translate() + " " + projectDisplayName, "Details", "Project", new { @id = projectId }, null)</li>
+        <li>@ViewBag.Title (@("Lnk_Status".Translate() + " " + ViewBag.DocumentStatus))</li>
+    </ul>
+}
+<div class="row">
+    <div class="col-xs-12 col-md-10 col-lg-9 form-content @ViewBag.SignedClass">
+        @using (Html.BeginForm("SaveTag18", "Form", FormMethod.Post, new { @class = "form-horizontal formular", id = "form0", name = "Tag18" }))
+        {
+            @Html.ValidationSummary(true)
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(a => a.DocumentId)
+            @Html.HiddenFor(a => a.DocumentModDate)
+
+            @Html.Hidden("closeForm", false)
+
+            <div class="col-xs-12">
+                @*<fieldset>*@
+                @*<div class="form-group rotate-tablet-alert">
+                      <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon glyphicon-refresh"></span> Drehen Sie das Tablet, um die Formularnavigation anzuzeigen.</div>
+                    </div>*@
+                <!-- #region Beurteilung von Netzrückwirkungen -->
+                <div class="form-group">
+                    <div class="row">
+                        <div class=" col-xs-9">
+                            <h1 class="col-xs-12 formTitle">@(trans.GetText("Technisches Anschlussgesuch (TAG)", "Demande de raccordement technique (DRT)"))</h1>
+                        </div>
+                        <div class=" col-xs-3">
+                            <div class="hidden-xs logoDivForm"><img id="logoForm" src="~/Content/vnb/@(Model.InstallationDocuments.First().Installation.Project.Vnb.UrlName)/logo.png" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebFormLabelFor2(a => a.ABONR, trans.GetText("VNB Objekt-Nr.", "N° CSG GRD"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class=" col-xs-6">
+                            @Html.M2WebDisplayTextFor(a => a.ABONR)
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ABONR, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebFormLabelFor2(a => a.ABONR, trans.GetText("Meldungs-Nr. VNB", "N° projet / offre GRD"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class=" col-xs-6">
+                            @Html.M2WebDisplayTextFor(a => a.EVUAUFTNR, new { @class = "abstand-rechts" })
+                            <div class="form-text">/</div>
+                            @Html.M2WebDisplayTextFor(a => a.EVUAUFTJAHR, new { @class = "abstand-links" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ABONR, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region Ort der Installation -->
+                <div class="form-group flexcontainer">
+                    <h2 class="subNavigationItem titleflex-left" id="section-1">@(trans.GetText("Ort der Installation", "Emplacement"))</h2>
+                    @if (!fixiert)
+                    {
+                        <div>
+                            @Html.ActionLink(trans.GetText("Bearbeiten...", "Éditer..."), "Edit", "Project", new { @id = projectId, @formID = Model.DocumentId }, new { id = "btnEditProject", style = "height: 40px;", @class = "openDialog btn pull-right btn-default titlebutton-right", data_dialog_id = "edit_project", data_dialog_title = "EditProject".Translate(), data_dialog_size = "modal-lg" })
+                        </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Standort", "Emplacement"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer">
+                            @Html.TextBoxFor(a => a.O_STRASSE, new { @class = "form-control inputflex-left readonly" })
+                            @Html.TextBoxFor(a => a.O_HAUSNR, new { @class = "form-control readonly", style = "width:19.2em" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.O_STRASSE, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.O_HAUSNR, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer">
+                            @Html.TextBoxFor(a => a.O_PLZ, new { @class = "form-control readonly", style = "width:6.4em" })
+                            @Html.TextBoxFor(a => a.O_ORT, new { @class = "form-control inputflex-right readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.O_PLZ, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.O_ORT, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gemeinde", "Commune"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.GEMEINDE, new { @class = "form-control readonly", style = "width:24em" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.GEMEINDE, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Parzelle-Nr.", "N° de parcelle"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.PARZELLE, new { @class = "form-control readonly", style = "width:14.4em" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.PARZELLE, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.G_NEUBAU)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.G_NEUBAU, trans.GetText("neu", "Nouveau"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.G_BESTEHEND)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.G_BESTEHEND, trans.GetText("bestehend", "Existant"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.G_X, new { @class = "cbInput" })<span class="check"></span>
+                                @Html.TextBoxFor(a => a.G_XTEXT, new { @class = "form-control", style = "display:inline-block; width:16em" })
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.G_NEUBAU, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.G_BESTEHEND, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.G_X, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.G_XTEXT, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region Anlage / Gebäudeteil  -->
+                <div class="form-group flexcontainer">
+                    <h2 class="subNavigationItem titleflex-left" id="section-2">@(trans.GetText("Anlage / Gebäudeteil", "Installation / Partie de bâtiment"))</h2>
+                    @if (!fixiert)
+                    {
+                        <div>
+                            @Html.ActionLink(trans.GetText("Bearbeiten...", "Éditer..."), "Edit", "Installation", new { @id = installationId, @formID = Model.DocumentId }, new { id = "btnEditInstallation", style = "height: 40px;", @class = "openDialog btn pull-right btn-default titlebutton-right", data_dialog_id = "edit_installation", data_dialog_title = "EditInstallation".Translate(), data_dialog_size = "modal-lg" })
+                        </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Zähler-Nr.", "N° compteur"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.ZAEHLER, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ZAEHLER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Netzanschluss (HAK)", "Raccordement au réseau (CSG)"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.NETZ_A, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("A", "A"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_A, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_NEU)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_NEU, trans.GetText("neu", "Nouveau"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_BEST)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_BEST, trans.GetText("bestehend", "Existant"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_NEU, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.NETZ_BEST, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region Adressen / Geschäftspartner -->
+                <div class="form-group">
+                    <h2 class="subNavigationItem" id="section-3">@trans.GetText("Adressen / Geschäftspartner", "Adresses / Bureaux")</h2>
+                </div>
+                <div class="form-group switchForm-group">
+                    <div class="col-xs-12">
+                        <h3>@(trans.GetText("Einreichendes Unternehmen", "Demandeur"))</h3>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebFormLabelFor2(a => a.I_NAME1, trans.GetText("Name", "nom"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.I_NAME1, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.I_NAME2, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebFormLabelFor2(a => a.I_ADRESSE1, trans.GetText("Adresse", "adresse"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.I_ADRESSE1, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.I_ADRESSE2, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer">
+                            @Html.TextBoxFor(a => a.I_PLZ, new { @class = "form-control readonly", style = "width:6.4em" })
+                            @Html.TextBoxFor(a => a.I_ORT, new { @class = "form-control inputflex-right readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group switchForm-group">
+                    <div class="col-xs-12">
+                        <h3>@(trans.GetText("Sachbearbeiter", "Responsable"))</h3>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebFormLabelFor2(a => a.I_SACHB, trans.GetText("Name", "nom"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.I_SACHB, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebFormLabelFor2(a => a.I_EMAIL, trans.GetText("E-Mail", "courriel"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.I_EMAIL, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebFormLabelFor2(a => a.I_TELNR, trans.GetText("Telefon", "téléphone"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.I_TELNR, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebFormLabelFor2(a => a.I_FAXNR, trans.GetText("Fax", "fax"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.I_FAXNR, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group switchForm-group">
+                    <div class="col-xs-12">
+                        <h3>@(trans.GetText("Eigentümer (Betriebsinhaber)", "Propriétaire (exploitant)"))</h3>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebFormLabelFor2(a => a.U_NAME1, trans.GetText("Name", "nom"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.U_NAME1, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.U_NAME2, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebFormLabelFor2(a => a.U_ADRESSE1, trans.GetText("Adresse", "adresse"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.U_ADRESSE1, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.U_ADRESSE2, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer">
+                            @Html.TextBoxFor(a => a.U_PLZ, new { @class = "form-control readonly", style = "width:6.4em" })
+                            @Html.TextBoxFor(a => a.U_ORT, new { @class = "form-control inputflex-right readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebFormLabelFor2(a => a.U_EMAIL, trans.GetText("E-Mail", "courriel"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.U_EMAIL, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebFormLabelFor2(a => a.U_TELNR, trans.GetText("Telefon", "téléphone"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.U_TELNR, new { @class = "form-control readonly" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebFormLabelFor2(a => a.U_TELNR, trans.GetText("Sprache", "Langue"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="radio radio-primary" id="optSpracheDe">
+                                <label>
+                                    @Html.RadioButton("oSprache", 0, "d".CompareTo(Model.U_SPRACHE) == 0, new { @name = "optionsSprache", @id = "optionsSpracheDe" })
+                                    <span class="circle"></span><span class="check"></span>
+                                    @Html.M2WebLabel(trans.GetText("De", "De"), new { @class = "sub-label" })
+                                </label>
+                            </div>
+                            <div class="radio radio-primary" id="optSpracheFr">
+                                <label>
+                                    @Html.RadioButton("oSprache", 1, "f".CompareTo(Model.U_SPRACHE) == 0, new { @name = "optionsSprache", @id = "optionsSpracheFr" })
+                                    <span class="circle"></span><span class="check"></span>
+                                    @Html.M2WebLabel(trans.GetText("Fr", "Fr"), new { @class = "sub-label" })
+                                </label>
+                            </div>
+                            <div class="radio radio-primary" id="optSpracheIt">
+                                <label>
+                                    @Html.RadioButton("oSprache", 2, "i".CompareTo(Model.U_SPRACHE) == 0, new { @name = "optionsSprache", @id = "optionsSpracheIt" })
+                                    <span class="circle"></span><span class="check"></span>
+                                    @Html.M2WebLabel(trans.GetText("It", "It"), new { @class = "sub-label" })
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region Termine -->
+                <div class="form-group">
+                    <h2 class="subNavigationItem" id="section-4">@trans.GetText("Termine", "Délais")</h2>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Voraussichtliche Inbetriebnahme", "Mise en service prèvue"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6" style="padding-top:5px;">
+                            @if (Model.TERMIN.Date.HasValue)
+                            {
+                                @Html.Raw(Model.TERMIN.Date.Value.ToShortDateString());
+                            }
+                            @Html.HiddenFor(a => a.TERMIN.Date)
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.TERMIN, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <div class="form-group">
+                    <h2 class="subNavigationItem" id="section-5">@trans.GetText("Geräte", "Appareils")</h2>
+                </div>
+                <!-- #region Elektrische Wärme / Wärmepumpe (WP)  -->
+                <div class="form-group switchForm-group">
+                    <div class="col-xs-10">
+                        <h3>@trans.GetText("Elektrische Wärme / Wärmepumpe (WP)", "Chaleur électrique/pompe à chaleur (PAC)")</h3>
+                    </div>
+                    <div class="col-xs-2 text-right">
+                        <input id="switchElektrWaerme" name="bootstrapSwitch" type="checkbox" data-size="mini" />
+                    </div>
+                    @Html.HiddenFor(a => a.GERAET_EWWP)
+                </div>
+                <div class="form-group" id="sectionElektrWaerme">
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_NEUANL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_NEUANL, trans.GetText("Neuanlage", "Nouvelle"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_AENDERW)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_NEUANL, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_AENDERW, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Kantonale Genehmigung vorhanden", "Autorisation cantonale reçue"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_GENEHMIGUNG)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_GENEHMIGUNG, trans.GetText("Ja", "Oui"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_GENEHMIGUNG, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Art des Gerätes/Anlage", "Type d'app./installation"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.WP_ARTGER, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_ARTGER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätehersteller", "Fabricant de l'app."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.WP_GERHERST, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_GERHERST, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Art des Betriebs", "Type d'exploitation"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_ARTMONO)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_ARTMONO, trans.GetText("monovalent", "monovalent"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_ARTBI)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_ARTBI, trans.GetText("bivalent", "bivalent"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_ARTMONO, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_ARTBI, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_GENEHMIGUNG, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätetyp", "Type d'appareil"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.WP_GERTYP, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_GERTYP, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätedaten Seite AC", "Données de l'appareil côté AC"), new { @class = "control-label labelFat" })
+                        </div>
+                        <div class="col-xs-6">
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anschluss", "Raccordement"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap AnschlWP">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_ANSCHL3X)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_ANSCHL3X, trans.GetText("3x400V", "3x400V"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_ANSCHL1X)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_ANSCHL1X, trans.GetText("1x230V", "1x230V"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_ANSCHLANDERE)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_ANSCHLANDERE, trans.GetText("Andere", "Autres"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_ANSCHL3X, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_ANSCHL1X, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_ANSCHLANDERE, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Nennstrom Gerät", "Courant nominal de l'app."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.WP_NENNSTROM, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("A", "A"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_NENNSTROM, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anlaufstrom Gerät (10ms)", "Courant de dém. de l'app. (10ms)"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.WP_ANLSTROM, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("A", "A"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_ANLSTROM, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anzahl Geräte", "Nombre d'appareils"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.WP_ANZGER, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("Stk", "Pcs"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_ANZGER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Nennleistung Gerät", "Puissance nominale de l'appareil"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.WP_NENNLEIST_G, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kW/kVA", "KW/kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_NENNLEIST_G, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Nennleistung Total", "Puissance nominale totale"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.WP_NENNLEIST_TOT, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kW/kVA", "KW/kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_NENNLEIST_TOT, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Spitzenleistung Total", "Puissance maximale totale"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.WP_SPITZLEIST, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kW/kVA", "KW/kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_SPITZLEIST, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Spezifikationen", "Spécifications"), new { @class = "control-label labelFat" })
+                        </div>
+                        <div class="col-xs-6">
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anlaufart", "Type de dém."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap AnlasserWP">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_DIREKTANL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_DIREKTANL, trans.GetText("Direktanlauf", "Démarrage direct"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_WIEDANL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_WIEDANL, trans.GetText("Widerstandsanlasser", "Démarreur à résistance"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_INVERTER)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_INVERTER, trans.GetText("Inverter", "Onduleur"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_FREQUMF)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_FREQUMF, trans.GetText("Frequenzumformer", "Convert. de fréquence"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_SANFTANL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_SANFTANL, trans.GetText("Sanftanlasser", "Démarreur progressif"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_DIREKTANL, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_WIEDANL, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_INVERTER, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_FREQUMF, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_SANFTANL, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Elektrische Zusatzheizung", "Chauffage électrique d'appoint"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_ELZUSHEIZ_NEIN)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_ELZUSHEIZ_NEIN, trans.GetText("Nein", "Non"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_ELZUSHEIZ_JA)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_ELZUSHEIZ_JA, trans.GetText("Ja", "Oui"))
+                            </span>
+                            @Html.M2WebLabel(trans.GetText("Wenn Ja, Leistung", "Si oui, puissance"), new { @class = "control-label sub-label" })
+                            <div style="margin-left:10px" class="input-group">
+                                @Html.TextBoxFor(a => a.WP_ELZUSHEIZ_LEIST, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel("kW", new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_ELZUSHEIZ_NEIN, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_ELZUSHEIZ_JA, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_ELZUSHEIZ_LEIST, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Wärmepumpentyp", "Type de pompe à chaleur"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_PUMPTYP_SW)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_PUMPTYP_SW, trans.GetText("Sole / Wasser", "Sol/eau"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_PUMPTYP_WW)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_PUMPTYP_WW, trans.GetText("Wasser / Wasser", "Eau/eau"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_PUMPTYP_LL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_PUMPTYP_LL, trans.GetText("Luft / Luft", "Air/air"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_PUMPTYP_LW)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_PUMPTYP_LW, trans.GetText("Luft / Wasser", "Air/eau"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_PUMPTYP_SW, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_PUMPTYP_WW, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_PUMPTYP_LL, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_PUMPTYP_LW, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Art der Wassererwärmung", "Type de produc. d'eau chaude"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_WERW_EL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_WERW_EL, trans.GetText("elektrisch", "Électrique"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_WERW_WPB)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_WERW_WPB, trans.GetText("Wärmepumpenboiler", "Chauffe-eau pompe à chaleur"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_WERW_WP)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_WERW_WP, trans.GetText("Wärmepumpe", "Pompe à chaleur"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.WP_WERW_SONNE)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_WERW_SONNE, trans.GetText("Sonnenkollektoren", "Capteurs solaires"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_WERW_EL, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_WERW_WPB, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_WERW_WP, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.WP_WERW_SONNE, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Warmwasserspeicher", "Chauffe-eau à accumulation"), new { @class = "control-label labelFat" })
+                        </div>
+                        <div class="col-xs-6">
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anzahl", "Nombre"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.WP_WARMWSPEICH_ANZ, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("Stk", "Pcs"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_WARMWSPEICH_ANZ, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Inhalt", "Contenu"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.WP_WARMWSPEICH_INH, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("I", "I"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_WARMWSPEICH_INH, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gesamtleistung", "Puissance globale"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.WP_WARMWSPEICH_LEIST, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kW", "kW"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.WP_WARMWSPEICH_LEIST, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region Energieerzeugungsanlagen (EEA)  -->
+                <div class="form-group switchForm-group">
+                    <div class="col-xs-10">
+                        <h3>@trans.GetText("Energieerzeugungsanlagen (EEA)", "Installations de production d'énergie (IPE)")</h3>
+                    </div>
+                    <div class="col-xs-2 text-right">
+                        <input id="switchEnergieerzeugungsanlagen" name="bootstrapSwitch" type="checkbox" data-size="mini" />
+                    </div>
+                    @Html.HiddenFor(a => a.GERAET_EEA)
+                </div>
+                <div class="form-group" id="sectionEnergieerzeugungsanlagen">
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_NEUANL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_NEUANL, trans.GetText("Neuanlage", "Nouvelle"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_AENDERW)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.WP_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_NEUANL, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_AENDERW, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Art des Gerätes/Anlage", "Type d'app./installation"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.EEA_ARTGER, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_ARTGER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätehersteller", "Fabricant de l'app."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.EEA_GERHERST, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_GERHERST, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Art des Betriebs", "Type d'exploitation"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_NETZVERB)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_NETZVERB, trans.GetText("Netzverbund", "Racc. au rés."))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_INSELBETR)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_INSELBETR, trans.GetText("Inselbetrieb", "Expl. en îlot"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_NOTSTROM)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_NOTSTROM, trans.GetText("Notstromanlage", "Groupe de secours"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_NETZVERB, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_INSELBETR, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_NOTSTROM, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätetyp", "Type d'appareil"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.EEA_GERTYP, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_GERTYP, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Eigenverbrauch", "Consommation propre"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_EIGENVERB_NEIN)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_EIGENVERB_NEIN, trans.GetText("Nein", "Non"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_EIGENVERB_JA)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_EIGENVERB_JA, trans.GetText("Ja", "Oui"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_EIGENVERB_NEIN, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_EIGENVERB_JA, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Wenn Ja", "Si oui"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_EIGENVERB_EINZEL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_EIGENVERB_EINZEL, trans.GetText("einzel", "individuelle"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_EIGENVERB_MEHR)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_EIGENVERB_MEHR, trans.GetText("mehrere", "collective"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_EIGENVERB_EINZEL, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_EIGENVERB_MEHR, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Zusammenschluss zum Eigenverbrauch (ZEV)", "Regroup. dans le cadre de la consom. propre (RCP)"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_ZEV_NEIN)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_ZEV_NEIN, trans.GetText("Nein", "Non"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_ZEV_JA)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_ZEV_JA, trans.GetText("Ja", "Oui"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_ZEV_NEIN, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_ZEV_JA, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Wenn Ja, Vorsicherung des VNB ZEV-Zählers", "Si oui, fusible en amont du compteur RCP GRD"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.EEA_VORSICH_ZEV, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("A", "A"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_VORSICH_ZEV, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Notstromanlage zeitweise mit Netz verbunden", "Groupe de secours temporairement relié au réseau"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_NOTSTROM_NEIN)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_ZEV_NEIN, trans.GetText("Nein", "Non"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_NOTSTROM_JA)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_ZEV_JA, trans.GetText("Ja", "Oui"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_NOTSTROM_NEIN, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_NOTSTROM_JA, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Umschaltung Netzverbund/Notstrom und umgekehrt mit Netzunterbruch", "Commutation raccord au rés./courant d'urgence et vice versa avec coupure réseau"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_UMSCH_NEIN)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_UMSCH_NEIN, trans.GetText("Nein", "Non"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_UMSCH_JA)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_UMSCH_JA, trans.GetText("Ja", "Oui"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_UMSCH_NEIN, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_UMSCH_JA, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Teilnahme an der Systemdienstleistung", "Participation aux services système"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_SYSTEMD_NEIN)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_SYSTEMD_NEIN, trans.GetText("Nein", "Non"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_SYSTEMD_JA)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_SYSTEMD_JA, trans.GetText("Ja", "Oui"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_ZEV_NEIN, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_ZEV_JA, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anbieter", "Fournisseur"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.EEA_SYSTEMD_ANBIET, new { @class = "form-control", style = "width:30em" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_SYSTEMD_ANBIET, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätedaten Seite AC", "Données de l'appareil côté AC"), new { @class = "control-label labelFat" })
+                        </div>
+                        <div class="col-xs-6">
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anschluss", "Raccordement"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_ANSCHL3X)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_ANSCHL3X, trans.GetText("3x400V", "3x400V"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_ANSCHL1X)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_ANSCHL1X, trans.GetText("1x230V", "1x230V"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_ANSCHLANDERE)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_ANSCHLANDERE, trans.GetText("Andere", "Autres"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_ANSCHL3X, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_ANSCHL1X, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_ANSCHLANDERE, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anzahl Geräte", "Nombre d'appareils"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.EEA_ANZGER, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("Stk", "Pcs"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_ANZGER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Nennleistung Gerät", "Puissance nominale de l'appareil"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.EEA_NENNLEIST_GER, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_NENNLEIST_GER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Nennleistung Total", "Puissance nominale totale"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.EEA_NENNLEIST_TOT, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_NENNLEIST_TOT, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("*Max. Leistungsabgabe ans Netz", "*max. fourniture de puissance sur le réseau"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.EEA_MAXLEIST_NETZ, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_MAXLEIST_NETZ, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.M2WebLabel(trans.GetText("(*Gesamtsystem inkl. bereits installierter Leistung und allfällig installiertem Energiespeicher mit Rückspeisung in das Verteilnetz)", "(* Système complet, y.c. puissance déjà installée et accumulateur évent. présent avec alimentation retour vers le réseau de distribution)"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Einspeisebegrenzung", "Limitation du stockage"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_EINSPBEGR_NEIN)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_EINSPBEGR_NEIN, trans.GetText("Nein", "Non"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_EINSPBEGR_JA)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_EINSPBEGR_JA, trans.GetText("Ja", "Oui"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_EINSPBEGR_NEIN, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_EINSPBEGR_JA, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("cos Φ im Betrieb", "cos Φ en exploitation"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.EEA_MAXLEIST_COS, new { @class = "form-control", style = "width:8em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_MAXLEIST_COS, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.M2WebLabel(trans.GetText("Photovoltaik: Leistung DC (bei einem Zubau die Angaben der Erweiterung) / Datenblätter (WR und Module) müssen nicht eingereicht werden.", "Photovoltaïque: la puissance DC (en cas de constr. suppl., données de l'ext.)/et les fiches techn. (ond. et modules) ne doivent pas être fournies."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Leistung Total", "Puissance totale"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.EEA_LEISTTOT, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kWp", "kWp"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_LEISTTOT, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Energieträger", "Agent énergétique"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_ENERGT_PV)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_ENERGT_PV, trans.GetText("Sonne (PV)", "Solaire (PV)"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_ENERGT_WASSER)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_ENERGT_WASSER, trans.GetText("Wasser", "Eau"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_ENERGT_WIND)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_ENERGT_WIND, trans.GetText("Wind", "Eolien"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_ENERGT_WWK)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_ENERGT_WWK, trans.GetText("WWK Anlage / BHKW", "Installation CCF"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_ENERGT_BIOGAS)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.EEA_ENERGT_BIOGAS, trans.GetText("Biogas", "Biogaz"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.EEA_ENERGT_X, new { @class = "cbInput" })<span class="check"></span>
+                                @Html.TextBoxFor(a => a.EEA_ENERGT_XTEXT, new { @class = "form-control", style = "display:inline-block; width:30em" })
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.EEA_ENERGT_PV, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_ENERGT_WASSER, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_ENERGT_WIND, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_ENERGT_WWK, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_ENERGT_BIOGAS, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_ENERGT_X, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.EEA_ENERGT_XTEXT, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region Anlagen mit Netzrückwirkungen  -->
+                <div class="form-group switchForm-group">
+                    <div class="col-xs-10">
+                        <h3>@trans.GetText("Anlagen mit Netzrückwirkungen", "Installations pouvant provoquer des perturbations")</h3>
+                    </div>
+                    <div class="col-xs-2 text-right">
+                        <input id="switchAnlagenMitNetzrueckwirkungen" name="bootstrapSwitch" type="checkbox" data-size="mini" />
+                    </div>
+                    @Html.HiddenFor(a => a.GERAET_NETZR)
+                </div>
+                <div class="form-group" id="sectionAnlagenMitNetzrueckwirkungen">
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_NEUANL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_NEUANL, trans.GetText("Neuanlage", "Nouvelle"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_AENDERW)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_NEUANL, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.NETZ_AENDERW, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Art des Gerätes/Anlage", "Type d'app./installation"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.NETZ_ARTGER, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_ARTGER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätehersteller", "Fabricant de l'app."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.NETZ_GERHERST, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_GERHERST, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätetyp", "Type d'appareil"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.NETZ_GERTYP, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_GERTYP, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätedaten Seite AC", "Données de l'appareil côté AC"), new { @class = "control-label labelFat" })
+                        </div>
+                        <div class="col-xs-6">
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anschluss", "Raccordement"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_ANSCHL3X)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_ANSCHL3X, trans.GetText("3x400V", "3x400V"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_ANSCHL1X)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_ANSCHL1X, trans.GetText("1x230V", "1x230V"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_ANSCHLANDERE)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_ANSCHLANDERE, trans.GetText("Andere", "Autres"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_ANSCHL3X, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.NETZ_ANSCHL1X, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.NETZ_ANSCHLANDERE, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Nennstrom Gerät", "Courant nominal de l'appareil"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.NETZ_NENNSTROM, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("A", "A"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_NENNSTROM, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anlaufstrom Gerät (10ms)", "Courant de dém. de l'app. (10 ms)"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.NETZ_ANLSTROM, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("A", "A"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_ANLSTROM, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anzahl Geräte", "Nombre d'appareils"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.NETZ_ANZGER, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("Stk", "Pcs"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_ANZGER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anz. Anläufe pro Min.", "Nbr. d'enclenchements par min."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            @Html.TextBoxFor(a => a.NETZ_ANZANLAUFE, new { @class = "form-control", style = "width:8em" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_ANZANLAUFE, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Nennleistung Gerät", "Puissance nominale de l'appareil"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.NETZ_NENNLEIST_GER, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_NENNLEIST_GER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Nennleistung Total", "Puissance nominale totale"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.NETZ_NENNLEIST_TOT, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_NENNLEIST_TOT, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Spitzenleistung Total", "Puissance maximale totale"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.NETZ_SPITZENLESIT, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_SPITZENLESIT, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("cos Φ im Betrieb", "cos Φ en exploitation"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            @Html.TextBoxFor(a => a.NETZ_COS, new { @class = "form-control", style = "width:8em" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_COS, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Spezifikationen", "Spécifications"), new { @class = "control-label labelFat" })
+                        </div>
+                        <div class="col-xs-6">
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anlaufart", "Type de démarrage"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_DIREKTANL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_DIREKTANL, trans.GetText("Direktanlauf", "Démarrage direct"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_WIEDANL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_WIEDANL, trans.GetText("Widerstandsanlasser", "Démarreur à résistance"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_INVERTER)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_INVERTER, trans.GetText("Inverter", "Onduleur"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_SANFTANL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_SANFTANL, trans.GetText("Sanftanlasser", "Démarreur progressif"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_FREQUMF)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_FREQUMF, trans.GetText("Frequenzumformer", "Convertisseur de fréquence"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_ANLHILFEN)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_ANLHILFEN, trans.GetText("weitere Anlaufhilfen", "Autres aides au démarrage"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_DIREKTANL, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.NETZ_WIEDANL, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.NETZ_INVERTER, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.NETZ_SANFTANL, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.NETZ_FREQUMF, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.NETZ_ANLHILFEN, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Blindstromkompensation", "Compensation de l'énergie réactive"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_BLINDKOMP_OHNE)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_BLINDKOMP_OHNE, trans.GetText("Ohne", "Sans"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_BLINDKOMP_BEST)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_BLINDKOMP_BEST, trans.GetText("Bestehend", "Existant"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.NETZ_BLINDKOMP_NEU)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_BLINDKOMP_NEU, trans.GetText("Neuanlage", "Nouvelle"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.NETZ_BLINDKOMP_OHNE, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.NETZ_BLINDKOMP_BEST, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.NETZ_BLINDKOMP_NEU, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region Energiespeicher  -->
+                <div class="form-group switchForm-group">
+                    <div class="col-xs-10">
+                        <h3>@trans.GetText("Energiespeicher", "Accumulateurs d'énergie")</h3>
+                    </div>
+                    <div class="col-xs-2 text-right">
+                        <input id="switchEnergiespeicher" name="bootstrapSwitch" type="checkbox" data-size="mini" />
+                    </div>
+                    @Html.HiddenFor(a => a.GERAET_BATTERIE)
+                </div>
+                <div class="form-group" id="sectionEnergiespeicher">
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_NEUANL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_NEUANL, trans.GetText("Neuanlage", "Nouvelle"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_AENDERW)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_NEUANL, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ENSP_AENDERW, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Art des Gerätes/Anlage", "Type d'app./installation"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.ENSP_ARTGER, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_ARTGER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätehersteller", "Fabricant de l'app."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.ENSP_GERHERST, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_GERHERST, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Art des Betriebs", "Type d'exploitat."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_NETZVERB)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_NETZVERB, trans.GetText("Netzverbund", "Raccord au réseau"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_INSELBETR)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_INSELBETR, trans.GetText("Inselbetrieb", "Exploitation en îlot"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_NOTSTROM)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_NOTSTROM, trans.GetText("Notstromfähig", "Compatible groupe de secours"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_NETZVERB, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ENSP_INSELBETR, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ENSP_NOTSTROM, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätetyp", "Type d'appareil"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.ENSP_GERTYP, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_GERTYP, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Notstromanlage zeitweise mit Netz verbunden", "Groupe de secours temporairement relié au rés."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_NOTSTRNETZ_N)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_NOTSTRNETZ_N, trans.GetText("Nein", "Non"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_NOTSTRNETZ_J)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_NOTSTRNETZ_J, trans.GetText("Ja", "Oui"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_NOTSTRNETZ_N, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ENSP_NOTSTRNETZ_J, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Umschaltung Netzverbund/Notstrom", "Commutation racc. au rés./courant d'urgence"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_UMSCH_N)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_UMSCH_N, trans.GetText("Nein", "Non"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_UMSCH_J)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_UMSCH_J, trans.GetText("Ja", "Oui"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_UMSCH_N, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ENSP_UMSCH_J, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätedaten Seite AC", "Données de l'appareil côté AC"), new { @class = "control-label labelFat" })
+                        </div>
+                        <div class="col-xs-6">
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anschluss", "Raccordement"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_ANSCHL3X)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_ANSCHL3X, trans.GetText("3x400V", "3x400V"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_ANSCHL1X)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_ANSCHL1X, trans.GetText("1x230V", "1x230V"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_NURDC)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_NURDC, trans.GetText("nur DC", "Seulement DC"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_ANSCHL3X, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ENSP_ANSCHL1X, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ENSP_NURDC, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Nennstrom Gerät", "Courant nominal de l'app."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ENSP_NENNSTROM, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("A", "A"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_NENNSTROM, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anzahl Geräte", "Nombre d'appareils"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ENSP_ANZGER, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("Stk", "Pcs"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_ANZGER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Nennleistung Gerät", "Puissance nominale de l'appareil"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ENSP_NENNLEIST_GER, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_NENNLEIST_GER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Nennleistung Total", "Puissance nominale totale"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ENSP_NENNLEIST_TOT, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_NENNLEIST_TOT, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Spitzenleistung Total", "Puissance maximale totale"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ENSP_SPITZLEIST, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_SPITZLEIST, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("cos Φ im Betrieb", "cos Φ en exploitation"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            @Html.TextBoxFor(a => a.ENSP_COS, new { @class = "form-control", style = "width:8em" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_COS, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Spezifikationen", "Spécifications"), new { @class = "control-label labelFat" })
+                        </div>
+                        <div class="col-xs-6">
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Integration des Energiespeichers", "Intégration de l'accumulateur"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_ENERGSP_AC)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_ENERGSP_AC, trans.GetText("AC (im AC Teil der Installation)", "AC (dans la partie AC de l’installation)"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_ENERGSP_DC)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_ENERGSP_DC, trans.GetText("DC (im DC Teil der Installation)", "DC (dans la partie DC de l’installation)"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_ENERGSP_AC, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ENSP_ENERGSP_DC, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Elektrische Leistung (Systemleistung)", "Puissance électrique (puissance du système)"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ENSP_SYSTLEIST, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kW", "kW"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_SYSTLEIST, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Speicherkapazität", "Capacité de stockage"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ENSP_SPEICHKAP, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kWh", "kWh"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_SPEICHKAP, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Betriebsart des Speichers", "Type d’exploitation de l'accumulateur"), new { @class = "control-label labelFat" })
+                        </div>
+                        <div class="col-xs-6">
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_KEINELADUNG)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_KEINELADUNG, trans.GetText("keine Ladung des Speichers aus dem Verteilnetz", "Aucun chargement de l'accumulateur depuis le réseau de distribution"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_KEINELADUNG, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_KEINEENTLADUNG)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_KEINEENTLADUNG, trans.GetText("keine Entladung des Speichers ins Verteilnetz", "Aucun déchargement de l'accumulateur vers le réseau"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_KEINEENTLADUNG, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_REGLEIST)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_REGLEIST, trans.GetText("Regelbare Leistung durch", "Puissance régulable par"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_REGLEIST_VNB)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_REGLEIST_VNB, trans.GetText("VNB", "GRD"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_REGLEIST_BETR)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_REGLEIST_BETR, trans.GetText("Betreiber", "Exploitant"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_REGLEIST, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ENSP_REGLEIST_VNB, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ENSP_REGLEIST_BETR, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_TEILNSYST)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_TEILNSYST, trans.GetText("Teilnahme an der Systemdienstleistung", "Participation aux services système"))
+                            </span>
+                            @Html.M2WebLabel(trans.GetText("Anbieter", "Fournisseur"), new { @class = "control-label sub-label" })
+                            @Html.TextBoxFor(a => a.ENSP_TEILNSYST_ANB, new { @class = "form-control", style = "width:12em" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_TEILNSYST, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ENSP_TEILNSYST_ANB, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_SPEICHVNB)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_SPEICHVNB, trans.GetText("Schnittstelle Speicher zum VNB vorhanden", "Interface disponible de l'accumulateur au GRD"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_SPEICHVNB, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ENSP_ANDBETRIEB)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_ANDBETRIEB, trans.GetText("andere Betriebsart > gemäss Beilage", "Autre type d'exploitation > d’après l'annexe"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ENSP_ANDBETRIEB, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <!-- #endregion -->
+                <!-- #region Ladestationen für Elektrofahrzeuge  -->
+                <div class="form-group switchForm-group">
+                    <div class="col-xs-10">
+                        <h3>@trans.GetText("Ladestationen für Elektrofahrzeuge", "Stations de charge pour véhicules électriques")</h3>
+                    </div>
+                    <div class="col-xs-2 text-right">
+                        <input id="switchLadestationenElektrofahrzeuge" name="bootstrapSwitch" type="checkbox" data-size="mini" />
+                    </div>
+                    @Html.HiddenFor(a => a.GERAET_LADEST)
+                </div>
+                <div class="form-group" id="sectionLadestationenElektrofahrzeuge">
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ELFA_NEUANL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_NEUANL, trans.GetText("Neuanlage", "Nouvelle"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ELFA_AENDERW)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_NEUANL, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ELFA_AENDERW, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Art des Gerätes/Anlage", "Type d'app./installation"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.ELFA_ARTGER, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_ARTGER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätehersteller", "Fabricant de l'app."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.ELFA_GERHERST, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_GERHERST, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Art des Betriebs", "Type d'exploitat."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ELFA_LADKABEL)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_LADKABEL, trans.GetText("Ladung Kabel", "Charge câble"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ELFA_LADINDUKTIV)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_LADINDUKTIV, trans.GetText("Ladung induktiv", "Charge induction"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_LADKABEL, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ELFA_LADINDUKTIV, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätetyp", "Type d'appareil"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.TextBoxFor(a => a.ELFA_GERTYP, new { @class = "form-control", style = "width:30em;" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_GERTYP, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Gerätedaten Seite AC", "Données de l'appareil côté AC"), new { @class = "control-label labelFat" })
+                        </div>
+                        <div class="col-xs-6">
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anschluss", "Raccordement"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ELFA_ANSCHL3X)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_ANSCHL3X, trans.GetText("3x400V", "3x400V"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ELFA_ANSCHL1X)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_ANSCHL1X, trans.GetText("1x230V", "1x230V"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_ANSCHL3X, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ELFA_ANSCHL1X, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Nennstrom Gerät", "Courant nominal de l'app."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ELFA_NENNSTROM, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("A", "A"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_NENNSTROM, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Anzahl Geräte", "Nombre d'appareils"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ELFA_ANZGER, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("Stk", "Pcs"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_ANZGER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Nennleistung Gerät", "Puissance nominale de l'appareil"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ELFA_NENNLEIST_GER, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_NENNLEIST_GER, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Nennleistung Total", "Puissance nominale totale"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ELFA_NENNLEIST_TOT, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_NENNLEIST_TOT, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Spitzenleistung Total", "Puissance maximale totale"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ELFA_SPITZLEIST, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_SPITZLEIST, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("cos Φ im Betrieb", "cos Φ en exploitation"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            @Html.TextBoxFor(a => a.ELFA_COS, new { @class = "form-control", style = "width:8em" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_COS, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Spezifikationen", "Spécifications"), new { @class = "control-label labelFat" })
+                        </div>
+                        <div class="col-xs-6">
+                        </div>
+                        <div class="col-xs-3 text-right">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ELFA_ACLADUNG)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_ACLADUNG, trans.GetText("AC Ladung des Fahrzeuges", "Chargement AC du véhicule"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ELFA_DCLADUNG)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_DCLADUNG, trans.GetText("DC Ladung des Fahrzeuges", "Chargement DC du véhicule"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_ACLADUNG, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ELFA_DCLADUNG, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Max. Netzentnahmeleistung", "Puissance max. prélevée sur le réseau"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ELFA_MAXENTLEIST, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_MAXENTLEIST, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Max. Netzeinspeiseleistung", "Puissance d'alimentation réseau max."), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ELFA_MAXEINSPLEIST, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_MAXEINSPLEIST, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Regelbare Leistung durch VNB", "Puissance régulable par le GRD"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ELFA_REGLEISTVNB_VON, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                            @Html.M2WebLabel(trans.GetText("bis", "à"), new { @class = "control-label sub-label", style = "padding-left:20px; padding-right:20px;" })
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ELFA_REGLEISTVNB_BIS, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_REGLEISTVNB_VON, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ELFA_REGLEISTVNB_BIS, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Regelbare Leistung durch Betreiber", "Puissance régulable par l'exploitant"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ELFA_REGLEISTBET_VON, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                            @Html.M2WebLabel(trans.GetText("bis", "à"), new { @class = "control-label sub-label", style = "padding-left:20px; padding-right:20px;" })
+                            <div class="input-group" style="width:8em">
+                                @Html.TextBoxFor(a => a.ELFA_REGLEISTBET_BIS, new { @class = "form-control", style = "width:8em" })
+                                @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_REGLEISTBET_VON, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ELFA_REGLEISTBET_BIS, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Wirkleistung steuerbar", "Puissance active modulable"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ELFA_WIRKSTEUER_N)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_WIRKSTEUER_N, trans.GetText("Nein", "Non"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ELFA_WIRKSTEUER_J)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_WIRKSTEUER_J, trans.GetText("Ja", "Oui"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_WIRKSTEUER_N, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ELFA_WIRKSTEUER_J, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Schnittstelle Ladesäule zu VNB vorhanden", "Interface disponible de la colonne de charge au GRD"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ELFA_SCHNITTLADE_N)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_SCHNITTLADE_N, trans.GetText("Nein", "Non"))
+                            </span>
+                            <span class="checkbox">
+                                @Html.CheckBoxFor(a => a.ELFA_SCHNITTLADE_J)<span class="check"></span>
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_SCHNITTLADE_J, trans.GetText("Ja", "Oui"))
+                            </span>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.ELFA_SCHNITTLADE_N, null, new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(a => a.ELFA_SCHNITTLADE_J, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region Beilagen  -->
+                <div class="form-group">
+                    <h2 class="subNavigationItem" id="section-6">@trans.GetText("Weitere allgemeine Angaben", "Autres données générales")</h2>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-3 text-right">
+                            @Html.M2WebLabel(trans.GetText("Bemerkungen des einreichenden Unternehmens", "Remarques du demandeur"), new { @class = "control-label sub-label" })
+                        </div>
+                        <div class="col-xs-6 flexcontainer flexwrap">
+                            @Html.TextAreaFor(a => a.BEMERKUNGEN.MEMO_STRING, 8, 1, new { @class = "col-xs-12 form-control non-resizable" })
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            @Html.ValidationMessageFor(a => a.BEMERKUNGEN, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region NetzBet  -->
+                @if (this.ViewBag.VnbResponse)
+                {
+                    <div class="row">
+                        <h2 class="subNavigationItem" id="section-7">@trans.GetText("Entscheid VNB", "Décision GRD")</h2>
+                    </div>
+                    if (@Model.GERAET_EWWP)
+                    {
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                    @Html.M2WebLabel(trans.GetText("Elektrische Wärme / WP", "Chaleur électrique/PAC"), new { @class = "control-label labelFat" })
+                                </div>
+                                <div class="col-xs-6">
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                </div>
+                                <div class="col-xs-6 flexcontainer flexwrap">
+                                    <span class="checkbox">
+                                        @Html.CheckBoxFor(a => a.EW_WPBEWILLIGT)<span class="check"></span>
+                                        @Html.M2WebFormLabelFor2(a => a.EW_WPBEWILLIGT, trans.GetText("Anlage bewilligt", "Installation approuvée"))
+                                    </span>
+                                    <span class="checkbox">
+                                        @Html.CheckBoxFor(a => a.EW_WPBEWILLIGTM)<span class="check"></span>
+                                        @Html.M2WebFormLabelFor2(a => a.EW_WPBEWILLIGTM, trans.GetText("Anlage bewilligt mit Massnahmen", "Inst. appr. avec mesures correctrices"))
+                                    </span>
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    @Html.ValidationMessageFor(a => a.EW_WPBEWILLIGT, null, new { @class = "text-danger" })
+                                    @Html.ValidationMessageFor(a => a.EW_WPBEWILLIGTM, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                    @Html.M2WebLabel(trans.GetText("Bemerkungen", "Remarques"), new { @class = "control-label sub-label" })
+                                </div>
+                                <div class="col-xs-6 flexcontainer flexwrap">
+                                    @Html.TextAreaFor(a => a.EW_WPBEMERK.MEMO_STRING, 5, 1, new { @class = "col-xs-12 form-control non-resizable" })
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    @Html.ValidationMessageFor(a => a.EW_WPBEMERK, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    if (@Model.GERAET_EEA)
+                    {
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                    @Html.M2WebLabel(trans.GetText("EEA", "IPE"), new { @class = "control-label labelFat" })
+                                </div>
+                                <div class="col-xs-6">
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                </div>
+                                <div class="col-xs-6 flexcontainer flexwrap">
+                                    <span class="checkbox">
+                                        @Html.CheckBoxFor(a => a.EW_EEABEWILLIGT)<span class="check"></span>
+                                        @Html.M2WebFormLabelFor2(a => a.EW_EEABEWILLIGT, trans.GetText("Anlage bewilligt", "Installation approuvée"))
+                                    </span>
+                                    <span class="checkbox">
+                                        @Html.CheckBoxFor(a => a.EW_EEABEWILLIGTM)<span class="check"></span>
+                                        @Html.M2WebFormLabelFor2(a => a.EW_EEABEWILLIGTM, trans.GetText("Anlage bewilligt mit Massnahmen", "Inst. appr. avec mesures correctrices"))
+                                    </span>
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    @Html.ValidationMessageFor(a => a.EW_EEABEWILLIGT, null, new { @class = "text-danger" })
+                                    @Html.ValidationMessageFor(a => a.EW_EEABEWILLIGTM, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                    @Html.M2WebLabel(trans.GetText("cos Φ", "cos Φ"), new { @class = "control-label sub-label" })
+                                </div>
+                                <div class="col-xs-6">
+                                    @Html.TextBoxFor(a => a.EW_EEACOS, new { @class = "form-control", style = "width:10em;" })
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    @Html.ValidationMessageFor(a => a.EW_EEACOS, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                    @Html.M2WebLabel(trans.GetText("Andere", "Autres"), new { @class = "control-label sub-label" })
+                                </div>
+                                <div class="col-xs-6">
+                                    @Html.TextBoxFor(a => a.EW_EEAANDERE, new { @class = "form-control", style = "width:10em;" })
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    @Html.ValidationMessageFor(a => a.EW_EEAANDERE, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                    @Html.M2WebLabel(trans.GetText("Bemerkungen", "Remarques"), new { @class = "control-label sub-label" })
+                                </div>
+                                <div class="col-xs-6 flexcontainer flexwrap">
+                                    @Html.TextAreaFor(a => a.EW_EEABEMERK.MEMO_STRING, 5, 1, new { @class = "col-xs-12 form-control non-resizable" })
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    @Html.ValidationMessageFor(a => a.EW_EEABEMERK, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    if (@Model.GERAET_NETZR)
+                    {
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                    @Html.M2WebLabel(trans.GetText("Anlagen mit Netzrückwirkungen", "Inst. pouvant provoq. des perturbat."), new { @class = "control-label labelFat" })
+                                </div>
+                                <div class="col-xs-6">
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                </div>
+                                <div class="col-xs-6 flexcontainer flexwrap">
+                                    <span class="checkbox">
+                                        @Html.CheckBoxFor(a => a.EW_NETZBEWILLIGT)<span class="check"></span>
+                                        @Html.M2WebFormLabelFor2(a => a.EW_NETZBEWILLIGT, trans.GetText("Anlage bewilligt", "Installation approuvée"))
+                                    </span>
+                                    <span class="checkbox">
+                                        @Html.CheckBoxFor(a => a.EW_NETZBEWILLIGTM)<span class="check"></span>
+                                        @Html.M2WebFormLabelFor2(a => a.EW_NETZBEWILLIGTM, trans.GetText("Anlage bewilligt mit Massnahmen", "Inst. appr. avec mesures correctrices"))
+                                    </span>
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    @Html.ValidationMessageFor(a => a.EW_NETZBEWILLIGT, null, new { @class = "text-danger" })
+                                    @Html.ValidationMessageFor(a => a.EW_NETZBEWILLIGTM, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                    @Html.M2WebLabel(trans.GetText("Bemerkungen", "Remarques"), new { @class = "control-label sub-label" })
+                                </div>
+                                <div class="col-xs-6 flexcontainer flexwrap">
+                                    @Html.TextAreaFor(a => a.EW_NETZBEMERK.MEMO_STRING, 5, 1, new { @class = "col-xs-12 form-control non-resizable" })
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    @Html.ValidationMessageFor(a => a.EW_NETZBEMERK, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    if (@Model.GERAET_BATTERIE)
+                    {
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                    @Html.M2WebLabel(trans.GetText("Energiespeicher", "Accumulateurs d’énergie"), new { @class = "control-label labelFat" })
+                                </div>
+                                <div class="col-xs-6">
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                </div>
+                                <div class="col-xs-6 flexcontainer flexwrap">
+                                    <span class="checkbox">
+                                        @Html.CheckBoxFor(a => a.EW_ENSPBEWILLIGT)<span class="check"></span>
+                                        @Html.M2WebFormLabelFor2(a => a.EW_ENSPBEWILLIGT, trans.GetText("Anlage bewilligt", "Installation approuvée"))
+                                    </span>
+                                    <span class="checkbox">
+                                        @Html.CheckBoxFor(a => a.EW_ENSPBEWILLIGTM)<span class="check"></span>
+                                        @Html.M2WebFormLabelFor2(a => a.EW_ENSPBEWILLIGTM, trans.GetText("Anlage bewilligt mit Massnahmen", "Inst. appr. avec mesures correctrices"))
+                                    </span>
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    @Html.ValidationMessageFor(a => a.EW_ENSPBEWILLIGT, null, new { @class = "text-danger" })
+                                    @Html.ValidationMessageFor(a => a.EW_ENSPBEWILLIGTM, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                    @Html.M2WebLabel(trans.GetText("Bemerkungen", "Remarques"), new { @class = "control-label sub-label" })
+                                </div>
+                                <div class="col-xs-6 flexcontainer flexwrap">
+                                    @Html.TextAreaFor(a => a.EW_ENSPBEMERK.MEMO_STRING, 5, 1, new { @class = "col-xs-12 form-control non-resizable" })
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    @Html.ValidationMessageFor(a => a.EW_ENSPBEMERK, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    if (@Model.GERAET_LADEST)
+                    {
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                    @Html.M2WebLabel(trans.GetText("Ladestationen für Elektrofahrzeuge", "Stat. de charge pour véhicules électr."), new { @class = "control-label labelFat" })
+                                </div>
+                                <div class="col-xs-6">
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                </div>
+                                <div class="col-xs-6 flexcontainer flexwrap">
+                                    <span class="checkbox">
+                                        @Html.CheckBoxFor(a => a.EW_ELFABEWILLIGT)<span class="check"></span>
+                                        @Html.M2WebFormLabelFor2(a => a.EW_ELFABEWILLIGT, trans.GetText("Anlage bewilligt", "Installation approuvée"))
+                                    </span>
+                                    <span class="checkbox">
+                                        @Html.CheckBoxFor(a => a.EW_ELFABEWILLIGTM)<span class="check"></span>
+                                        @Html.M2WebFormLabelFor2(a => a.EW_ELFABEWILLIGTM, trans.GetText("Anlage bewilligt mit Massnahmen", "Inst. appr. avec mesures correctrices"))
+                                    </span>
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    @Html.ValidationMessageFor(a => a.EW_ELFABEWILLIGT, null, new { @class = "text-danger" })
+                                    @Html.ValidationMessageFor(a => a.EW_ELFABEWILLIGTM, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                    @Html.M2WebLabel(trans.GetText("Bemerkungen", "Remarques"), new { @class = "control-label sub-label" })
+                                </div>
+                                <div class="col-xs-6 flexcontainer flexwrap">
+                                    @Html.TextAreaFor(a => a.EW_ELFABEMERK.MEMO_STRING, 5, 1, new { @class = "col-xs-12 form-control non-resizable" })
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    @Html.ValidationMessageFor(a => a.EW_ELFABEMERK, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-3 text-right">
+                                @Html.M2WebLabel(trans.GetText("Weitere Bemerkungen des VNB", "Remarques du GRD"), new { @class = "control-label labelFat" })
+                            </div>
+                            <div class="col-xs-6">
+                            </div>
+                            <div class="col-xs-3 text-right">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 text-right">
+                                @Html.M2WebLabel(trans.GetText("Rundsteuerfrequenz VNB", "Fréquence de télécommande centralisée GRD"), new { @class = "control-label sub-label" })
+                            </div>
+                            <div class="col-xs-6 flexcontainer flexwrap">
+                                <div class="input-group" style="width:8em">
+                                    @Html.TextBoxFor(a => a.EW_RUNDSTEUERFREQ, new { @class = "form-control", style = "width:8em" })
+                                    @Html.M2WebLabel(trans.GetText("Hz", "Hz"), new { @class = "input-group-addon control-label" })
+                                </div>
+                            </div>
+                            <div class="col-xs-3 text-right">
+                                @Html.ValidationMessageFor(a => a.EW_RUNDSTEUERFREQ, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 text-right">
+                                @Html.M2WebLabel(trans.GetText("Kurzschlussleistung am Verknüpfungspunkt SkV", "Puissance de court-circuit au point de couplage commun"), new { @class = "control-label sub-label" })
+                            </div>
+                            <div class="col-xs-6 flexcontainer flexwrap">
+                                <div class="input-group" style="width:8em">
+                                    @Html.TextBoxFor(a => a.EW_KURZSCHLLEIST, new { @class = "form-control", style = "width:8em" })
+                                    @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                                </div>
+                            </div>
+                            <div class="col-xs-3 text-right">
+                                @Html.ValidationMessageFor(a => a.EW_KURZSCHLLEIST, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 text-right">
+                                @Html.M2WebLabel(trans.GetText("Anlagenleistung Sa", "Puissance apparente au CSG"), new { @class = "control-label sub-label" })
+                            </div>
+                            <div class="col-xs-6 flexcontainer flexwrap">
+                                <div class="input-group" style="width:8em">
+                                    @Html.TextBoxFor(a => a.EW_ANLEIST, new { @class = "form-control", style = "width:8em" })
+                                    @Html.M2WebLabel(trans.GetText("kVA", "kVA"), new { @class = "input-group-addon control-label" })
+                                </div>
+                            </div>
+                            <div class="col-xs-3 text-right">
+                                @Html.ValidationMessageFor(a => a.EW_ANLEIST, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 text-right">
+                                @Html.M2WebLabel(trans.GetText("Bemerkungen", "Remarques"), new { @class = "control-label sub-label" })
+                            </div>
+                            <div class="col-xs-6 flexcontainer flexwrap">
+                                @Html.TextAreaFor(a => a.EW_BEM.MEMO_STRING, 5, 1, new { @class = "col-xs-12 form-control non-resizable" })
+                            </div>
+                            <div class="col-xs-3 text-right">
+                                @Html.ValidationMessageFor(a => a.EW_BEM, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 text-right">
+                            </div>
+                            <div class="col-xs-6 flexcontainer flexwrap">
+                                @Html.M2WebLabel(trans.GetText("Die \"Werkvorschriften WV CH\" und die \"Technischen Regeln zur Beurteilung von Netzrückwirkungen DACHCZ\" müssen am Verknüpfungspunkt eingehalten werden. Das Anschlussgesuch hat eine Gültigkeit für 1 Jahr.",
+                        "Les «prescriptions des distributeurs d'électricité PDIE CH» et les «règles techniques pour l'évaluation des perturbations de réseaux DACHCZ» doivent être respectées au point de couplage commun. La demande de raccordement est valable pendant 1 an."), new { @class = "control-label sub-label" })
+                            </div>
+                            <div class="col-xs-3 text-right">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 text-right">
+                                @Html.M2WebLabel(trans.GetText("Unterschrift VNB", "Signature GRD"), new { @class = "control-label labelFat" })
+                            </div>
+                            <div class="col-xs-6">
+                            </div>
+                            <div class="col-xs-3 text-right">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 text-right">
+                                @Html.M2WebLabel(trans.GetText("Datum", "Date"), new { @class = "control-label sub-label" })
+                            </div>
+                            <div class="col-xs-6 flexcontainer flexwrap">
+                                @Html.DisplayFor(a => a.EW_SIGNDAT.Date)
+                                @Html.HiddenFor(a => a.EW_SIGNDAT.Date)
+                            </div>
+                            <div class="col-xs-3 text-right">
+                                @Html.ValidationMessageFor(a => a.EW_SIGNDAT, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 text-right">
+                                @Html.M2WebLabel(trans.GetText("Unterschrift", "Signature"), new { @class = "control-label sub-label" })
+                            </div>
+                            <div class="col-xs-6 flexcontainer flexwrap">
+                                @Html.DisplayFor(a => a.EW_SIGN)
+                                @Html.HiddenFor(a => a.EW_SIGN)
+                            </div>
+                            <div class="col-xs-3 text-right">
+                                @Html.ValidationMessageFor(a => a.EW_SIGN, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                }
+                <!-- #endregion -->
+                @*</fieldset>*@
+            </div>
+        }
+    </div>
+    <!-- #region Navigation -->
+    <div class="hidden-xs hidden-sm col-md-2 col-lg-3" id="formNavigation">
+        <ul id="summary" class="hidden-xs hidden-sm">
+            @*<li class="title">Navi Formular</li>*@
+            <li class="contents">
+                <nav id="subNavigation">
+                </nav>
+            </li>
+        </ul>
+    </div>
+    <!-- #endregion -->
+</div>
+@Scripts.Render("~/bundles/m2web-form")
+@Scripts.Render("~/bundles/m2web-form-tag18")
+<script type="text/javascript">
+    $(document).ready(function () {
+        m2web.form.init(@Model.DocumentId, @Model.InstallationDocuments.First().Installation.ProjectId, { }, '@Json.Encode(ViewBag.CanSend)', '@Json.Encode(ViewBag.Sending)', '@Json.Encode(ViewBag.SendMessage)',@(ViewBag.canBeSigned?"true": "false"), @ViewBag.GlobalSysUserId);
+
+        var colmap = {};
+
+        // Änderungen von VNB anzeigen
+        m2web.form.showDifferences("@Url.Action("GetVnbDifferences")/" + @Model.DocumentId, colmap);
+
+        var onText = '@("switchYes".Translate(documentCultureInfo))';
+        var offText = '@("switchNo".Translate(documentCultureInfo))';
+        m2web.formTag18.init('@Culture', onText, offText);
+
+        m2web.form.setEnabled(@Json.Encode(ViewBag.SaveEnabled));
+    });
+</script>
+

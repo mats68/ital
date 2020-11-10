@@ -1,0 +1,273 @@
+Protocollo di misura e test PV
+Protocollo di misura e test PV
+No.
+Rapporto n.
+Luogo di installazione
+Modificare...
+Posizione
+comunità locale
+Pacco n.
+Numero civico.
+EGID
+Tipo di edificio
+commento
+ZEV
+Modello piano n.
+a partire dal
+Autentico. No.
+a partire dal
+investimento
+Modificare...
+Stockw., Posizione
+Cliente di elettricità
+Contatore n.
+Impianto n.
+Periodo / i di utilizzo e controllo
+Anni
+Indirizzi / partner commerciali
+Modificare...
+contraente
+Idraulico
+controller
+Permesso n.
+Cognome
+indirizzo
+Cliente
+proprietario
+amministrazione
+Cliente energia elettrica dell'impianto
+Idraulico
+Un altro
+Cognome
+indirizzo
+e-mail
+Telefono
+Ambito di controllo
+Modificare...
+Idraulico
+Ispezione finale
+Data di controllo SK
+Organismo di controllo indipendente
+Controllo dell'accettazione
+Controllo periodico
+Controllo casuale (DSO)
+Data di controllo AK / PK / StK
+Motivo del test
+Nuova installazione
+Impianto esistente
+Impianto esistente
+modifica
+estensione
+Ambito del controllo / installazione eseguita
+No. / anno, data
+Risultato del test categoria 1
+standard
+I test funzionali e le misurazioni della categoria 1 sono obbligatori per ogni PVA (vedi test funzionali).
+Nessun difetto riscontrato
+Risultato del test categoria 2
+standard
+Ulteriori prove funzionali e misurazioni di categoria 2 (sezione successiva) sono facoltative e da concordare con il proprietario.
+Aggiunte dei risultati del test categoria 1
+Registrare la curva caratteristica U / I (rapporto allegato)
+Registrazione con procedura IR (report allegato)
+Registrazione con metodo EL (report allegato)
+Risultati del test categorie aggiuntive
+Tensione di prova verso terra (rapporto allegato)
+Verifica diodi di blocco (rapporto allegato)
+Test di Riso allo stato umido (rapporto allegato)
+Informazioni sul sistema installato
+Progetto
+Potenza nominale del sistema (a STC)
+kW DC
+kVA AC
+Descrizione dell'impianto
+Tetto a terrazza
+Tetto spiovente
+facciata
+integrato
+indipendente
+Allineamento
+°
+Inclinazione
+°
+Tipo di pianta
+Rete
+Sistema ad isola
+Breve descrizione
+Eventi
+Data di messa in servizio
+Periodo di montaggio dal
+per
+Dettagli del dispositivo
+Dettagli dei moduli FV
+Modificare
+Potenza nominale totale = somma del numero P <sub> mpp </sub> *
+Tipo n.
+Produttore
+Tipo di modulo
+P <sub> mpp </sub> <br> [W]
+U <sub> mpp </sub> <br> [V]
+I <sub> mpp </sub> <br> [A]
+U <sub> oc </sub> <br> [V]
+I <sub> sc </sub> <br> [A]
+<sub> ritorno </sub> <br> [A]
+Numero di [St.]
+Potenza nominale totale
+W.
+Numero totale
+pezzo
+Informazioni su inverter / microinverter / ottimizzatore di potenza
+Modificare
+Potenza nominale totale = somma del numero P <sub> AC </sub> *
+Tipo n.
+Produttore
+modello
+(campo vuoto)
+P <sub> AC </sub> <br> [kVA]
+Galv. Separazione
+Ibrido
+Numero di [St.]
+Potenza nominale totale
+kVA
+Numero totale
+pezzo
+Informazioni sul generatore FV e sulla stringa FV
+Modificare
+Informazioni sul campo fotovoltaico
+Dettagli del filo
+Strand no.
+Modulo tipo n.
+Numero Moduli <BR> per filo
+Interconnessa <BR> a INV n.
+Part array no. <BR> (S / O / N / W)
+genere
+Sezione trasversale <BR> [mm²]
+Informazioni sul concetto di fulmini e sovratensioni
+Disponibile sistema di protezione contro i fulmini
+Classe di protezione contro i fulmini richiesta
+IO.
+II
+III
+Concetto di protezione da sovratensioni e fulmini disponibile in conformità con
+Collegamento diretto del generatore all'LPS
+Ispezione visiva del sistema (sezione 5.2)
+Ispezione del lato DC
+Selezione e disposizione corrette di tutti i componenti del sistema e dei sistemi di assemblaggio (condizioni ambientali)
+Parti di montaggio sul tetto e ingresso cavi resistenti alle intemperie
+Specifiche BSM / STP rispettate (costruzione / materiale)
+Conduttori di protezione e SPA installati in parallelo e vicino alle linee CC
+Sezione SPA per PVA
+mm²
+(almeno 10 mm²)
+Sezione trasversale della SPA principale
+mm²
+I dispositivi di protezione da sovratensione installati corrispondono al concetto di protezione
+Area minima dei loop di linea garantita
+Distanze di separazione osservate
+Tutti i componenti CC progettati per il funzionamento continuo con Umax / Imax
+Moduli FV dimensionati per la tensione di sistema (Uocmax)
+Sono disponibili dispositivi di separazione per stringhe di array FV e sotto-array
+Disponibile sezionatore DC
+Visita il lato AC
+Collegamento corretto di tutti i dispositivi di isolamento e commutazione (installazione FV = carico / rete = alimentazione)
+Disponibile sezionatore AC
+RCD di tipo B disponibile
+Tipo di RCD
+a disposizione
+Protezione RCD integrata nell'inverter
+Parametri di funzionamento e protezione WR secondo foglio separato (Impostazioni per protezione NS)
+Ispezione di etichette e marcatura
+Tutti i circuiti, dispositivi di protezione, interruttori e terminali di collegamento con etichette permanenti (adesive) in conformità con NIN fornito
+Avvisi di avvertenza secondo
+a disposizione
+su WR (tipo C)
+Solar DC (Tipo B)
+su SGK / HAK (tipo A)
+Informazioni disponibili sul sito
+Schema di principio
+Procedura di spegnimento
+Dettagli di contatto installatore
+Test funzionali
+Test e misurazioni funzionali Categoria 1
+Data
+tempo
+Condizioni ambientali / meteorologiche
+soleggiato
+nuvoloso
+variabile
+Irradiazione
+W / m²
+temperatura
+° C
+Lato DC
+El. Consistenza controllata
+Conduttore di protezione DC
+e o
+Responsabile SPA
+Cornice array SPA
+Tensione massima del generatore tenendo conto delle condizioni ambientali; Determinazione con l'aiuto di
+coefficiente di temperatura specifico del modulo /
+Fattore di correzione Tk:
+Modificare
+Strand no.
+Polarità <br> controllata
+Inversione di polarità <br> GAK
+U <sub> OC Gen. max </sub> <br> n x U <sub> OC </sub> x T <sub> k </sub>
+I <sub> SC STC </sub> <br> x 1.25
+U <sub> OC </sub> <br> [V]
+I <sub> SC </sub> <br> [A]
+R <sub> ISO </sub> <br> [MΩ]
+U <sub> mpp </sub> <br> [V]
+I <sub> mpp </sub> <br> [A]
+R <sub> PA </sub> <br> [Ω]
+Viene eseguito il test di funzionamento dei dispositivi di commutazione sul lato CC
+Viene eseguito il test funzionale di altri dispositivi di controllo sul lato DC
+Lato AC
+Modificare
+WR No.
+Assegnazione di trefoli
+numero di serie
+Imposta codice rete
+Controllare l'interruzione di corrente
+Potere reattivo atteggiamento
+Potere reattivo valore
+Osservazioni
+Sistemi di accumulo elettrico stazionario
+Questi sistemi devono essere conformi alla SNR 460712 => Le informazioni tecniche sul bollitore sono disponibili su un foglio separato.
+Accoppiato DC
+Accoppiato AC
+Misurazioni
+Dispositivi di misurazione utilizzati
+standard
+(Crea e digita)
+Test effettuato dopo
+Misurazioni
+da interruttore di sistema AC (NIV Art. 14)
+installazione completa (NIV Art. 7/9)
+Titolo della propria colonna
+Modificare
+Circuito
+Posizione / parte del sistema
+Linea / cavo
+Dispositivo di protezione da sovracorrente
+Misure (valore misurato)
+Dispositivo corrente residua (RCD)
+aggiuntivo
+Assemblaggio del quadro
+L-PE
+L-N
+No.
+designazione
+Tipo / tipo
+Dimensione conduttore & nbsp; / croce. [Mm²]
+Art Char.
+Io <sub> N </sub> [A]
+I <sub> K req. </sub> [A]
+I <sub> K end </sub> [A]
+I <sub> K req. </sub> [A]
+I <sub> K end </sub> [A]
+R <sub> ISO </sub> [MΩ] I <sub> Perdita </sub> [mA]
+Conduttività Protettivo [Ω]
+Io <sub> N </sub> / tipo [A]
+IΔN [mA]
+Tempo di intervento [ms & nbsp; / & nbsp; ok]

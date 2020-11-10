@@ -3,7 +3,7 @@
 var fs = require('fs')
 const lineReader = require('line-reader');
 
-var input_file = 'MppPV20.before.cshtml'
+var input_file = 'MppPV20.cshtml'
 var output_file = 'MppPV20.after.cshtml'
 
 var arr_de = []
@@ -32,8 +32,15 @@ lineReader.eachLine(input_file, function (line: string, last: boolean) {
         const german = line.substring(ind1, ind2)
         const find = arr_de.findIndex(d => d === german)
         if (find > -1) {
-            console.log(arr_de[find], '  ',arr_it[find] )
+            // console.log(arr_de[find], '  ',arr_it[find] )
         }
+        const ind3 = line.indexOf('"', ind2 + 1) + 1
+        const ind4 = line.indexOf('"', ind3 + 1) + 1
+        const str_before = line.substring(0, ind4)
+        const str_after = line.substring(ind4)
+        const newLine = str_before + ',"' + arr_it[find] + '"' + str_after
+        console.log(newLine)
+
 
         //console.log(german)
     }

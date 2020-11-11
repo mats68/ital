@@ -1,0 +1,106 @@
+Apparatebestellung
+Apparatebestellung
+VNB Objekt-Nr.
+IA-Nr. / Jahr
+Meldungs-Nr. VNB
+Ort der Installation
+Standort
+Gemeinde
+Parzelle
+Versicherungs-Nr.
+Gebäudeart
+Anz. Einheiten / Zähler
+Gebäudeteil
+Zusammenschluss zum Eigenverbrauch (ZEV)
+Adressen / Geschäftspartner
+Installationsbetrieb
+Bewilligungs-Nr.
+Sachbearbeiter
+Eigentümer
+Sprache
+Zusätzliche Adresse
+Verwaltung
+Architekt
+Name
+(2. Zeile)
+Adresse
+(2. Zeile) 
+PLZ, Ort
+E-Mail
+Telefon
+Sprache
+Installationsbeschrieb
+Neuanlage
+Änderung/Erweit.
+Rückbau
+Bauanschluss
+Temporär
+Festplatz
+Es muss eine Option gewählt werden. Mehrere sind nicht möglich.
+Verbraucher, Erzeuger, Speicher
+Liste der Verbraucher, Erzeuger, Speicher
+Bearbeiten
+Liste gemäss Beilage
+Anzahl
+Verbr.
+Erz.
+Spei.
+Bezeichnung des Verbrauchers, Erzeugers, Speichers
+VNB Sperre
+Leistung<br />Bezug vom<br />Netz [kVA]
+Leistung<br />Abgabe ans<br />Netz [kVA]
+Speicher-<br />kapazität<br />[kWh]
+Anz.<br />Aussen-<br />leiter<br />(1-3)
+Leistung Total Bezug vom Netz
+Leistung Total Abgabe ans Netz
+Voraussichtliche Maximalbelastung Total
+aktive Steuerung VNB
+Teilnahme an Systemdienstleistung (Regelenergie)
+mit Herkunftsnachweis (HKN)
+Mess- und Steuereinrichtungen
+Liste der Mess- und Steuereinrichtungen
+Bearbeiten
+Kunde/in und<br />Rechnungsadresse, Nutzung
+Stockerk /<br />Verbrauchs-<br />stelle VNB
+Raum-<br />nummer
+VNB Tarif
+Sich.<br />[A]
+Zählernummer<br />VNB
+Mont.<br />Ort
+ZEV
+Anz.<br />Aussen-<br />leiter<br />(1-3)
+neu.
+vorh.
+ausw.
+dem.
+umm.
+TRE/LSG
+Anzahl
+Kommando
+TRE-Nr.
+Montageort
+neu
+vorh.
+ausw.
+dem.
+umm.
+Termine
+Apparatemontagen/-demontagen bitte 5 Arbeitstage im Voraus schriftlich anmelden (WV-CH 2.5)
+Zu demontieren
+bis
+Zu montieren
+bis
+Werkkontrolle des VNB ab
+Werkvorschriften
+Gemäss WV-CH 2.5 übernimmt der Elektroinstallateur mit dem Ersuchen die Mess- und Steuerapparate zu montieren die Verantwortung, dass die Installation ohne Gefahr für Personen und Sachen in Betrieb genommen werden kann. Die Installation ist durch den verantwortlichen Elektroinstallateur in Betrieb zu nehmen.
+Bei Verdacht auf Vorhandensein von Asbest ist der VNB und deren Beauftragte verpflichtet, die Arbeiten an Mess- und Schaltapparaten umgehend einzustellen. Vereinbarte Termine oder Fristen werden dadurch automatisch verschoben. Der VNB schliesst jegliche Haftung für Schäden, die auf Asbestvorkommen zurückzuführen sind, soweit gesetzlich zulässig, ausdrücklich aus.
+Akzeptieren
+Abschnitt 'Werkvorschriften' noch nicht akzeptiert
+Bemerkungen und Kontakt vor Ort
+Bemerkungen
+Kontakt am Ort der Installation
+Name
+Mobile
+Netzanschluss
+Wenn mehr als ein Eintrag in der Liste vorhanden ist, bleibt der Schalter eingeschalten und deaktiviert
+Wenn die Liste nicht leer ist, bleibt der Schalter eingeschalten und deaktiviert

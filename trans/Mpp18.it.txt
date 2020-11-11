@@ -1,0 +1,136 @@
+Protocollo di misurazione e test
+Protocollo di misurazione e test
+No.
+Rapporto n.
+Luogo di installazione
+Modificare...
+Posizione
+comunità locale
+Pacco n.
+Numero civico.
+EGID
+Tipo di edificio
+commento
+ZEV
+investimento
+Modificare...
+Stockw., Posizione
+Cliente di elettricità
+Contatore n
+Impianto n
+Periodo / i di utilizzo e controllo
+Anni
+Indirizzi / partner commerciali
+Modificare...
+contraente
+Idraulico
+controller
+Permesso n.
+Cognome
+indirizzo
+Cliente
+proprietario
+amministrazione
+Cliente energia elettrica dell'impianto
+Idraulico
+Un altro
+Cognome
+indirizzo
+e-mail
+Telefono
+Ambito di controllo
+Modificare...
+Idraulico
+Ispezione finale (SK)
+Data di controllo SK
+Organismo di controllo indipendente
+Controllo dell'accettazione (AK)
+Controllo periodico (PK)
+Controlli a campione (StK - VNB)
+Data di controllo AK / PK / StK
+Motivo del test
+Nuova installazione
+Impianto esistente
+Impianto esistente
+modifica
+estensione
+Ambito del controllo / installazione eseguita
+No. / anno, data
+esami
+Ispezione visuale
+Selezione e disposizione corrette delle apparecchiature (condizioni ambientali)
+Protezione di base (protezione contro il contatto diretto)
+Attenersi alla documentazione tecnica fornita dal produttore
+Dispositivi di spegnimento e disconnessione
+Dispositivi / sistemi di sicurezza e interruttori di revisione
+Disponibile barriera tagliafuoco
+Posa dei cavi (dimensionamento / disposizione / marcatura)
+Identificazione dei circuiti, dispositivo di protezione da sovracorrente. Eccetera.
+Accessibilità delle risorse
+Sistema di protezione
+TN-S
+TN-C
+TN-C-S
+Sch III
+Elettrodo di terra
+fondazione
+Verga di terra profonda
+Messa a terra a nastro
+Collegamento equipotenziale protettivo
+Collegamento equipotenziale di protezione locale aggiuntivo
+Disposizione dei dispositivi bus nel distributore (distanze)
+Linee bus / attuatori secondo la massima tensione
+Selezione e impostazione dei dispositivi di monitoraggio della protezione
+Presenza di schemi elettrici, segnali di avvertimento e divieto, schemi, legende, ecc.
+Test di funzionamento e misurazione
+Conduttività del conduttore di protezione, collegamento equipotenziale di protezione
+Spegnimento automatico in caso di guasto
+Campo rotante in senso orario delle prese trifase
+Tensione di rete misurata [V]
+Funzione del dispositivo di corrente residua (RCD)
+Caduta di tensione osservata
+Osservazioni
+Misurazioni
+Dispositivi di misurazione utilizzati
+standard
+(Crea e digita)
+Test effettuato dopo
+Misurazioni
+Titolo della propria colonna
+Modificare
+Circuito
+Posizione / parte del sistema
+Linea / cavo
+Dispositivo di protezione da sovracorrente
+Misure (valore misurato)
+Dispositivo corrente residua (RCD)
+aggiuntivo
+Assemblaggio del quadro
+L-PE
+L-N
+No.
+designazione
+Tipo gentile
+Dimensioni conduttore; / croce. [Mm²]
+Art Char.
+Io <sub> N </sub> [A]
+I <sub> K req. </sub> [A]
+I <sub> K end </sub> [A]
+I <sub> K req. </sub> [A]
+I <sub> K end </sub> [A]
+R <sub> ISO </sub> [MΩ] I <sub> Perdita </sub> [mA]
+Conduttività Protettivo [Ω]
+Io <sub> N </sub> / tipo [A]
+IΔN [mA]
+Tempo di intervento [ms; /; ok]
+Risultato della prova
+Assemblaggio e documentazione del quadro
+Gruppo quadro SK
+Senza amianto
+Sospetto amianto
+Identificazione SK secondo
+Dichiarazione del produttore con verifica di routine
+SK inclusa nel controllo finale
+documentazione
+Consegnare la documentazione del sistema
+schema

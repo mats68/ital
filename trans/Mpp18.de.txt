@@ -1,0 +1,136 @@
+Mess- und Prüfprotokoll
+Mess- und Prüfprotokoll
+Nr.
+Rapport-Nr.
+Ort der Installation
+Bearbeiten...
+Standort
+Gemeinde
+Parzelle-Nr.
+Gebäude-Nr.
+EGID
+Gebäudeart
+Bemerkung
+ZEV
+Anlage
+Bearbeiten...
+Stockw., Lage
+Stromkunde
+Zähler-Nr
+Anlagen-Nr
+Nutzung und Kontrollperiode(n)
+Jahre
+Adressen / Geschäftspartner
+Bearbeiten...
+Auftragnehmer
+Installateur
+Kontrolleur
+Bewilligungs-Nr.
+Name
+Adresse
+Auftraggeber
+Eigentümer
+Verwaltung
+Stromkunde der Anlage
+Installateur
+Anderer
+Name
+Adresse
+E-Mail
+Telefon
+Kontrollumfang
+Bearbeiten...
+Installateur
+Schlusskontrolle (SK)
+Kontrolldatum SK
+Unabhängiges Kontrollorgan
+Abnahmekontrolle (AK)
+Periodische Kontrolle (PK)
+Stichprobenkontrolle (StK - VNB)
+Kontrolldatum AK/PK/StK
+Prüfgrund
+Neuanlage
+Bestehende Anlage
+Bestehende Anlage
+Änderung
+Erweiterung
+Kontrollumfang / ausgeführte Installation
+Nr. / Jahr, Datum
+Prüfungen
+Sichtprüfung
+Richtige Auswahl und Anordnung der Betriebsmittel (Umgebungsbedingungen)
+Basisschutz (Schutz gegen direktes Berühren)
+Beachtung vom Hersteller mitgelieferte technische Unterlagen
+Abschalt- und Trennvorrichtungen
+Sicherheitseinrichtungen / Anlage- und Revisionsschalter
+Brandabschottung vorhanden
+Leitungsverlegung (Bemessung / Anordnung / Kennzeichn.)
+Kennzeichnung der Stromkreise, Überstrom-Schutzeinr. etc.
+Zugänglichkeit der Betriebsmittel
+Schutz-System
+TN-S
+TN-C
+TN-C-S
+Sch III
+Erder
+Fundament
+Tiefenerder
+Banderder
+Schutzpotenzialausgleich
+Zusätzlicher örtlicher Schutzpotenzialausgleich
+Anordnung der Busgeräte im Verteiler (Abstände)
+Busleitungen / Aktoren gemäss höchster Spannung
+Auswahl und Einstellung von Schutz-Überw.-Einrichtungen
+Vorhandensein von Schaltplänen, Warn-, Verbotszeichen Schemata, Legenden etc.
+Funktionsprüfung und Messung
+Leitfähigkeit des Schutzleiters, Schutzpotenzialausgleich
+Automatische Abschaltung im Fehlerfall
+Rechtsdrehfeld der Drehstromsteckdosen
+Gemessene Netzspannung [V]
+Funktion Fehlerstromschutzeinrichtung (RCD)
+Spannungsfall eingehalten
+Bemerkungen
+Messungen
+Verwendete Messgeräte
+Norm
+(Fabrikat und Typ)
+Prüfung durchgeführt nach
+Messungen
+Eigener Spaltentitel
+Bearbeiten
+Stromkreis
+Ort / Anlageteil
+Leitung / Kabel
+Überstromschutzeinr.
+Messungen (gemessener Wert)
+Fehlerstromschutzeinrichtung (RCD)
+Weiteres
+Schaltgerätekombination
+L-PE
+L-N
+Nr.
+Bezeichnung
+Art Typ
+Leiteranz.&nbsp;/ Quer.[mm²]
+Art Charakt.
+I<sub>N</sub> [A]
+I<sub>K Anf.</sub> [A]
+I<sub>K Ende</sub> [A]
+I<sub>K Anf.</sub> [A]
+I<sub>K Ende</sub> [A]
+R<sub>ISO</sub> [MΩ] I<sub>Leck</sub> [mA]
+Leitfähigk. Schutzl. [Ω]
+I<sub>N</sub>/Typ [A]
+IΔN [mA]
+Auslösezeit [ms&nbsp;/&nbsp;ok]
+Prüfergebnis
+Schaltgerätekombination und Dokumentation
+Schaltgerätekombination SK
+Asbestfrei
+Asbestverdacht
+SK-Identifikation nach
+Herstellererklärung mit Stücknachweis
+SK in die Schlusskontrolle miteinbezogen
+Dokumentation
+Anlagedokumentation übergeben
+Schema

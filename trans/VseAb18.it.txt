@@ -1,0 +1,106 @@
+Ordine dell'attrezzatura
+Ordine dell'attrezzatura
+Oggetto VNB n.
+IA no. / Anno
+Messaggio n. VNB
+Luogo di installazione
+Posizione
+comunità locale
+tracciare
+Assicurazione n.
+Tipo di edificio
+Numero Unità / contatori
+Parte dell'edificio
+Associazione per l'autoconsumo (ZEV)
+Indirizzi / partner commerciali
+Società di installazione
+Permesso n.
+impiegato
+proprietario
+linguaggio
+Indirizzo aggiuntivo
+amministrazione
+architetto
+Cognome
+(2a riga)
+indirizzo
+(2a riga)
+CAP / località
+e-mail
+Telefono
+linguaggio
+Descrizione dell'installazione
+Nuova installazione
+Modifica / estensione
+Smantellamento
+Collegamento dell'edificio
+Temporaneo
+area fieristica
+È necessario scegliere un'opzione. Diversi non sono possibili.
+Consumatori, produttori, negozi
+Elenco di consumatori, produttori, negozi
+Modificare
+Elenco secondo l'allegato
+numero
+Consum.
+Minerale.
+Spei.
+Designazione del consumatore, produttore, negozio
+Blocco VNB
+Acquisto <br /> di alimentazione dalla <br /> rete [kVA]
+Erogazione <br /> dell'alimentazione alla rete <br /> [kVA]
+Capacità <br /> di stoccaggio <br /> [kWh]
+Numero di <br /> conduttori <br /> esterni <br /> (1-3)
+Potenza Consumo totale dalla rete
+Uscita totale alla rete
+Carico massimo previsto totale
+controllo attivo VNB
+Partecipazione a servizi di sistema (controllo energia)
+con prova dell'origine (HKN)
+Dispositivi di misurazione e controllo
+Elenco dei dispositivi di misurazione e controllo
+Modificare
+Cliente e <br /> indirizzo di fatturazione, utilizzo
+Stockerk / <br /> Consumo <br /> punto VNB
+Numero <br /> stanza
+Tariffa VNB
+Te stesso. <br /> [A]
+Numero contatore <br /> VNB
+Mont. <br /> Posizione
+ZEV
+Numero di <br /> conduttori <br /> esterni <br /> (1-3)
+Nuovo.
+esistente
+Selezionare
+il.
+umm.
+TRE / LSG
+numero
+comando
+TRE no.
+Sito di installazione
+Nuovo
+esistente
+Selezionare
+il.
+umm.
+Eventi
+Montaggio / smontaggio dell'apparecchiatura: registrarsi per iscritto 5 giorni lavorativi prima (WV-CH 2.5)
+Per smantellare
+per
+Assemblare
+per
+Ispezione in fabbrica del DSO
+Regolamento del lavoro
+Secondo WV-CH 2.5, l'elettricista si assume la responsabilità dell'installazione delle apparecchiature di misurazione e controllo, in modo che l'installazione possa essere messa in funzione senza mettere in pericolo persone o cose. L'installazione deve essere commissionata dall'elettricista responsabile.
+Se si sospetta la presenza di amianto, il DSO ei suoi agenti sono obbligati a interrompere immediatamente i lavori sui dispositivi di misurazione e commutazione. Gli appuntamenti o le scadenze concordati vengono automaticamente posticipati. Il DSO esclude espressamente ogni responsabilità per danni riconducibili al verificarsi dell'amianto, per quanto legalmente consentito.
+Accettare
+Sezione "regolamenti di fabbrica" ​​non ancora accettata
+Commenti e contatti sul sito
+Osservazioni
+Contattare il sito di installazione
+Cognome
+mobile
+Collegamento alla rete
+Se nell'elenco è presente più di una voce, l'interruttore rimane acceso e disattivato
+Se l'elenco non è vuoto, l'interruttore rimane acceso e disattivato

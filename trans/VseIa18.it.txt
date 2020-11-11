@@ -5,33 +5,33 @@ IA no. / Anno
 Messaggio n. VNB
 Luogo di installazione
 Posizione
-comunità locale
+Comunità locale
 tracciare
 Assicurazione n.
 Tipo di edificio
 Numero Unità / contatori
 Parte dell'edificio
 Associazione per l'autoconsumo (ZEV)
-Indirizzi / partner commerciali
+Indirizzi / Partner commerciali
 Società di installazione
 Permesso n.
-impiegato
-proprietario
-linguaggio
+Impiegato
+Proprietario
+Linguaggio
 Indirizzo aggiuntivo
-amministrazione
+Amministrazione
 architetto
 Cognome
 (2a riga)
-indirizzo
+Indirizzo
 (2a riga)
 CAP / località
-e-mail
+E-Mail
 Telefono
-linguaggio
+Linguaggio
 Descrizione dell'installazione
 Nuova installazione
-Modifica / estensione
+Modifica / Estensione
 Smantellamento
 Collegamento dell'edificio
 Temporaneo
@@ -47,10 +47,10 @@ Finora. AS interruzione di sovracorrente.
 modello
 HAK integrato
 (H) AK n.
-nessun cambiamento
+Nessun cambiamento
 deve essere rafforzato
 deve essere sostituito
-nessun cambiamento
+Nessun cambiamento
 deve essere rafforzato
 deve essere sostituito
 necessario AS interruzione di sovracorrente.
@@ -65,7 +65,7 @@ Consum.
 Minerale.
 Spei.
 Designazione del consumatore, produttore, negozio
-tecn. <br /> Applicazione di connessione <br /> (TAG) da
+tecn. <br /> Applicazione di connessione <br /> (RaSi) da
 Acquisto <br /> di alimentazione dalla <br /> rete [kVA]
 Erogazione <br /> dell'alimentazione alla rete <br /> [kVA]
 Capacità <br /> di stoccaggio <br /> [kWh]
@@ -79,7 +79,7 @@ con prova dell'origine (HKN)
 Dispositivi di misurazione e controllo
 Elenco dei dispositivi di misurazione e controllo
 Modificare
-Cliente e <br /> indirizzo di fatturazione, utilizzo
+Cliente e <br /> Indirizzo di fatturazione, utilizzo
 Piano / <br /> Consumo <br /> punto VNB
 Numero <br /> stanza
 Tariffa VNB
@@ -109,16 +109,16 @@ Previsto completamento dei lavori
 Osservazioni
 Osservazioni
 Contorni
-schema
+Schema
 Piano di situazione
-Applicazione di connessione TAG per
+Applicazione di connessione RaSi per
 Disposizione distribuzione principale
 Consenso al controllo dell'utente finale / produttore da parte di DSO
 Operatore di rete
 approvato
 Approvato con riserva
 ritorno incompleto
-Nota lo schema
+Nota lo Schema
 VNB
 Data
 firma

@@ -5,33 +5,33 @@ IA no. / Anno
 Messaggio n. VNB
 Luogo di installazione
 Posizione
-comunità locale
+Comunità locale
 tracciare
 Assicurazione n.
 Tipo di edificio
 Numero Unità / contatori
 Parte dell'edificio
 Associazione per l'autoconsumo (ZEV)
-Indirizzi / partner commerciali
+Indirizzi / Partner commerciali
 Società di installazione
 Permesso n.
-impiegato
-proprietario
-linguaggio
+Impiegato
+Proprietario
+Linguaggio
 Indirizzo aggiuntivo
-amministrazione
+Amministrazione
 architetto
 Cognome
 (2a riga)
-indirizzo
+Indirizzo
 (2a riga)
 CAP / località
-e-mail
+E-Mail
 Telefono
-linguaggio
+Linguaggio
 Descrizione dell'installazione
 Nuova installazione
-Modifica / estensione
+Modifica / Estensione
 Smantellamento
 Collegamento dell'edificio
 Temporaneo
@@ -60,7 +60,7 @@ con prova dell'origine (HKN)
 Dispositivi di misurazione e controllo
 Elenco dei dispositivi di misurazione e controllo
 Modificare
-Cliente e <br /> indirizzo di fatturazione, utilizzo
+Cliente e <br /> Indirizzo di fatturazione, utilizzo
 Stockerk / <br /> Consumo <br /> punto VNB
 Numero <br /> stanza
 Tariffa VNB

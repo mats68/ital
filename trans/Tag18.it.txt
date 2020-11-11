@@ -1,11 +1,11 @@
 Applicazione di connessione tecnica
-Applicazione di connessione tecnica (TAG)
+Rapporto di Sicurezza per impianto elettrico (RaSi)
 Oggetto VNB n.
 Messaggio n. VNB
 Luogo di installazione
 Modificare...
 Posizione
-comunità locale
+Comunità locale
 Pacco n.
 Nuovo
 esistente
@@ -16,32 +16,32 @@ Collegamento alla rete (HAK)
 UN.
 Nuovo
 esistente
-Indirizzi / partner commerciali
+Indirizzi / Partner commerciali
 Azienda di presentazione
 Cognome
-indirizzo
-impiegato
+Indirizzo
+Impiegato
 Cognome
-e-mail
+E-Mail
 Telefono
-fax
+Fax
 Proprietario (imprenditore)
 Cognome
-indirizzo
-e-mail
+Indirizzo
+E-Mail
 Telefono
-linguaggio
+Linguaggio
 De
-P.
+Fr
 It
 Eventi
 Messa in servizio prevista
-attrezzature
+Attrezzature
 Calore elettrico / pompa di calore (WP)
 Nuova installazione
-Modifica / estensione
+Modifica / Estensione
 Permesso cantonale disponibile
-sì
+Sì
 Tipo di dispositivo / sistema
 Produttore del dispositivo
 Tipo di operazione
@@ -74,8 +74,8 @@ Convertitore di frequenza
 Partenza morbida
 Riscaldamento elettrico aggiuntivo
 No
-sì
-Se sì, prestazioni
+Sì
+Se Sì, prestazioni
 Tipo di pompa di calore
 Salamoia / acqua
 Acqua acqua
@@ -95,7 +95,7 @@ Prestazioni complessive
 kW
 Impianti di produzione di energia (EEA)
 Nuova installazione
-Modifica / estensione
+Modifica / Estensione
 Tipo di dispositivo / sistema
 Produttore del dispositivo
 Tipo di operazione
@@ -105,24 +105,24 @@ Sistema di alimentazione di emergenza
 Tipo di dispositivo
 autoconsumo
 No
-sì
+Sì
 Se è così
 single
 parecchi
 Associazione per l'autoconsumo (ZEV)
 No
-sì
-Se sì, fusibile di backup del misuratore ZEV VNB
+Sì
+Se Sì, fusibile di backup del misuratore ZEV VNB
 UN.
 Sistema di alimentazione di emergenza temporaneamente connesso alla rete
 No
-sì
+Sì
 Commutazione rete / alimentazione di emergenza e viceversa in caso di mancanza di alimentazione
 No
-sì
+Sì
 Partecipazione al servizio di sistema
 No
-sì
+Sì
 fornitori
 Pagina dati dispositivo AC
 connessione
@@ -140,9 +140,9 @@ kVA
 (* Sistema completo comprensivo di potenza già installata ed eventuale accumulo di energia installato con riscontro nella rete di distribuzione)
 Limitazione dell'immissione in rete
 No
-sì
+Sì
 cos Φ in funzione
-Fotovoltaico: non è necessario presentare potenza DC (in caso di estensione, i dettagli dell'estensione) / schede tecniche (inverter e moduli).
+Fotovoltaico: non è necessario presentare potenza DC (in caso di Estensione, i dettagli dell'Estensione) / schede tecniche (inverter e moduli).
 Prestazioni totali
 kWp
 Fonte di energia
@@ -153,7 +153,7 @@ Impianto WWK / CHP
 Biogas
 Sistemi con perturbazioni di rete
 Nuova installazione
-Modifica / estensione
+Modifica / Estensione
 Tipo di dispositivo / sistema
 Produttore del dispositivo
 Tipo di dispositivo
@@ -190,7 +190,7 @@ Esistente
 Nuova installazione
 Accumulo di energia
 Nuova installazione
-Modifica / estensione
+Modifica / Estensione
 Tipo di dispositivo / sistema
 Produttore del dispositivo
 Tipo di operazione
@@ -200,10 +200,10 @@ Capacità di alimentazione di emergenza
 Tipo di dispositivo
 Sistema di alimentazione di emergenza temporaneamente connesso alla rete
 No
-sì
+Sì
 Rete di commutazione / alimentazione di emergenza
 No
-sì
+Sì
 Pagina dati dispositivo AC
 connessione
 3x400V
@@ -229,18 +229,18 @@ kW
 Capacità di memoria
 kWh
 Modalità operativa della memoria
-nessun addebito dello stoccaggio dalla rete di distribuzione
+Nessun addebito dello stoccaggio dalla rete di distribuzione
 nessuno scarico dell'unità di stoccaggio nella rete di distribuzione
 Prestazioni controllabili tramite
 VNB
-operatore
+Operatore
 Partecipazione al servizio di sistema
 fornitori
 Interfaccia di memoria per il VNB disponibile
-altra modalità di funzionamento> secondo l'allegato
+Altra modalità di funzionamento> secondo l'allegato
 Stazioni di ricarica per veicoli elettrici
 Nuova installazione
-Modifica / estensione
+Modifica / Estensione
 Tipo di dispositivo / sistema
 Produttore del dispositivo
 Tipo di operazione
@@ -273,16 +273,16 @@ Potenza regolabile tramite DSO
 kVA
 per
 kVA
-Prestazioni regolabili dall'operatore
+Prestazioni regolabili dall'Operatore
 kVA
 per
 kVA
 Potenza attiva controllabile
 No
-sì
+Sì
 Disponibile interfaccia tra stazione di ricarica e VNB
 No
-sì
+Sì
 Ulteriori informazioni generali
 Commenti della società presentatrice
 Decisione del DSO

@@ -1,44 +1,44 @@
-Prova di sicurezza
-Prova di sicurezza
-Secondo l'ordinanza sugli impianti elettrici a bassa tensione (NIV, RS 734.27)
+Rapporto di Sicurezza per impianto elettrico (RaSi)
+Rapporto di Sicurezza per impianto elettrico (RaSi)
+secondo l'ordinanza sugli impianti elettrici a bassa tensione (OIBT, RS 734.27)
 Rapporto n.
 Luogo di installazione
 Modificare...
 Posizione
-comunità locale
+Comunità locale
 Pacco n.
 Numero civico.
 EGID
 Tipo di edificio
-commento
+Commento
 ZEV
-investimento
+Investimento
 Modificare...
-Stockw., Posizione
+Pavimento, Posizione
 Cliente di elettricità
 Contatore n.
 Impianto n.
 Periodo / i di utilizzo e controllo
 Anni
-Indirizzi / partner commerciali
+Indirizzi / Partner commerciali
 Modificare...
 Elettricista
 Permesso n.
 Cognome
-indirizzo
+Indirizzo
 Organismo di controllo indipendente
 Permesso n.
 Cognome
-indirizzo
-proprietario
+Indirizzo
+Proprietario
 Cognome
-indirizzo
-e-mail
+Indirizzo
+E-Mail
 Telefono
-amministrazione
+Amministrazione
 Cognome
-indirizzo
-e-mail
+Indirizzo
+E-Mail
 Telefono
 Ambito di controllo
 Modificare...
@@ -55,8 +55,8 @@ Motivo del test
 Nuova installazione
 Impianto esistente
 Impianto esistente
-modifica
-estensione
+Modifica
+Estensione
 Ambito del controllo / installazione eseguita
 I sigilli sono stati rimossi
 Inst. Display
@@ -70,7 +70,7 @@ Interruttore automatico di collegamento
 Tipo, caratteristico
 I <sub> N </sub>
 Dispositivo di protezione da sovracorrente nel punto di connessione d. Inst.
-designazione
+Designazione
 Tipo, caratteristico
 I <sub> N </sub>
 Misurazioni
@@ -79,14 +79,14 @@ I <sub> K end L-PE </sub>
 I <sub> K req. L-N </sub>
 I <sub> K end L-N </sub>
 R <sub> ISO </sub> / I <sub> Leak </sub>
-particolarità
+Particolarità
 Inserti e distributori
 Contorni
 Rapporto di misurazione + test
 Misurazione + rapporto di prova fotovoltaico
 Distributore
-SiNa + documenti aggiuntivi al proprietario / amministratore.
-SiNa all'operatore / ispettorato di rete
+RaSi + documenti aggiuntivi al Proprietario / amministratore.
+RaSi all'Operatore / ispettorato di rete
 Operatore di rete / ispettorato
 Osservazioni
 Rilevante per la prossima PK

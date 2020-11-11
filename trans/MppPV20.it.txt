@@ -5,42 +5,42 @@ Rapporto n.
 Luogo di installazione
 Modificare...
 Posizione
-comunità locale
+Comunità locale
 Pacco n.
 Numero civico.
 EGID
 Tipo di edificio
-commento
+Commento
 ZEV
 Modello piano n.
 a partire dal
 Autentico. No.
 a partire dal
-investimento
+Investimento
 Modificare...
-Stockw., Posizione
+Pavimento, Posizione
 Cliente di elettricità
 Contatore n.
 Impianto n.
 Periodo / i di utilizzo e controllo
 Anni
-Indirizzi / partner commerciali
+Indirizzi / Partner commerciali
 Modificare...
 contraente
 Idraulico
 controller
 Permesso n.
 Cognome
-indirizzo
+Indirizzo
 Cliente
-proprietario
-amministrazione
+Proprietario
+Amministrazione
 Cliente energia elettrica dell'impianto
 Idraulico
 Un altro
 Cognome
-indirizzo
-e-mail
+Indirizzo
+E-Mail
 Telefono
 Ambito di controllo
 Modificare...
@@ -56,17 +56,17 @@ Motivo del test
 Nuova installazione
 Impianto esistente
 Impianto esistente
-modifica
-estensione
+Modifica
+Estensione
 Ambito del controllo / installazione eseguita
 No. / anno, data
 Risultato del test categoria 1
-standard
+Standard
 I test funzionali e le misurazioni della categoria 1 sono obbligatori per ogni PVA (vedi test funzionali).
 Nessun difetto riscontrato
 Risultato del test categoria 2
-standard
-Ulteriori prove funzionali e misurazioni di categoria 2 (sezione successiva) sono facoltative e da concordare con il proprietario.
+Standard
+Ulteriori prove funzionali e misurazioni di categoria 2 (sezione successiva) sono facoltative e da concordare con il Proprietario
 Aggiunte dei risultati del test categoria 1
 Registrare la curva caratteristica U / I (rapporto allegato)
 Registrazione con procedura IR (report allegato)
@@ -238,7 +238,7 @@ Accoppiato DC
 Accoppiato AC
 Misurazioni
 Dispositivi di misurazione utilizzati
-standard
+Standard 
 (Crea e digita)
 Test effettuato dopo
 Misurazioni
@@ -248,7 +248,7 @@ Titolo della propria colonna
 Modificare
 Circuito
 Posizione / parte del sistema
-Linea / cavo
+Linea / Cavo
 Dispositivo di protezione da sovracorrente
 Misure (valore misurato)
 Dispositivo corrente residua (RCD)
@@ -257,7 +257,7 @@ Assemblaggio del quadro
 L-PE
 L-N
 No.
-designazione
+Designazione
 Tipo / tipo
 Dimensione conduttore & nbsp; / croce. [Mm²]
 Art Char.

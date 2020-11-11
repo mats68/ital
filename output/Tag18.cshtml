@@ -42,7 +42,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class=" col-xs-9">
-                            <h1 class="col-xs-12 formTitle">@(trans.GetText("Technisches Anschlussgesuch (TAG)", "Demande de raccordement technique (DRT)","Applicazione di connessione tecnica (TAG)"))</h1>
+                            <h1 class="col-xs-12 formTitle">@(trans.GetText("Technisches Anschlussgesuch (TAG)", "Demande de raccordement technique (DRT)","Rapporto di Sicurezza per impianto elettrico (RaSi)"))</h1>
                         </div>
                         <div class=" col-xs-3">
                             <div class="hidden-xs logoDivForm"><img id="logoForm" src="~/Content/vnb/@(Model.InstallationDocuments.First().Installation.Project.Vnb.UrlName)/logo.png" /></div>
@@ -112,7 +112,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-3 text-right">
-                            @Html.M2WebLabel(trans.GetText("Gemeinde", "Commune","comunità locale"), new { @class = "control-label sub-label" })
+                            @Html.M2WebLabel(trans.GetText("Gemeinde", "Commune","Comunità locale"), new { @class = "control-label sub-label" })
                         </div>
                         <div class="col-xs-6">
                             @Html.TextBoxFor(a => a.GEMEINDE, new { @class = "form-control readonly", style = "width:24em" })
@@ -216,7 +216,7 @@
                 <!-- #endregion -->
                 <!-- #region Adressen / Geschäftspartner -->
                 <div class="form-group">
-                    <h2 class="subNavigationItem" id="section-3">@trans.GetText("Adressen / Geschäftspartner", "Adresses / Bureaux","Indirizzi / partner commerciali")</h2>
+                    <h2 class="subNavigationItem" id="section-3">@trans.GetText("Adressen / Geschäftspartner", "Adresses / Bureaux","Indirizzi / Partner commerciali")</h2>
                 </div>
                 <div class="form-group switchForm-group">
                     <div class="col-xs-12">
@@ -245,7 +245,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-3 text-right">
-                            @Html.M2WebFormLabelFor2(a => a.I_ADRESSE1, trans.GetText("Adresse", "adresse","indirizzo"), new { @class = "control-label sub-label" })
+                            @Html.M2WebFormLabelFor2(a => a.I_ADRESSE1, trans.GetText("Adresse", "adresse","Indirizzo"), new { @class = "control-label sub-label" })
                         </div>
                         <div class="col-xs-6">
                             @Html.TextBoxFor(a => a.I_ADRESSE1, new { @class = "form-control readonly" })
@@ -275,7 +275,7 @@
                 </div>
                 <div class="form-group switchForm-group">
                     <div class="col-xs-12">
-                        <h3>@(trans.GetText("Sachbearbeiter", "Responsable","impiegato"))</h3>
+                        <h3>@(trans.GetText("Sachbearbeiter", "Responsable","Impiegato"))</h3>
                     </div>
                 </div>
                 <div class="form-group">
@@ -291,7 +291,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-3 text-right">
-                            @Html.M2WebFormLabelFor2(a => a.I_EMAIL, trans.GetText("E-Mail", "courriel","e-mail"), new { @class = "control-label sub-label" })
+                            @Html.M2WebFormLabelFor2(a => a.I_EMAIL, trans.GetText("E-Mail", "courriel","E-Mail"), new { @class = "control-label sub-label" })
                         </div>
                         <div class="col-xs-6">
                             @Html.TextBoxFor(a => a.I_EMAIL, new { @class = "form-control readonly" })
@@ -311,7 +311,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-3 text-right">
-                            @Html.M2WebFormLabelFor2(a => a.I_FAXNR, trans.GetText("Fax", "fax","fax"), new { @class = "control-label sub-label" })
+                            @Html.M2WebFormLabelFor2(a => a.I_FAXNR, trans.GetText("Fax", "fax","Fax"), new { @class = "control-label sub-label" })
                         </div>
                         <div class="col-xs-6">
                             @Html.TextBoxFor(a => a.I_FAXNR, new { @class = "form-control readonly" })
@@ -347,7 +347,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-3 text-right">
-                            @Html.M2WebFormLabelFor2(a => a.U_ADRESSE1, trans.GetText("Adresse", "adresse","indirizzo"), new { @class = "control-label sub-label" })
+                            @Html.M2WebFormLabelFor2(a => a.U_ADRESSE1, trans.GetText("Adresse", "adresse","Indirizzo"), new { @class = "control-label sub-label" })
                         </div>
                         <div class="col-xs-6">
                             @Html.TextBoxFor(a => a.U_ADRESSE1, new { @class = "form-control readonly" })
@@ -376,7 +376,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-3 text-right">
-                            @Html.M2WebFormLabelFor2(a => a.U_EMAIL, trans.GetText("E-Mail", "courriel","e-mail"), new { @class = "control-label sub-label" })
+                            @Html.M2WebFormLabelFor2(a => a.U_EMAIL, trans.GetText("E-Mail", "courriel","E-Mail"), new { @class = "control-label sub-label" })
                         </div>
                         <div class="col-xs-6">
                             @Html.TextBoxFor(a => a.U_EMAIL, new { @class = "form-control readonly" })
@@ -396,7 +396,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-3 text-right">
-                            @Html.M2WebFormLabelFor2(a => a.U_TELNR, trans.GetText("Sprache", "Langue","linguaggio"), new { @class = "control-label sub-label" })
+                            @Html.M2WebFormLabelFor2(a => a.U_TELNR, trans.GetText("Sprache", "Langue","Linguaggio"), new { @class = "control-label sub-label" })
                         </div>
                         <div class="col-xs-6 flexcontainer flexwrap">
                             <div class="radio radio-primary" id="optSpracheDe">
@@ -410,7 +410,7 @@
                                 <label>
                                     @Html.RadioButton("oSprache", 1, "f".CompareTo(Model.U_SPRACHE) == 0, new { @name = "optionsSprache", @id = "optionsSpracheFr" })
                                     <span class="circle"></span><span class="check"></span>
-                                    @Html.M2WebLabel(trans.GetText("Fr", "Fr","P."), new { @class = "sub-label" })
+                                    @Html.M2WebLabel(trans.GetText("Fr", "Fr","Fr"), new { @class = "sub-label" })
                                 </label>
                             </div>
                             <div class="radio radio-primary" id="optSpracheIt">
@@ -449,7 +449,7 @@
                 </div>
                 <!-- #endregion -->
                 <div class="form-group">
-                    <h2 class="subNavigationItem" id="section-5">@trans.GetText("Geräte", "Appareils","attrezzature")</h2>
+                    <h2 class="subNavigationItem" id="section-5">@trans.GetText("Geräte", "Appareils","Attrezzature")</h2>
                 </div>
                 <!-- #region Elektrische Wärme / Wärmepumpe (WP)  -->
                 <div class="form-group switchForm-group">
@@ -472,7 +472,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.WP_AENDERW)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.WP_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension","Modifica / estensione"))
+                                @Html.M2WebFormLabelFor2(a => a.WP_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension","Modifica / Estensione"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -487,7 +487,7 @@
                         <div class="col-xs-6 flexcontainer flexwrap">
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.WP_GENEHMIGUNG)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.WP_GENEHMIGUNG, trans.GetText("Ja", "Oui","sì"))
+                                @Html.M2WebFormLabelFor2(a => a.WP_GENEHMIGUNG, trans.GetText("Ja", "Oui","Sì"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -723,9 +723,9 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.WP_ELZUSHEIZ_JA)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.WP_ELZUSHEIZ_JA, trans.GetText("Ja", "Oui","sì"))
+                                @Html.M2WebFormLabelFor2(a => a.WP_ELZUSHEIZ_JA, trans.GetText("Ja", "Oui","Sì"))
                             </span>
-                            @Html.M2WebLabel(trans.GetText("Wenn Ja, Leistung", "Si oui, puissance","Se sì, prestazioni"), new { @class = "control-label sub-label" })
+                            @Html.M2WebLabel(trans.GetText("Wenn Ja, Leistung", "Si oui, puissance","Se Sì, prestazioni"), new { @class = "control-label sub-label" })
                             <div style="margin-left:10px" class="input-group">
                                 @Html.TextBoxFor(a => a.WP_ELZUSHEIZ_LEIST, new { @class = "form-control", style = "width:8em" })
                                 @Html.M2WebLabel("kW", new { @class = "input-group-addon control-label" })
@@ -872,7 +872,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.EEA_AENDERW)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.WP_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension","Modifica / estensione"))
+                                @Html.M2WebFormLabelFor2(a => a.WP_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension","Modifica / Estensione"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -951,7 +951,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.EEA_EIGENVERB_JA)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.EEA_EIGENVERB_JA, trans.GetText("Ja", "Oui","sì"))
+                                @Html.M2WebFormLabelFor2(a => a.EEA_EIGENVERB_JA, trans.GetText("Ja", "Oui","Sì"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -990,7 +990,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.EEA_ZEV_JA)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.EEA_ZEV_JA, trans.GetText("Ja", "Oui","sì"))
+                                @Html.M2WebFormLabelFor2(a => a.EEA_ZEV_JA, trans.GetText("Ja", "Oui","Sì"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -1000,7 +1000,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-3 text-right">
-                            @Html.M2WebLabel(trans.GetText("Wenn Ja, Vorsicherung des VNB ZEV-Zählers", "Si oui, fusible en amont du compteur RCP GRD","Se sì, fusibile di backup del misuratore ZEV VNB"), new { @class = "control-label sub-label" })
+                            @Html.M2WebLabel(trans.GetText("Wenn Ja, Vorsicherung des VNB ZEV-Zählers", "Si oui, fusible en amont du compteur RCP GRD","Se Sì, fusibile di backup del misuratore ZEV VNB"), new { @class = "control-label sub-label" })
                         </div>
                         <div class="col-xs-6 flexcontainer flexwrap">
                             <div class="input-group" style="width:8em">
@@ -1024,7 +1024,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.EEA_NOTSTROM_JA)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.EEA_ZEV_JA, trans.GetText("Ja", "Oui","sì"))
+                                @Html.M2WebFormLabelFor2(a => a.EEA_ZEV_JA, trans.GetText("Ja", "Oui","Sì"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -1044,7 +1044,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.EEA_UMSCH_JA)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.EEA_UMSCH_JA, trans.GetText("Ja", "Oui","sì"))
+                                @Html.M2WebFormLabelFor2(a => a.EEA_UMSCH_JA, trans.GetText("Ja", "Oui","Sì"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -1064,7 +1064,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.EEA_SYSTEMD_JA)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.EEA_SYSTEMD_JA, trans.GetText("Ja", "Oui","sì"))
+                                @Html.M2WebFormLabelFor2(a => a.EEA_SYSTEMD_JA, trans.GetText("Ja", "Oui","Sì"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -1194,7 +1194,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.EEA_EINSPBEGR_JA)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.EEA_EINSPBEGR_JA, trans.GetText("Ja", "Oui","sì"))
+                                @Html.M2WebFormLabelFor2(a => a.EEA_EINSPBEGR_JA, trans.GetText("Ja", "Oui","Sì"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -1218,7 +1218,7 @@
                         <div class="col-xs-3 text-right">
                         </div>
                         <div class="col-xs-6">
-                            @Html.M2WebLabel(trans.GetText("Photovoltaik: Leistung DC (bei einem Zubau die Angaben der Erweiterung) / Datenblätter (WR und Module) müssen nicht eingereicht werden.", "Photovoltaïque: la puissance DC (en cas de constr. suppl., données de l'ext.)/et les fiches techn. (ond. et modules) ne doivent pas être fournies.","Fotovoltaico: non è necessario presentare potenza DC (in caso di estensione, i dettagli dell'estensione) / schede tecniche (inverter e moduli)."), new { @class = "control-label sub-label" })
+                            @Html.M2WebLabel(trans.GetText("Photovoltaik: Leistung DC (bei einem Zubau die Angaben der Erweiterung) / Datenblätter (WR und Module) müssen nicht eingereicht werden.", "Photovoltaïque: la puissance DC (en cas de constr. suppl., données de l'ext.)/et les fiches techn. (ond. et modules) ne doivent pas être fournies.","Fotovoltaico: non è necessario presentare potenza DC (in caso di Estensione, i dettagli dell'Estensione) / schede tecniche (inverter e moduli)."), new { @class = "control-label sub-label" })
                         </div>
                         <div class="col-xs-3 text-right">
                         </div>
@@ -1301,7 +1301,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.NETZ_AENDERW)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.NETZ_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension","Modifica / estensione"))
+                                @Html.M2WebFormLabelFor2(a => a.NETZ_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension","Modifica / Estensione"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -1581,7 +1581,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.ENSP_AENDERW)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.ENSP_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension","Modifica / estensione"))
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension","Modifica / Estensione"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -1660,7 +1660,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.ENSP_NOTSTRNETZ_J)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.ENSP_NOTSTRNETZ_J, trans.GetText("Ja", "Oui","sì"))
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_NOTSTRNETZ_J, trans.GetText("Ja", "Oui","Sì"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -1679,7 +1679,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.ENSP_UMSCH_J)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.ENSP_UMSCH_J, trans.GetText("Ja", "Oui","sì"))
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_UMSCH_J, trans.GetText("Ja", "Oui","Sì"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -1876,7 +1876,7 @@
                         <div class="col-xs-6 flexcontainer flexwrap">
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.ENSP_KEINELADUNG)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.ENSP_KEINELADUNG, trans.GetText("keine Ladung des Speichers aus dem Verteilnetz", "Aucun chargement de l'accumulateur depuis le réseau de distribution","nessun addebito dello stoccaggio dalla rete di distribuzione"))
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_KEINELADUNG, trans.GetText("keine Ladung des Speichers aus dem Verteilnetz", "Aucun chargement de l'accumulateur depuis le réseau de distribution","Nessun addebito dello stoccaggio dalla rete di distribuzione"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -1910,7 +1910,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.ENSP_REGLEIST_BETR)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.ENSP_REGLEIST_BETR, trans.GetText("Betreiber", "Exploitant","operatore"))
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_REGLEIST_BETR, trans.GetText("Betreiber", "Exploitant","Operatore"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -1954,7 +1954,7 @@
                         <div class="col-xs-6 flexcontainer flexwrap">
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.ENSP_ANDBETRIEB)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.ENSP_ANDBETRIEB, trans.GetText("andere Betriebsart > gemäss Beilage", "Autre type d'exploitation > d’après l'annexe","altra modalità di funzionamento> secondo l'allegato"))
+                                @Html.M2WebFormLabelFor2(a => a.ENSP_ANDBETRIEB, trans.GetText("andere Betriebsart > gemäss Beilage", "Autre type d'exploitation > d’après l'annexe","Altra modalità di funzionamento> secondo l'allegato"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -1985,7 +1985,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.ELFA_AENDERW)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.ELFA_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension","Modifica / estensione"))
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_AENDERW, trans.GetText("Änderung/Erweiterung", "Modification/extension","Modifica / Estensione"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -2235,7 +2235,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-3 text-right">
-                            @Html.M2WebLabel(trans.GetText("Regelbare Leistung durch Betreiber", "Puissance régulable par l'exploitant","Prestazioni regolabili dall'operatore"), new { @class = "control-label sub-label" })
+                            @Html.M2WebLabel(trans.GetText("Regelbare Leistung durch Betreiber", "Puissance régulable par l'exploitant","Prestazioni regolabili dall'Operatore"), new { @class = "control-label sub-label" })
                         </div>
                         <div class="col-xs-6 flexcontainer flexwrap">
                             <div class="input-group" style="width:8em">
@@ -2264,7 +2264,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.ELFA_WIRKSTEUER_J)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.ELFA_WIRKSTEUER_J, trans.GetText("Ja", "Oui","sì"))
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_WIRKSTEUER_J, trans.GetText("Ja", "Oui","Sì"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">
@@ -2283,7 +2283,7 @@
                             </span>
                             <span class="checkbox">
                                 @Html.CheckBoxFor(a => a.ELFA_SCHNITTLADE_J)<span class="check"></span>
-                                @Html.M2WebFormLabelFor2(a => a.ELFA_SCHNITTLADE_J, trans.GetText("Ja", "Oui","sì"))
+                                @Html.M2WebFormLabelFor2(a => a.ELFA_SCHNITTLADE_J, trans.GetText("Ja", "Oui","Sì"))
                             </span>
                         </div>
                         <div class="col-xs-3 text-right">

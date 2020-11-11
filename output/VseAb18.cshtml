@@ -111,7 +111,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            @Html.M2WebFormLabelFor2(a => a.GEMEINDE, trans.GetText("Gemeinde", "Commune","comunità locale"), new { @class = "col-xs-4 control-label labelPadding" })
+                            @Html.M2WebFormLabelFor2(a => a.GEMEINDE, trans.GetText("Gemeinde", "Commune","Comunità locale"), new { @class = "col-xs-4 control-label labelPadding" })
                             <div class="col-xs-8">
                                 @Html.M2WebDisplayTextFor(a => a.GEMEINDE)
                             </div>
@@ -166,7 +166,7 @@
                 <!-- #endregion -->
                 <!-- #region Adressen / Geschäftspartner -->
                 <div class="form-group">
-                    <h2 class="subNavigationItem" id="section-2">@(trans.GetText("Adressen / Geschäftspartner", "Adresses","Indirizzi / partner commerciali"))</h2>
+                    <h2 class="subNavigationItem" id="section-2">@(trans.GetText("Adressen / Geschäftspartner", "Adresses","Indirizzi / Partner commerciali"))</h2>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-6">
@@ -196,7 +196,7 @@
                             @Html.M2WebDisplayTextFor(a => a.I_ORT, new { @class = "abstand-links" })
                         </div>
                         <div class="row">
-                            <h4 class="col-xs-12 small">@(trans.GetText("Sachbearbeiter", "Responsable","impiegato"))</h4>
+                            <h4 class="col-xs-12 small">@(trans.GetText("Sachbearbeiter", "Responsable","Impiegato"))</h4>
                         </div>
                         <div class="col-xs-12">
                             @Html.M2WebDisplayTextFor(a => a.I_SACHB)
@@ -214,7 +214,7 @@
                             <br />
                         </div>
                         <div class="row">
-                            <h3 class="col-xs-12">@(trans.GetText("Eigentümer", "Propriétaire","proprietario"))</h3>
+                            <h3 class="col-xs-12">@(trans.GetText("Eigentümer", "Propriétaire","Proprietario"))</h3>
                         </div>
                         <div class="col-xs-12">
                             @Html.M2WebDisplayTextFor(a => a.U_NAME1)
@@ -238,7 +238,7 @@
                             @Html.M2WebDisplayTextFor(a => a.U_TELNR)
                         </div>
                         <div class="col-xs-12">
-                            @Html.M2WebFormLabelFor2(a => a.U_SPRACHE, trans.GetText("Sprache", "Langue","linguaggio"), new { @class = "control-label left" })
+                            @Html.M2WebFormLabelFor2(a => a.U_SPRACHE, trans.GetText("Sprache", "Langue","Linguaggio"), new { @class = "control-label left" })
                         </div>
                         <div class="col-xs-12">
                             <div class="col-xs-3 radio radio-primary" id="optSpracheDe">
@@ -270,7 +270,7 @@
                         </div>
                         <div class="col-xs-12">
                             <select id="selectAddressType">
-                                <option value="VERW">@(trans.GetText("Verwaltung", "Gérance","amministrazione"))</option>
+                                <option value="VERW">@(trans.GetText("Verwaltung", "Gérance","Amministrazione"))</option>
                                 <option value="ARCH">@(trans.GetText("Architekt", "Architecte","architetto"))</option>
                             </select>
                         </div>
@@ -288,7 +288,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                @Html.M2WebFormLabelFor2(a => a.GES_ADR1, trans.GetText("Adresse", "Adresse","indirizzo"), new { @class = "col-xs-4 col-sm-4 control-label" })
+                                @Html.M2WebFormLabelFor2(a => a.GES_ADR1, trans.GetText("Adresse", "Adresse","Indirizzo"), new { @class = "col-xs-4 col-sm-4 control-label" })
                                 <div class="col-xs-6">
                                     @Html.TextBoxFor(a => a.GES_ADR1, new { @class = "form-control", @readonly = "true" })
                                 </div>
@@ -309,7 +309,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                @Html.M2WebFormLabelFor2(a => a.GES_EMAIL, trans.GetText("E-Mail", "E-mail","e-mail"), new { @class = "col-xs-4 col-sm-4 control-label" })
+                                @Html.M2WebFormLabelFor2(a => a.GES_EMAIL, trans.GetText("E-Mail", "E-mail","E-Mail"), new { @class = "col-xs-4 col-sm-4 control-label" })
                                 <div class="col-xs-8">
                                     @Html.TextBoxFor(a => a.GES_EMAIL, new { @class = "form-control", @readonly = "true" })
                                 </div>
@@ -321,7 +321,7 @@
                                 </div>
                             </div>
                             <div class="form-group invisible">
-                                @Html.M2WebFormLabelFor2(a => a.GES_SPRACHE, trans.GetText("Sprache", "Langue","linguaggio"), new { @class = "col-xs-4 col-sm-4 control-label" })
+                                @Html.M2WebFormLabelFor2(a => a.GES_SPRACHE, trans.GetText("Sprache", "Langue","Linguaggio"), new { @class = "col-xs-4 col-sm-4 control-label" })
                                 <div class="col-xs-2">
                                     @Html.TextBoxFor(a => a.GES_SPRACHE, new { @class = "form-control" })
                                 </div>
@@ -350,7 +350,7 @@
                             <div class=" col-xs-4 checkbox">
                                 <label>
                                     @Html.CheckBoxFor(a => a.I_EXTENT, new { @class = "inst-beschrieb" })<span class="check"></span>
-                                    @Html.M2WebFormLabelFor2(a => a.I_EXTENT, trans.GetText("Änderung/Erweit.", "Extension/modif.","Modifica / estensione"))
+                                    @Html.M2WebFormLabelFor2(a => a.I_EXTENT, trans.GetText("Änderung/Erweit.", "Extension/modif.","Modifica / Estensione"))
                                 </label>
                             </div>
                             <div class=" col-xs-4 checkbox">
@@ -540,7 +540,7 @@
                             <table class="edo-table" id="Tarifapparate" name="tblMessSteuerList">
                                 <thead>
                                     <tr style="line-height:normal">
-                                        <th>@Html.M2WebLabel(trans.GetText("Kunde/in und<br />Rechnungsadresse, Nutzung", "Client et adresse de facturation,<br />utlisation","Cliente e <br /> indirizzo di fatturazione, utilizzo"), new { style = "font-size:small" })</th>
+                                        <th>@Html.M2WebLabel(trans.GetText("Kunde/in und<br />Rechnungsadresse, Nutzung", "Client et adresse de facturation,<br />utlisation","Cliente e <br /> Indirizzo di fatturazione, utilizzo"), new { style = "font-size:small" })</th>
                                         <th>@Html.M2WebLabel(trans.GetText("Stockerk /<br />Verbrauchs-<br />stelle VNB", "Etage/Pt. de<br />consomm.<br />GRD","Stockerk / <br /> Consumo <br /> punto VNB"), new { style = "font-size:small" })</th>
                                         <th>@Html.M2WebFormLabelFor2(a => tAListe.RAUM, trans.GetText("Raum-<br />nummer", "N° de<br />la pièce","Numero <br /> stanza"), new { style = "font-size:small; text-align:center" })</th>
                                         <th>@Html.M2WebFormLabelFor2(a => tAListe.TARIF, trans.GetText("VNB Tarif", "Tarif GRD","Tariffa VNB"), new { style = "font-size:small; text-align:center" })</th>

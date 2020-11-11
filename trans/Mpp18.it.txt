@@ -1,42 +1,42 @@
-Protocollo di misurazione e test
-Protocollo di misurazione e test
+FV - Rapporto di misura e di collaudo
+FV - Rapporto di misura e di collaudo
 No.
 Rapporto n.
 Luogo di installazione
 Modificare...
 Posizione
-comunità locale
+Comunità locale
 Pacco n.
 Numero civico.
 EGID
 Tipo di edificio
-commento
+Commento
 ZEV
-investimento
+Investimento
 Modificare...
-Stockw., Posizione
+Pavimento, Posizione
 Cliente di elettricità
 Contatore n
 Impianto n
 Periodo / i di utilizzo e controllo
 Anni
-Indirizzi / partner commerciali
+Indirizzi / Partner commerciali
 Modificare...
 contraente
 Idraulico
 controller
 Permesso n.
 Cognome
-indirizzo
+Indirizzo
 Cliente
-proprietario
-amministrazione
+Proprietario
+Amministrazione
 Cliente energia elettrica dell'impianto
 Idraulico
 Un altro
 Cognome
-indirizzo
-e-mail
+Indirizzo
+E-Mail
 Telefono
 Ambito di controllo
 Modificare...
@@ -52,15 +52,15 @@ Motivo del test
 Nuova installazione
 Impianto esistente
 Impianto esistente
-modifica
-estensione
+Modifica
+Estensione
 Ambito del controllo / installazione eseguita
 No. / anno, data
-esami
+Esami
 Ispezione visuale
 Selezione e disposizione corrette delle apparecchiature (condizioni ambientali)
 Protezione di base (protezione contro il contatto diretto)
-Attenersi alla documentazione tecnica fornita dal produttore
+Attenersi alla Documentazione tecnica fornita dal produttore
 Dispositivi di spegnimento e disconnessione
 Dispositivi / sistemi di sicurezza e interruttori di revisione
 Disponibile barriera tagliafuoco
@@ -92,7 +92,7 @@ Caduta di tensione osservata
 Osservazioni
 Misurazioni
 Dispositivi di misurazione utilizzati
-standard
+Standard
 (Crea e digita)
 Test effettuato dopo
 Misurazioni
@@ -100,7 +100,7 @@ Titolo della propria colonna
 Modificare
 Circuito
 Posizione / parte del sistema
-Linea / cavo
+Linea / Cavo
 Dispositivo di protezione da sovracorrente
 Misure (valore misurato)
 Dispositivo corrente residua (RCD)
@@ -109,7 +109,7 @@ Assemblaggio del quadro
 L-PE
 L-N
 No.
-designazione
+Designazione
 Tipo gentile
 Dimensioni conduttore; / croce. [Mm²]
 Art Char.
@@ -124,13 +124,13 @@ Io <sub> N </sub> / tipo [A]
 IΔN [mA]
 Tempo di intervento [ms; /; ok]
 Risultato della prova
-Assemblaggio e documentazione del quadro
+Assembl. e documentazione del quadro
 Gruppo quadro SK
 Senza amianto
 Sospetto amianto
 Identificazione SK secondo
 Dichiarazione del produttore con verifica di routine
 SK inclusa nel controllo finale
-documentazione
-Consegnare la documentazione del sistema
-schema
+Documentazione
+Consegnare la Documentazione del sistema
+Schema

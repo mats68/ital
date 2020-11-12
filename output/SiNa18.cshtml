@@ -3,7 +3,7 @@
     string documentLang = ViewBag.DocumentLang;
     var documentCultureInfo = new System.Globalization.CultureInfo(documentLang);
     var trans = new FormTrans(documentCultureInfo);
-    ViewBag.Title = trans.GetText("Sicherheitsnachweis", "Rapport de sécurité","Rapporto di Sicurezza per impianto elettrico (RaSi)");
+    ViewBag.Title = trans.GetText("Sicherheitsnachweis", "Rapport de sécurité","Rapporto di Sicurezza per impianto elettrico (SiNa)");
     Layout = "~/Views/Shared/_LayoutForm19.cshtml";
     var projectId = Model.InstallationDocuments.First().Installation.ProjectId;
     var installationId = Model.InstallationDocuments.First().InstallationId;
@@ -38,7 +38,7 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-xs-9">
-                        <h1 class="col-xs-7 col-md-8 formTitle">@(trans.GetText("Sicherheitsnachweis", "Rapport de sécurité","Rapporto di Sicurezza per impianto elettrico (RaSi)"))</h1>
+                        <h1 class="col-xs-7 col-md-8 formTitle">@(trans.GetText("Sicherheitsnachweis", "Rapport de sécurité","Rapporto di Sicurezza per impianto elettrico (SiNa)"))</h1>
                     </div>
                     <div class="col-xs-3">
                         @*VNB-Logo hier nicht anzeigen*@
@@ -60,7 +60,7 @@
             <!-- #endregion -->
             <!-- #region Ort der Installation -->
             <div class="form-group flexcontainer">
-                <h2 class="subNavigationItem titleflex-left" id="section-1">@(trans.GetText("Ort der Installation", "Situation de l'installation","Luogo di installazione"))</h2>
+                <h2 class="subNavigationItem titleflex-left" id="section-1">@(trans.GetText("Ort der Installation", "Situation de l'installation","Proprietario dell'impianto"))</h2>
                 @if (!fixiert)
                 {
                     <div>

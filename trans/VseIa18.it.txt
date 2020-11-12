@@ -1,9 +1,9 @@
-Display di installazione
-Display di installazione
+Display di installazione (IA)
+Display di installazione (IA)
 Oggetto VNB n.
 IA no. / Anno
 Messaggio n. VNB
-Luogo di installazione
+Proprietario dell'impianto
 Posizione
 Comunità locale
 tracciare

@@ -3,7 +3,7 @@
     string documentLang = ViewBag.DocumentLang;
     var documentCultureInfo = new System.Globalization.CultureInfo(documentLang);
     var trans = new FormTrans(documentCultureInfo);
-    ViewBag.Title = trans.GetText("Techn. Anschlussgesuch", "Demande de racc. technique","Applicazione di connessione tecnica");
+    ViewBag.Title = trans.GetText("Techn. Anschlussgesuch", "Demande de racc. technique","Applicazione di connessione tecnica (TAG)");
     Layout = "~/Views/Shared/_LayoutForm19.cshtml";
     var projectId = Model.InstallationDocuments.First().Installation.ProjectId;
     var projectDisplayName = Model.InstallationDocuments.First().Installation.Project.DisplayName;
@@ -42,7 +42,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class=" col-xs-9">
-                            <h1 class="col-xs-12 formTitle">@(trans.GetText("Technisches Anschlussgesuch (TAG)", "Demande de raccordement technique (DRT)","Rapporto di Sicurezza per impianto elettrico (RaSi)"))</h1>
+                            <h1 class="col-xs-12 formTitle">@(trans.GetText("Technisches Anschlussgesuch (TAG)", "Demande de raccordement technique (DRT)","Rapporto di Sicurezza per impianto elettrico (TAG)"))</h1>
                         </div>
                         <div class=" col-xs-3">
                             <div class="hidden-xs logoDivForm"><img id="logoForm" src="~/Content/vnb/@(Model.InstallationDocuments.First().Installation.Project.Vnb.UrlName)/logo.png" /></div>
@@ -76,7 +76,7 @@
                 <!-- #endregion -->
                 <!-- #region Ort der Installation -->
                 <div class="form-group flexcontainer">
-                    <h2 class="subNavigationItem titleflex-left" id="section-1">@(trans.GetText("Ort der Installation", "Emplacement","Luogo di installazione"))</h2>
+                    <h2 class="subNavigationItem titleflex-left" id="section-1">@(trans.GetText("Ort der Installation", "Emplacement","Proprietario dell'impianto"))</h2>
                     @if (!fixiert)
                     {
                         <div>

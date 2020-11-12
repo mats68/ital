@@ -1,9 +1,9 @@
-Ordine dell'attrezzatura
-Ordine dell'attrezzatura
+Ordine dell'attrezzatura (Apparatebestellung)
+Ordine dell'attrezzatura (Apparatebestellung)
 Oggetto VNB n.
 IA no. / Anno
 Messaggio n. VNB
-Luogo di installazione
+Proprietario dell'impianto
 Posizione
 Comunità locale
 tracciare

@@ -60,7 +60,7 @@ input_files.forEach(file => {
                 newLine = str_before + ',"' + arr_it[find] + '"' + str_after
                 // console.log(newLine)
             } else {
-                console.log('Translation not found: ', german)
+                console.log('Translation not found: ', german, 'File: ', trans_file_de)
             }
         }
         output_str = output_str + newLine + '\n'

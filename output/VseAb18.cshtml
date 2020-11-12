@@ -3,7 +3,7 @@
     string documentLang = ViewBag.DocumentLang;
     var documentCultureInfo = new System.Globalization.CultureInfo(documentLang);
     var trans = new FormTrans(documentCultureInfo);
-    ViewBag.Title = trans.GetText("Apparatebestellung", "Intervention sur les appareils de tarification","Ordine dell'attrezzatura");
+    ViewBag.Title = trans.GetText("Apparatebestellung", "Intervention sur les appareils de tarification","Ordine dell'attrezzatura (Apparatebestellung)");
     Layout = "~/Views/Shared/_LayoutForm.cshtml";
     var vGListe = new Brunner.M2Web.Entities.FormEntities.VseAb18VGListe();
     var tAListe = new Brunner.M2Web.Entities.FormEntities.VseAb18TAListe();
@@ -55,7 +55,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class=" col-xs-9">
-                            <h1 class="col-xs-12 formTitle">@(trans.GetText("Apparatebestellung", "Intervention sur les appareils de tarification","Ordine dell'attrezzatura"))</h1>
+                            <h1 class="col-xs-12 formTitle">@(trans.GetText("Apparatebestellung", "Intervention sur les appareils de tarification","Ordine dell'attrezzatura (Apparatebestellung)"))</h1>
                         </div>
                         <div class="col-xs-3">
                             <div class="hidden-xs logoDivForm"><img id="logoForm" src="~/Content/vnb/@(Model.InstallationDocuments.First().Installation.Project.Vnb.UrlName)/logo.png" /></div>
@@ -93,7 +93,7 @@
                 <!-- #endregion -->
                 <!-- #region Ort der Installation -->
                 <div class="form-group">
-                    <h2 class="subNavigationItem" id="section-1">@(trans.GetText("Ort der Installation", "Emplacement","Luogo di installazione"))</h2>
+                    <h2 class="subNavigationItem" id="section-1">@(trans.GetText("Ort der Installation", "Emplacement","Proprietario dell'impianto"))</h2>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-6">

@@ -1,8 +1,8 @@
-FV - Rapporto di misura e di collaudo
-FV - Rapporto di misura e di collaudo
+Rapporto di misura e di collaudo MPP
+Rapporto di misura e di collaudo MPP
 No.
 Rapporto n.
-Luogo di installazione
+Proprietario dell'impianto
 Modificare...
 Posizione
 Comunità locale
@@ -124,7 +124,7 @@ Io <sub> N </sub> / tipo [A]
 IΔN [mA]
 Tempo di intervento [ms; /; ok]
 Risultato della prova
-Assembl. e documentazione del quadro
+Assembl. e document. del quadro
 Gruppo quadro SK
 Senza amianto
 Sospetto amianto

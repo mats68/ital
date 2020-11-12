@@ -1,8 +1,8 @@
-Applicazione di connessione tecnica
-Rapporto di Sicurezza per impianto elettrico (RaSi)
+Applicazione di connessione tecnica (TAG)
+Rapporto di Sicurezza per impianto elettrico (TAG)
 Oggetto VNB n.
 Messaggio n. VNB
-Luogo di installazione
+Proprietario dell'impianto
 Modificare...
 Posizione
 Comunità locale

@@ -154,7 +154,7 @@ Ispezione visiva del sistema (sezione 5.2)
 Ispezione del lato DC
 Selezione e disposizione corrette di tutti i componenti del sistema e dei sistemi di assemblaggio (condizioni ambientali)
 Parti di montaggio sul tetto e ingresso cavi resistenti alle intemperie
-Specificazioni BSM / STP rispettate (costruzione / materiale)
+Specifiche BSM / STP rispettate (costruzione / materiale)
 Conduttori di protezione e SPA installati in parallelo e vicino alle linee CC
 Sezione SPA per PVA
 mm²

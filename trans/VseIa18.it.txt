@@ -55,7 +55,7 @@ deve essere rafforzato
 deve essere sostituito
 necessario AS interruzione di sovracorrente.
 Max. Elettricità acquistata
-Max. Potenza di immissione in rete
+Potenza max. d’alimentazione alla rete
 Consumatori, produttori, negozi
 Elenco di consumatori, produttori, negozi
 Modificare

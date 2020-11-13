@@ -47,8 +47,8 @@ Fabbricante apparecchio
 Tipo di operazione
 monovalente
 bivalente
-Tipo di dispositivo
-Caratteristiche tecniche lato AC
+Tipo apparecchio
+Dati dell’apparecchio lato AC Caratteristiche tecniche lato AC
 Raccordo
 3x400V
 1x230V
@@ -65,7 +65,7 @@ Potenza nominale totale
 kW / kVA
 Potenza max. erogata alla rete
 kW / kVA
-Specificazioni
+Specifiche
 Tipo d’avviamento
 Avviamento diretto
 Avviamento a resistenza
@@ -124,7 +124,7 @@ Partecipazione alle prestazioni di servizio
 No
 Sì
 Fornitori
-Caratteristiche tecniche lato AC
+Dati dell’apparecchio lato AC Caratteristiche tecniche lato AC
 Raccordo
 3x400V
 1x230V
@@ -156,8 +156,8 @@ Nuova
 Modifica / Estensione
 Tipo d’apparecchio/impianto
 Fabbricante apparecchio
-Tipo di dispositivo
-Caratteristiche tecniche lato AC
+Tipo apparecchio
+Dati dell’apparecchio lato AC Caratteristiche tecniche lato AC
 Raccordo
 3x400V
 1x230V
@@ -176,7 +176,7 @@ kVA
 Potenza max. erogata alla rete
 kVA
 cos Φ in servizio
-Specificazioni
+Specifiche
 Tipo d'avviamento
 Avviamento diretto
 Avviamento a resistenza
@@ -197,14 +197,14 @@ Tipo di operazione
 Rete
 Funzionamento dell'isola
 Capacità di alimentazione di emergenza
-Tipo di dispositivo
+Tipo apparecchio
 Gruppo di soccorso con raccordo temporaneo alla rete
 No
 Sì
 Commutazione rete/soccorso
 No
 Sì
-Caratteristiche tecniche lato AC
+Dati dell’apparecchio lato AC Caratteristiche tecniche lato AC
 Raccordo
 3x400V
 1x230V
@@ -220,7 +220,7 @@ kVA
 Potenza max. erogata alla rete
 kVA
 cos Φ in servizio
-Specificazioni
+Specifiche
 Integrazione dell'accumulo di energia
 AC (nella parte AC dell’impianto)
 DC (nella parte DC dell’impianto)
@@ -237,17 +237,17 @@ Esercente
 Partecipazione alle prestazioni di servizio
 Fornitori
 Interfaccia di memoria per il GRD disponibile
-Altra modalità di funzionamento> secondo l'allegato
+Altro tipo d’esercizio > come da allegato
 Stazioni di ricarica per veicoli elettrici
 Nuova
 Modifica / Estensione
 Tipo d’apparecchio/impianto
 Fabbricante apparecchio
 Tipo di operazione
-Cavo di ricarica
+Carica con cavo
 Carica induttiva
-Tipo di dispositivo
-Caratteristiche tecniche lato AC
+Tipo apparecchio
+Dati dell’apparecchio lato AC Caratteristiche tecniche lato AC
 Raccordo
 3x400V
 1x230V
@@ -262,29 +262,29 @@ kVA
 Potenza max. erogata alla rete
 kVA
 cos Φ in servizio
-Specificazioni
-Ricarica AC del veicolo
-Ricarica CC del veicolo
-Max. Consumo energetico
+Specifiche
+Carica AC del veicolo
+Carica DC del veicolo
+Potenza massima prelevata dalla rete
 kVA
-Max. Potenza di immissione in rete
+Potenza max. d’alimentazione alla rete
 kVA
-Potenza regolabile tramite DSO
-kVA
-per
-kVA
-potenza regolabili dall'Operatore
+Potenza regolabile dal GRD
 kVA
 per
 kVA
-Potenza attiva controllabile
+Potenza regolabile dall’esercente
+kVA
+per
+kVA
+Potenza attiva modulabile
 No
 Sì
-Disponibile interfaccia tra stazione di ricarica e GRD
+Interfaccia della colonna disponibile al GRD
 No
 Sì
-Ulteriori informazioni generali
-Commenti della società presentatrice
+Altri dati generali
+Osservazioni del richiedente
 Decisione del DSO
 Calore elettrico / HP
 Impianto approvato

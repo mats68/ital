@@ -46,7 +46,7 @@ Data di controllo SK
 Organismo di controllo indipendente
 Controllo dell'accettazione (AK)
 Controllo periodico (PK)
-Controlli a campione (StK - VNB)
+Controlli a campione (StK - GRD)
 Data di controllo AK / PK / StK
 Motivo del test
 Nuova installazione

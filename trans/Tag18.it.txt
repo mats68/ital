@@ -1,7 +1,7 @@
-Applicazione di connessione tecnica (TAG)
-Rapporto di Sicurezza per impianto elettrico (TAG)
-Oggetto VNB n.
-Messaggio n. VNB
+Richiesta tecnica di allacciamento (RTA)
+Richiesta tecnica di allacciamento (RTA)
+Oggetto GRD n.
+Messaggio n. GRD
 Proprietario dell'impianto
 Modificare...
 Posizione
@@ -30,14 +30,14 @@ Cognome
 Indirizzo
 E-Mail
 Telefono
-Linguaggio
+Lingua
 De
 Fr
 It
 Eventi
 Messa in servizio prevista
 Attrezzature
-Calore elettrico / pompa di calore (WP)
+Riscaldamento elettrico/pompe di calore (PDC)
 Nuova installazione
 Modifica / Estensione
 Permesso cantonale disponibile
@@ -48,88 +48,88 @@ Tipo di operazione
 monovalente
 bivalente
 Tipo di dispositivo
-Pagina dati dispositivo AC
-connessione
+Caratteristiche tecniche lato AC
+Raccordo
 3x400V
 1x230V
 Altro
 Dispositivo corrente nominale
-UN.
-Avvio del dispositivo corrente (10 ms)
-UN.
-Numero di dispositivi
-Pc
-Dispositivo di potenza nominale
+A
+Corrente d’avviamento apparec. (10ms)
+A
+Numero di apparecchi 
+Pz
+Potenza nominale dell’apparecchio
 kW / kVA
 Potenza nominale totale
 kW / kVA
-Massime prestazioni totali
+Potenza max. erogata alla rete
 kW / kVA
-Specifiche
-Tipo di avvio
+Specificazioni
+Tipo d’avviamento
 Avviamento diretto
-Starter di resistenza
+Avviamento a resistenza
 Inverter
 Convertitore di frequenza
 Partenza morbida
 Riscaldamento elettrico aggiuntivo
 No
 Sì
-Se Sì, prestazioni
+Se Sì, potenza
 Tipo di pompa di calore
-Salamoia / acqua
-Acqua acqua
+Acqua salina / acqua
+Acqua / acqua
 Aria / aria
-Aria Acqua
+Aria / acqua
 Tipo di riscaldamento dell'acqua
-elettrico
-Caldaia a pompa di calore
+Elettrico
+Bollitore a pompa di calore
 Pompa di calore
-Pannelli solari
+Collettori solari
 Serbatoio dell'acqua calda
-numero
-Pc
-soddisfare
-IO.
-Prestazioni complessive
+Numero
+Pz
+Contenuto
+I
+Potenza globale
 kW
-Impianti di produzione di energia (EEA)
-Nuova installazione
+Impianti di produzione d'energia (IPE)
+Nuova
 Modifica / Estensione
-Tipo di dispositivo / sistema
-Produttore del dispositivo
-Tipo di operazione
-Rete
-Funzionamento dell'isola
-Sistema di alimentazione di emergenza
-Tipo di dispositivo
+Tipo d'apparecchio / impianto
+Fabbricante apparecchio
+Modalità d’esercizio
+Racc. alla rete
+Funz. dell'isola
+Gruppo di soccorso
+Tipo apparecchio
 autoconsumo
 No
 Sì
-Se è così
-single
-parecchi
-Associazione per l'autoconsumo (ZEV)
+Se Si,
+Individuale
+Collettivo
+Raggruppamento ai fini del consumo proprio (RCP)
 No
 Sì
-Se Sì, fusibile di backup del misuratore ZEV VNB
+Se si, fusibile a monte del contatore RCP del GRD
 UN.
-Sistema di alimentazione di emergenza temporaneamente connesso alla rete
+Gruppo di soccorso con raccordo temporaneo alla rete
 No
 Sì
-Commutazione rete / alimentazione di emergenza e viceversa in caso di mancanza di alimentazione
+Commutazione Rete/Gruppo di soccorso e viceversa, con interruzione di corrente
 No
 Sì
-Partecipazione al servizio di sistema
+Partecipazione alle prestazioni di servizio
 No
 Sì
 fornitori
-Pagina dati dispositivo AC
-connessione
+Caratteristiche tecniche lato AC
+Raccordo
 3x400V
 1x230V
 Altro
-Numero di dispositivi
+Numero di apparecchi
 Pc
 Dispositivo di potenza nominale
 kVA
@@ -138,18 +138,18 @@ kVA
 * Max. Potenza in uscita alla rete
 kVA
 (* Sistema completo comprensivo di potenza già installata ed eventuale accumulo di energia installato con riscontro nella rete di distribuzione)
-Limitazione dell'immissione in rete
+Limitazione dell’immissione
 No
 Sì
-cos Φ in funzione
-Fotovoltaico: non è necessario presentare potenza DC (in caso di Estensione, i dettagli dell'Estensione) / schede tecniche (inverter e moduli).
-Prestazioni totali
+cos Φ in servizio
+Fotovoltaico: Potenza DC (in caso di un ampliamento, dati dell’estensione)/documentazione tecnica (ondulatore e moduli) non devono essere allegati.
+Potenza totale
 kWp
-Fonte di energia
+Vettore energetico
 Sole (PV)
-acqua
+Acqua
 vento
-Impianto WWK / CHP
+Forza calore/cogenerazione
 Biogas
 Sistemi con perturbazioni di rete
 Nuova installazione
@@ -157,8 +157,8 @@ Modifica / Estensione
 Tipo di dispositivo / sistema
 Produttore del dispositivo
 Tipo di dispositivo
-Pagina dati dispositivo AC
-connessione
+Caratteristiche tecniche lato AC
+Raccordo
 3x400V
 1x230V
 Altro
@@ -166,20 +166,20 @@ Dispositivo corrente nominale
 UN.
 Avvio del dispositivo corrente (10 ms)
 UN.
-Numero di dispositivi
-Pc
+Numero di apparecchi
+Pz
 Numero Avvia al min.
-Dispositivo di potenza nominale
+Potenza nominale apparecchio 
 kVA
 Potenza nominale totale
 kVA
-Massime prestazioni totali
+Potenza max. erogata alla rete
 kVA
-cos Φ in funzione
-Specifiche
-Tipo di avvio
+cos Φ in servizio
+Specificazioni
+Tipo d'avviamento
 Avviamento diretto
-Starter di resistenza
+Avviamento a resistenza
 Inverter
 Partenza morbida
 Convertitore di frequenza
@@ -198,29 +198,29 @@ Rete
 Funzionamento dell'isola
 Capacità di alimentazione di emergenza
 Tipo di dispositivo
-Sistema di alimentazione di emergenza temporaneamente connesso alla rete
+Gruppo di soccorso con raccordo temporaneo alla rete
 No
 Sì
 Rete di commutazione / alimentazione di emergenza
 No
 Sì
-Pagina dati dispositivo AC
-connessione
+Caratteristiche tecniche lato AC
+Raccordo
 3x400V
 1x230V
 Solo DC
 Dispositivo corrente nominale
 UN.
-Numero di dispositivi
+Numero di apparecchi
 Pc
-Dispositivo di potenza nominale
+Potenza nominale apparecchio
 kVA
 Potenza nominale totale
 kVA
-Massime prestazioni totali
+Potenza max. erogata alla rete
 kVA
-cos Φ in funzione
-Specifiche
+cos Φ in servizio
+Specificazioni
 Integrazione dell'accumulo di energia
 AC (nella parte AC dell'installazione)
 DC (nella parte DC dell'installazione)
@@ -231,12 +231,12 @@ kWh
 Modalità operativa della memoria
 Nessun addebito dello stoccaggio dalla rete di distribuzione
 nessuno scarico dell'unità di stoccaggio nella rete di distribuzione
-Prestazioni controllabili tramite
-VNB
+potenza controllabili tramite
+GRD
 Operatore
-Partecipazione al servizio di sistema
+Partecipazione alle prestazioni di servizio
 fornitori
-Interfaccia di memoria per il VNB disponibile
+Interfaccia di memoria per il GRD disponibile
 Altra modalità di funzionamento> secondo l'allegato
 Stazioni di ricarica per veicoli elettrici
 Nuova installazione
@@ -247,22 +247,22 @@ Tipo di operazione
 Cavo di ricarica
 Carica induttiva
 Tipo di dispositivo
-Pagina dati dispositivo AC
-connessione
+Caratteristiche tecniche lato AC
+Raccordo
 3x400V
 1x230V
 Dispositivo corrente nominale
 UN.
-Numero di dispositivi
+Numero di apparecchi
 Pc
-Dispositivo di potenza nominale
+Potenza nominale apparecchio
 kVA
 Potenza nominale totale
 kVA
-Massime prestazioni totali
+Potenza max. erogata alla rete
 kVA
-cos Φ in funzione
-Specifiche
+cos Φ in servizio
+Specificazioni
 Ricarica AC del veicolo
 Ricarica CC del veicolo
 Max. Consumo energetico
@@ -273,14 +273,14 @@ Potenza regolabile tramite DSO
 kVA
 per
 kVA
-Prestazioni regolabili dall'Operatore
+potenza regolabili dall'Operatore
 kVA
 per
 kVA
 Potenza attiva controllabile
 No
 Sì
-Disponibile interfaccia tra stazione di ricarica e VNB
+Disponibile interfaccia tra stazione di ricarica e GRD
 No
 Sì
 Ulteriori informazioni generali
@@ -309,7 +309,7 @@ Impianto approvato
 Impianto approvato con provvedimenti
 Osservazioni
 Ulteriori commenti del DSO
-Frequenza di controllo ondulazione VNB
+Frequenza di controllo ondulazione GRD
 Hz
 Potenza di cortocircuito nel punto di connessione SkV
 kVA

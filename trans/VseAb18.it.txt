@@ -1,8 +1,8 @@
 Ordine dell'attrezzatura (Apparatebestellung)
 Ordine dell'attrezzatura (Apparatebestellung)
-Oggetto VNB n.
+Oggetto GRD n.
 IA no. / Anno
-Messaggio n. VNB
+Messaggio n. GRD
 Proprietario dell'impianto
 Posizione
 Comunità locale
@@ -11,13 +11,13 @@ Assicurazione n.
 Tipo di edificio
 Numero Unità / contatori
 Parte dell'edificio
-Associazione per l'autoconsumo (ZEV)
+Raggruppamento ai fini del consumo proprio (RCP)
 Indirizzi / Partner commerciali
 Società di installazione
 Permesso n.
 Impiegato
 Proprietario
-Linguaggio
+Lingua
 Indirizzo aggiuntivo
 Amministrazione
 architetto
@@ -28,7 +28,7 @@ Indirizzo
 CAP / località
 E-Mail
 Telefono
-Linguaggio
+Lingua
 Descrizione dell'installazione
 Nuova installazione
 Modifica / Estensione
@@ -46,7 +46,7 @@ Consum.
 Minerale.
 Spei.
 Designazione del consumatore, produttore, negozio
-Blocco VNB
+Blocco GRD
 Acquisto <br /> di alimentazione dalla <br /> rete [kVA]
 Erogazione <br /> dell'alimentazione alla rete <br /> [kVA]
 Capacità <br /> di stoccaggio <br /> [kWh]
@@ -54,18 +54,18 @@ Numero di <br /> conduttori <br /> esterni <br /> (1-3)
 Potenza Consumo totale dalla rete
 Uscita totale alla rete
 Carico massimo previsto totale
-controllo attivo VNB
+controllo attivo GRD
 Partecipazione a servizi di sistema (controllo energia)
 con prova dell'origine (HKN)
 Dispositivi di misurazione e controllo
 Elenco dei dispositivi di misurazione e controllo
 Modificare
 Cliente e <br /> Indirizzo di fatturazione, utilizzo
-Stockerk / <br /> Consumo <br /> punto VNB
+Stockerk / <br /> Consumo <br /> punto GRD
 Numero <br /> stanza
-Tariffa VNB
+Tariffa GRD
 Te stesso. <br /> [A]
-Numero contatore <br /> VNB
+Numero contatore <br /> GRD
 Mont. <br /> Posizione
 ZEV
 Numero di <br /> conduttori <br /> esterni <br /> (1-3)

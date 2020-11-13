@@ -52,7 +52,7 @@ Controllo dell'accettazione (AK)
 Controllo periodico (PK)
 Data di controllo AK / PK
 Motivo del test
-Nuova installazione
+Nuova
 Impianto esistente
 Impianto esistente
 Modifica

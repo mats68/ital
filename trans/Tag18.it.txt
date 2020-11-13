@@ -13,7 +13,7 @@ Pianta / parte dell'edificio
 Modificare...
 Contatore n.
 Collegamento alla rete (HAK)
-UN.
+A
 Nuovo
 esistente
 Indirizzi / Partner commerciali
@@ -38,12 +38,12 @@ Eventi
 Messa in servizio prevista
 Attrezzature
 Riscaldamento elettrico/pompe di calore (PDC)
-Nuova installazione
+Nuova
 Modifica / Estensione
 Permesso cantonale disponibile
 Sì
-Tipo di dispositivo / sistema
-Produttore del dispositivo
+Tipo d’apparecchio/impianto
+Fabbricante apparecchio
 Tipo di operazione
 monovalente
 bivalente
@@ -71,7 +71,7 @@ Avviamento diretto
 Avviamento a resistenza
 Inverter
 Convertitore di frequenza
-Partenza morbida
+Avviamento progressivo
 Riscaldamento elettrico aggiuntivo
 No
 Sì
@@ -100,7 +100,7 @@ Tipo d'apparecchio / impianto
 Fabbricante apparecchio
 Modalità d’esercizio
 Racc. alla rete
-Funz. dell'isola
+Esercizio in isola 
 Gruppo di soccorso
 Tipo apparecchio
 autoconsumo
@@ -113,7 +113,7 @@ Raggruppamento ai fini del consumo proprio (RCP)
 No
 Sì
 Se si, fusibile a monte del contatore RCP del GRD
-UN.
+A
 Gruppo di soccorso con raccordo temporaneo alla rete
 No
 Sì
@@ -123,7 +123,7 @@ Sì
 Partecipazione alle prestazioni di servizio
 No
 Sì
-fornitori
+Fornitori
 Caratteristiche tecniche lato AC
 Raccordo
 3x400V
@@ -137,7 +137,7 @@ Potenza nominale totale
 kVA
 * Max. Potenza in uscita alla rete
 kVA
-(* Sistema completo comprensivo di potenza già installata ed eventuale accumulo di energia installato con riscontro nella rete di distribuzione)
+(*Sistema completo, con potenze già installate ed eventuali accumulatori con immissione in rete di distribuzione)
 Limitazione dell’immissione
 No
 Sì
@@ -146,16 +146,16 @@ Fotovoltaico: Potenza DC (in caso di un ampliamento, dati dell’estensione)/doc
 Potenza totale
 kWp
 Vettore energetico
-Sole (PV)
+Sole (FV)
 Acqua
-vento
+Vento
 Forza calore/cogenerazione
 Biogas
 Sistemi con perturbazioni di rete
-Nuova installazione
+Nuova
 Modifica / Estensione
-Tipo di dispositivo / sistema
-Produttore del dispositivo
+Tipo d’apparecchio/impianto
+Fabbricante apparecchio
 Tipo di dispositivo
 Caratteristiche tecniche lato AC
 Raccordo
@@ -163,9 +163,9 @@ Raccordo
 1x230V
 Altro
 Dispositivo corrente nominale
-UN.
+A
 Avvio del dispositivo corrente (10 ms)
-UN.
+A
 Numero di apparecchi
 Pz
 Numero Avvia al min.
@@ -181,18 +181,18 @@ Tipo d'avviamento
 Avviamento diretto
 Avviamento a resistenza
 Inverter
-Partenza morbida
+Avviamento progressivo
 Convertitore di frequenza
-ulteriori aiuti all'avviamento
+Altri sistemi d’avviamento
 Compensazione della corrente reattiva
 Senza
 Esistente
-Nuova installazione
+Nuova
 Accumulo di energia
-Nuova installazione
+Nuova
 Modifica / Estensione
-Tipo di dispositivo / sistema
-Produttore del dispositivo
+Tipo d’apparecchio/impianto
+Fabbricante apparecchio
 Tipo di operazione
 Rete
 Funzionamento dell'isola
@@ -201,7 +201,7 @@ Tipo di dispositivo
 Gruppo di soccorso con raccordo temporaneo alla rete
 No
 Sì
-Rete di commutazione / alimentazione di emergenza
+Commutazione rete/soccorso
 No
 Sì
 Caratteristiche tecniche lato AC
@@ -210,7 +210,7 @@ Raccordo
 1x230V
 Solo DC
 Dispositivo corrente nominale
-UN.
+A
 Numero di apparecchi
 Pc
 Potenza nominale apparecchio
@@ -222,27 +222,27 @@ kVA
 cos Φ in servizio
 Specificazioni
 Integrazione dell'accumulo di energia
-AC (nella parte AC dell'installazione)
-DC (nella parte DC dell'installazione)
+AC (nella parte AC dell’impianto)
+DC (nella parte DC dell’impianto)
 Potenza elettrica (potenza del sistema)
 kW
-Capacità di memoria
+Capacità di stoccaggio
 kWh
-Modalità operativa della memoria
-Nessun addebito dello stoccaggio dalla rete di distribuzione
-nessuno scarico dell'unità di stoccaggio nella rete di distribuzione
-potenza controllabili tramite
+Tipo d’utilizzo dell’accumulatore
+Nessuna ricarica dell’accumulatore dalla rete di distribuzione
+Nessuna scarica dell’accumulatore nella rete di distribuzione
+Potenza regolabile dal
 GRD
-Operatore
+Esercente
 Partecipazione alle prestazioni di servizio
-fornitori
+Fornitori
 Interfaccia di memoria per il GRD disponibile
 Altra modalità di funzionamento> secondo l'allegato
 Stazioni di ricarica per veicoli elettrici
-Nuova installazione
+Nuova
 Modifica / Estensione
-Tipo di dispositivo / sistema
-Produttore del dispositivo
+Tipo d’apparecchio/impianto
+Fabbricante apparecchio
 Tipo di operazione
 Cavo di ricarica
 Carica induttiva
@@ -252,7 +252,7 @@ Raccordo
 3x400V
 1x230V
 Dispositivo corrente nominale
-UN.
+A
 Numero di apparecchi
 Pc
 Potenza nominale apparecchio

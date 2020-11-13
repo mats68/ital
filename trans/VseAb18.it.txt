@@ -30,7 +30,7 @@ E-Mail
 Telefono
 Lingua
 Descrizione dell'installazione
-Nuova installazione
+Nuova
 Modifica / Estensione
 Smantellamento
 Collegamento dell'edificio

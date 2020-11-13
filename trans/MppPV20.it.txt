@@ -53,7 +53,7 @@ Controllo periodico
 Controllo casuale (DSO)
 Data di controllo AK / PK / StK
 Motivo del test
-Nuova installazione
+Nuova
 Impianto esistente
 Impianto esistente
 Modifica

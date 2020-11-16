@@ -3,7 +3,7 @@
 var fs = require('fs')
 const lineReader = require('line-reader');
 
-var input_files = ['Mpp18', 'MppPV20', 'Sina18', 'Tag18', 'VseAb18', 'VseIa18']
+var input_files = ['Mpp18', 'MppPV20', 'Sina18', 'Tag18', 'VseAb18', 'VseIa18', 'MppVse1']
 // var input_file = 'Sina18.cshtml'
 // var input_de = 'trans/Sina18.de.txt'
 // var input_it = 'trans/Sina18.it.txt'

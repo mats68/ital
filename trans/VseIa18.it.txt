@@ -4,11 +4,11 @@ Oggetto GRD n.
 IA no. / Anno
 Messaggio n. GRD
 Proprietario dell'impianto
-Posizione
+Ubicazione
 Comunità locale
 tracciare
 Assicurazione n.
-Tipo di edificio
+Tipo d'impianto
 Numero Unità / contatori
 Parte dell'edificio
 Raggruppamento ai fini del consumo proprio (RCP)
@@ -29,55 +29,55 @@ CAP / località
 E-Mail
 Telefono
 Lingua
-Descrizione dell'installazione
+Installazione
 Nuova
-Modifica / Estensione
-Smantellamento
-Collegamento dell'edificio
+Ampliamento / modifica
+Ricostruzione
+Cantiere
+Temporanea
 Manifestazione
-area fieristica
 È necessario scegliere un'opzione. Diversi non sono possibili.
-Collegamento alla rete
-Posizione
+Allacciamento
+Ubicazione
 Nuovo
 esistente
-filo elettrico
+Cavo
 Linea aerea
-Finora. AS interruzione di sovracorrente.
+DPS d'allacciomanento esistente
 modello
-HAK integrato
-(H) AK n.
-Nessun cambiamento
-deve essere rafforzato
-deve essere sostituito
+DPS integrato
+DPS n.
+Nuovo
+deve essere potentiato
+Modifica / sostituzione
 Nessun cambiamento
 deve essere rafforzato
 deve essere sostituito
 necessario AS interruzione di sovracorrente.
 Max. Elettricità acquistata
 Potenza max. d’alimentazione alla rete
-Consumatori, produttori, negozi
-Elenco di consumatori, produttori, negozi
+Apparecchi di misura e di comando
+Lista di apparecchi e di misura e di comando
 Modificare
 Elenco secondo l'allegato
-numero
-Consum.
+Quantità
+Utilizz.
 Minerale.
-Spei.
-Designazione del consumatore, produttore, negozio
-tecn. <br /> Applicazione di connessione <br /> (RaSi) da
-Acquisto <br /> di alimentazione dalla <br /> rete [kVA]
-Erogazione <br /> dell'alimentazione alla rete <br /> [kVA]
-Capacità <br /> di stoccaggio <br /> [kWh]
-Numero di <br /> conduttori <br /> esterni <br /> (1-3)
+Accum.
+Uttilizatori Generatori Accumulator
+richiesta <br /> technica di <br /> (RaSi)
+potenzua <br /> assorbita <br />  della rete [kVA]
+Potenza <br /> errogata <br /> della rete [kVA]
+Capacità <br /> di accumulo <br /> [kWh]
+Numero <br /> fasi <br /> (1-3)
 Potenza tot. assorbita dalla rete
 Potenza tot. errogata alla rete
 Carico totale previsto
 telecomando attivo GRD
 Partecipazione a servizi di sistema (controllo energia)
 con prova dell'origine (HKN)
-Dispositivi di misurazione e controllo
-Elenco dei dispositivi di misurazione e controllo
+Apparecchi di misura e di comando
+Lista dei dispositivi di misurazione e controllo
 Modificare
 Cliente e <br /> Utilizzatore e Indirizzo della fattura
 Piano / <br /> Consumo <br /> punto GRD

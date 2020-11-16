@@ -1,0 +1,33 @@
+USE [M2WEB]
+GO
+INSERT [dbo].[FormType] ( [Name], [Variant], [Version], [DisplayName], [FormEntityClassName], [ViewTemplateName], [CreaDate], [CreaUser], [ModDate], [ModUser], [AllowMultipleInstallations], [TemplateId], [SortCrit], [SysMlLangId], [LongName], [CompanyType], [PdfFormType], [FormTypeGUID]) 
+VALUES (N'IA18_IT', N'VSE', 1, N'IA', N'Brunner.M2Web.Entities.FormEntities.VseIa18', N'VseIa18.cshtml', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:11.200' AS DateTime), N'Matthias', 0, N'2142', 100, 4, N'Avviso installazione', N'installer;controller;ownerwithnumber;', N'', NULL)
+GO
+INSERT [dbo].[FormType] ( [Name], [Variant], [Version], [DisplayName], [FormEntityClassName], [ViewTemplateName], [CreaDate], [CreaUser], [ModDate], [ModUser], [AllowMultipleInstallations], [TemplateId], [SortCrit], [SysMlLangId], [LongName], [CompanyType], [PdfFormType], [FormTypeGUID]) 
+VALUES (N'AB18_IT', N'VSE', 1, N'AB', N'Brunner.M2Web.Entities.FormEntities.VseAb18', N'VseAb18.cshtml', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:11.200' AS DateTime), N'Matthias', 0, N'2144', 150, 4, N'Ordinazione apparechi', N'installer;controller;', N'', NULL)
+GO
+INSERT [dbo].[FormType] ( [Name], [Variant], [Version], [DisplayName], [FormEntityClassName], [ViewTemplateName], [CreaDate], [CreaUser], [ModDate], [ModUser], [AllowMultipleInstallations], [TemplateId], [SortCrit], [SysMlLangId], [LongName], [CompanyType], [PdfFormType], [FormTypeGUID]) 
+VALUES (N'TAG_IT', N'Allgemein', 1, N'TAG', N'Brunner.M2Web.Entities.FormEntities.Tag18', N'Tag18.cshtml', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:11.200' AS DateTime), N'Matthias', 0, N'2146', 8, 4, N'Richiesta tecnica di allacciamento (RTA)', N'*', N'', N'd809378a-82c3-4d99-811c-f8bdcb5056c6')
+GO
+INSERT [dbo].[FormType] ( [Name], [Variant], [Version], [DisplayName], [FormEntityClassName], [ViewTemplateName], [CreaDate], [CreaUser], [ModDate], [ModUser], [AllowMultipleInstallations], [TemplateId], [SortCrit], [SysMlLangId], [LongName], [CompanyType], [PdfFormType], [FormTypeGUID]) 
+VALUES (N'MPP18_IT', N'Allgemein', 2, N'MPP', N'Brunner.M2Web.Entities.FormEntities.Mpp18', N'Mpp18.cshtml', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:11.200' AS DateTime), N'Matthias', 0, N'2153', 200, 4, N'Rapporto di misura e di collaudo', N'installer;controller;', N'installer;controller;', N'422280fc-64db-41b9-b8f9-1180d554b121')
+GO
+INSERT [dbo].[FormType] ( [Name], [Variant], [Version], [DisplayName], [FormEntityClassName], [ViewTemplateName], [CreaDate], [CreaUser], [ModDate], [ModUser], [AllowMultipleInstallations], [TemplateId], [SortCrit], [SysMlLangId], [LongName], [CompanyType], [PdfFormType], [FormTypeGUID]) 
+VALUES (N'SINA18_IT', N'Allgemein', 2, N'SiNa', N'Brunner.M2Web.Entities.FormEntities.SiNa18', N'SiNa18.cshtml', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:11.200' AS DateTime), N'Matthias', 0, N'2151', 210, 4, N'Rapporto di Sicurezza per impianto elettrico (RaSi)', N'installer;controller;', N'*', N'fd7e8dac-027a-4b50-8552-46b12f30d63b')
+GO
+INSERT [dbo].[FormType] ( [Name], [Variant], [Version], [DisplayName], [FormEntityClassName], [ViewTemplateName], [CreaDate], [CreaUser], [ModDate], [ModUser], [AllowMultipleInstallations], [TemplateId], [SortCrit], [SysMlLangId], [LongName], [CompanyType], [PdfFormType], [FormTypeGUID]) 
+VALUES (N'MPPPV20_IT', N'Allgemein', 2, N'PV MPP', N'Brunner.M2Web.Entities.FormEntities.MppPV20', N'MppPV20.cshtml', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:11.200' AS DateTime), N'Matthias', 0, N'2155', 200, 4, N'Protocollo di misurazione e test', N'installer;controller;ownerwithnumber;', N'installer;controller;ownerwithnumber;', NULL)
+GO
+INSERT [dbo].[FormType] ( [Name], [Variant], [Version], [DisplayName], [FormEntityClassName], [ViewTemplateName], [CreaDate], [CreaUser], [ModDate], [ModUser], [AllowMultipleInstallations], [TemplateId], [SortCrit], [SysMlLangId], [LongName], [CompanyType], [PdfFormType], [FormTypeGUID]) 
+VALUES (N'MPP_IT', N'Allgemein', 1, N'MPP', N'Brunner.M2Web.Entities.FormEntities.MppVse1', N'MppVse1.cshtml', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:11.200' AS DateTime), N'Matthias', 0, N'2119', 200, 4, N'Rapporto di misura e di collaudo', N'installer;controller;', N'*', N'422280fc-64db-41b9-b8f9-1180d554b121')
+GO
+
+
+INSERT FormChoice ( [VnbId], [FormTypeId], [CreaDate], [CreaUser], [ModDate], [ModUser]) VALUES ( 31, 20057, CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias')
+INSERT FormChoice  ( [VnbId], [FormTypeId], [CreaDate], [CreaUser], [ModDate], [ModUser]) VALUES ( 31, 20058, CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias')
+INSERT FormChoice  ( [VnbId], [FormTypeId], [CreaDate], [CreaUser], [ModDate], [ModUser]) VALUES (31, 20059, CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias')
+INSERT FormChoice ( [VnbId], [FormTypeId], [CreaDate], [CreaUser], [ModDate], [ModUser]) VALUES ( 31, 20060, CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias')
+INSERT FormChoice ( [VnbId], [FormTypeId], [CreaDate], [CreaUser], [ModDate], [ModUser]) VALUES ( 31, 20061, CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias')
+INSERT FormChoice ( [VnbId], [FormTypeId], [CreaDate], [CreaUser], [ModDate], [ModUser]) VALUES (31, 20062, CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias')
+INSERT FormChoice ( [VnbId], [FormTypeId], [CreaDate], [CreaUser], [ModDate], [ModUser]) VALUES (31, 20063, CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias')
+

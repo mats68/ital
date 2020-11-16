@@ -167,7 +167,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("Gebäudeart", "Genre de bât.","Tipo di edificio"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Gebäudeart", "Genre de bât.","Tipo d'impianto"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6">
                         @Html.TextBoxFor(a => a.GEBAEUDEART, new { @class = "form-control readonly" })
@@ -189,7 +189,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("ZEV", "RCP","ZEV"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("ZEV", "RCP","RCP"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6 flexcontainer">
                         <span class="checkbox">@Html.CheckBoxFor(a => a.ZEV)</span><span class="check"></span>
@@ -373,7 +373,7 @@
             </div>
             <div class="form-group switchForm-group">
                 <div class="col-xs-12">
-                    <h3>@(trans.GetText("Auftragnehmer", "Entrepreneur","contraente"))</h3>
+                    <h3>@(trans.GetText("Auftragnehmer", "Entrepreneur","Contraente"))</h3>
                 </div>
             </div>
             <div class="form-group">
@@ -622,7 +622,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-3 text-right">
-                            @Html.M2WebLabel(trans.GetText("Kontrolldatum AK/PK/StK", "Date du contrôle CR/CP/CS","Data di controllo AK / PK / StK"), new { @class = "control-label sub-label" })
+                            @Html.M2WebLabel(trans.GetText("Kontrolldatum AK/PK/StK", "Date du contrôle CR/CP/CS","Data di controllo"), new { @class = "control-label sub-label" })
                         </div>
                         <div class="col-xs-6">
                             <div class="input-group date" style="width:9em">
@@ -650,7 +650,7 @@
                     <div class="col-xs-6 flexcontainer flexwrap">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.MP_NEU)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.MP_NEU, trans.GetText("Neuanlage", "Nouvelle installation","Nuova installazione"))
+                            @Html.M2WebFormLabelFor2(a => a.MP_NEU, trans.GetText("Neuanlage", "Nouvelle installation","Nuova"))
                         </span>
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.MP_BEST)<span class="check"></span>
@@ -1792,7 +1792,7 @@
                         </span>
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_21)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_21, trans.GetText("auf SGK / HAK (Typ A)", "ense.appareillage/coffret d'intro.(type A)","su SGK / HAK (tipo A)"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_21, trans.GetText("auf SGK / HAK (Typ A)", "ense.appareillage/coffret d'intro.(type A)"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">

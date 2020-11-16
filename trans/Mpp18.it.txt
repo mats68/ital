@@ -9,7 +9,7 @@ Comunità locale
 Pacco n.
 Numero civico.
 EGID
-Tipo di edificio
+Tipo d'impianto
 Commento
 RCP
 Installatore elettricista
@@ -99,7 +99,7 @@ Misurazioni
 Titolo della propria colonna
 Modificare
 Circuito
-Posizione / parte del sistema
+Ubicazione / parte del sistema
 Linea / Cavo
 Dispositivo di protezione da sovracorrente
 Misure (valore misurato)

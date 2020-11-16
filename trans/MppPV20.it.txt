@@ -9,7 +9,7 @@ Comunità locale
 Pacco n.
 Numero civico.
 EGID
-Tipo di edificio
+Tipo d'impianto
 Commento
 RCP
 Modello piano n.
@@ -182,7 +182,7 @@ Avvisi di avvertenza secondo
 a disposizione
 su WR (tipo C)
 Solar DC (Tipo B)
-su SGK / HAK (tipo A)
+su SGK / DPS (tipo A)
 Informazioni disponibili sul sito
 Schema di principio
 Procedura di spegnimento

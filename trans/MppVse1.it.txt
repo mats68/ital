@@ -4,7 +4,7 @@ No.
 Rapporto n.
 Luogo di installazione
 Posizione
-Tipo di edificio
+Tipo d'impianto
 Osservazioni
 Ecco un commento MPP
 Pianta / parte dell'edificio

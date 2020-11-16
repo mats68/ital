@@ -8,7 +8,7 @@ Posizione
 Comunità locale
 tracciare
 Assicurazione n.
-Tipo di edificio
+Tipo d'impianto
 Numero Unità / contatori
 Parte dell'edificio
 Raggruppamento ai fini del consumo proprio (RCP)
@@ -29,7 +29,7 @@ CAP / località
 E-Mail
 Telefono
 Lingua
-Descrizione dell'installazione
+Installazione
 Nuova
 Modifica / Estensione
 Smantellamento
@@ -37,7 +37,7 @@ Collegamento dell'edificio
 Manifestazione
 area fieristica
 È necessario scegliere un'opzione. Diversi non sono possibili.
-Consumatori, produttori, negozi
+Apparecchi di misura e di comando
 Elenco di consumatori, produttori, negozi
 Modificare
 Elenco secondo l'allegato
@@ -101,6 +101,6 @@ Osservazioni
 Contattare il sito di installazione
 Cognome
 mobile
-Collegamento alla rete
+Allacciamento
 Se nell'elenco è presente più di una voce, l'interruttore rimane acceso e disattivato
 Se l'elenco non è vuoto, l'interruttore rimane acceso e disattivato

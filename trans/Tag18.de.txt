@@ -12,7 +12,7 @@ bestehend
 Anlage / Gebäudeteil
 Bearbeiten...
 Zähler-Nr.
-Netzanschluss (HAK)
+Netzanschluss (DPS)
 A
 neu
 bestehend

@@ -9,7 +9,7 @@ Comunità locale
 Pacco n.
 Numero civico.
 EGID
-Tipo di edificio
+Tipo d'impianto
 Commento
 RCP
 Investimento

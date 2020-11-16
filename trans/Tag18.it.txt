@@ -12,7 +12,7 @@ esistente
 Pianta / parte dell'edificio
 Modificare...
 Contatore n.
-Collegamento alla rete (HAK)
+Allacciamento (DPS)
 A
 Nuovo
 esistente

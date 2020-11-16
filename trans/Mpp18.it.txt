@@ -1,5 +1,5 @@
-Rapporto di misura e di collaudo MPP
-Rapporto di misura e di collaudo MPP
+Rapporto di misura e di collaudo
+Rapporto di misura e di collaudo
 No.
 Rapporto n.
 Proprietario dell'impianto
@@ -11,10 +11,10 @@ Numero civico.
 EGID
 Tipo di edificio
 Commento
-ZEV
-Investimento
+RCP
+Installatore elettricista
 Modificare...
-Pavimento, Posizione
+Posizione
 Cliente di elettricità
 Contatore n
 Impianto n
@@ -22,7 +22,7 @@ Periodo / i di utilizzo e controllo
 Anni
 Indirizzi / Partner commerciali
 Modificare...
-contraente
+Contraente
 Idraulico
 controller
 Permesso n.
@@ -45,9 +45,9 @@ Ispezione finale (SK)
 Data di controllo SK
 Organismo di controllo indipendente
 Controllo dell'accettazione (AK)
-Controllo periodico (PK)
-Controlli a campione (StK - GRD)
-Data di controllo AK / PK / StK
+Controllo periodico
+Controlli a campione
+Data di controllo
 Motivo del test
 Nuova
 Impianto esistente

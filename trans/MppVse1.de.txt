@@ -1,0 +1,108 @@
+Mess- und Prüfprotokoll
+Mess- und Prüfprotokoll
+Nr.
+Rapport-Nr.
+Ort der Installation
+Standort
+Gebäudeart
+Bemerkungen
+Hier kommt eine MPP Bemerkung
+Anlage / Gebäudeteil
+Lage
+Nutzung
+Stromkunde
+Anlagen-Nr.
+Zähler-Nr.
+Adressen / Geschäftspartner
+Auftragnehmer
+Installateur
+Kontrolleur
+Bewilligungs-Nr.
+Auftraggeber
+Eigentümer
+Verwaltung
+Stromkunde der Anlage
+Name
+(2. Zeile) 
+Adresse
+(2. Zeile) 
+PLZ, Ort
+Email
+Telefon
+Kontrollumfang
+Prüfgrund
+Neuanlage
+Bestehende Anlage
+Änderung
+Erweiterung
+Durchgeführte Kontrolle
+Inst.-Anzeige Nr.
+Jahr
+Datum
+Kontrollumfang
+Prüfungen
+Sichtprüfung
+Richtige Auswahl und Anordnung der Betriebsmittel (Raumart)
+Basisschutz (Schutz gegen direktes Berühren)
+Beachtung vom Hersteller mitgelieferte technische Unterlagen
+Abschalt- und Trennvorrichtung
+Sicherheitsrichtlinien / Anlage- und Revisionsschalter
+Vorhandensein von Brandabschottung
+Leitungsverlegung ( Bemessung, Anordnung, Kennzeichnung)
+Kennzeichnung der Stromkreise, Überstromunterbrecher etc.
+Zugänglichkeit der Betriebsmittel
+Schutzsystem:
+TN-S
+TN-C
+Hauptpotenzialausgleich
+Erder
+Fundament
+Wasser
+Zusätzlicher (örtlicher) Schutzpotenzialausgleich
+Anordnung der Busgeräte im Verteiler (Abstände)
+Busleitungen / Aktoren gemäss höchster Spannung
+Auswahl und Einstellung von Schutz-Überw.-Einrichtungen
+Vorhandensein von Schaltplänen, Warn-, Verbotszeichen, Schemata, Legenden etc.
+Funktionsprüfung (und Messung)
+Leitfähigkeit des Schutzleiters, Potentialausgleich
+Automatische Abschaltung im Fehlerfall
+Rechtsdrehfeld der Drehstromsteckdosen
+Funktion Fehlerstromschutzschalter
+Gemessene Netzspannung [V]
+Bemerkungen
+Messungen
+Verwendete Messgeräte nach IEC 61010
+Prüfung durchgeführt nach
+Messungen
+Bearbeiten
+Messungen bearbeiten
+Stromkreis
+Ort / Anlage Schaltgerätekombination
+Leitung / Kabel
+Überstromschutzeinr.
+Messungen
+Fehlerstromschutzeinrichtung
+Nr.
+Bezeichnung
+Art / Typ
+Leiteranz. / Quer [mm<sup>2</sup>]
+Art / Charakt.
+I<sub>N</sub> [A]
+I<sub>K Anf.</sub> [A]
+I<sub>K Ende</sub> [A]
+R<sub>ISO</sub>[M&Omega;] I<sub>Leck</sub>[mA]
+Leitfähigk. Schutzl. [&Omega;]
+I<sub>N</sub>/Art [A]
+I<sub>dN</sub> [mA]
+t<sub>Auslös</sub> [ms]
+Prüfergebnis
+Schaltgeräte und Dokumentation
+Schaltgerätekombination SK
+Asbestfrei
+Asbesthaltig
+SK-Identifikation nach
+Herstellererklärung mit Stückprüfung
+SK in die Schlusskontrolle miteinbezogen
+Dokumentation
+Anlagedokumentation übergeben
+Schema

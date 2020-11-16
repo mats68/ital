@@ -1,5 +1,5 @@
-Display di installazione (IA)
-Display di installazione (IA)
+Avviso d'installazione
+Avviso d'installazione
 Oggetto GRD n.
 IA no. / Anno
 Messaggio n. GRD
@@ -34,7 +34,7 @@ Nuova
 Modifica / Estensione
 Smantellamento
 Collegamento dell'edificio
-Temporaneo
+Manifestazione
 area fieristica
 È necessario scegliere un'opzione. Diversi non sono possibili.
 Collegamento alla rete
@@ -70,27 +70,27 @@ Acquisto <br /> di alimentazione dalla <br /> rete [kVA]
 Erogazione <br /> dell'alimentazione alla rete <br /> [kVA]
 Capacità <br /> di stoccaggio <br /> [kWh]
 Numero di <br /> conduttori <br /> esterni <br /> (1-3)
-Potenza Consumo totale dalla rete
-Uscita totale alla rete
-Carico massimo previsto totale
-controllo attivo GRD
+Potenza tot. assorbita dalla rete
+Potenza tot. errogata alla rete
+Carico totale previsto
+telecomando attivo GRD
 Partecipazione a servizi di sistema (controllo energia)
 con prova dell'origine (HKN)
 Dispositivi di misurazione e controllo
 Elenco dei dispositivi di misurazione e controllo
 Modificare
-Cliente e <br /> Indirizzo di fatturazione, utilizzo
+Cliente e <br /> Utilizzatore e Indirizzo della fattura
 Piano / <br /> Consumo <br /> punto GRD
-Numero <br /> stanza
+Local No.
 Tariffa GRD
 Te stesso. <br /> [A]
 Numero contatore <br /> GRD
 Mont. <br /> Posizione
-ZEV
+RCP
 Numero di <br /> conduttori <br /> esterni <br /> (1-3)
 Nuovo.
-esistente
-Selezionare
+esist.
+Selez.
 il.
 umm.
 TRE / LSG
@@ -99,8 +99,8 @@ comando
 TRE no.
 Sito di installazione
 Nuovo
-esistente
-Selezionare
+esist.
+Selez.
 il.
 umm.
 Eventi
@@ -110,8 +110,8 @@ Osservazioni
 Osservazioni
 Contorni
 Schema
-Piano di situazione
-Applicazione di connessione RaSi per
+Planimetria
+Richiesta tenica (RTA) per
 Disposizione distribuzione principale
 Consenso al controllo dell'utente finale / produttore da parte di DSO
 Operatore di rete

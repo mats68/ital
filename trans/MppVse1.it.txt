@@ -1,0 +1,108 @@
+Protocollo di misurazione e test
+Protocollo di misurazione e test
+No.
+Rapporto n.
+Luogo di installazione
+Posizione
+Tipo di edificio
+Osservazioni
+Ecco un commento MPP
+Pianta / parte dell'edificio
+Posizione
+uso
+Cliente di elettricità
+Impianto n.
+Contatore n.
+Indirizzi / partner commerciali
+Contraente
+Idraulico
+controller
+Permesso n.
+Cliente
+proprietario
+amministrazione
+Cliente energia elettrica dell'impianto
+Cognome
+(2a riga)
+indirizzo
+(2a riga)
+CAP / località
+E-mail
+Telefono
+Ambito di controllo
+Motivo del test
+Nuova installazione
+Impianto esistente
+modifica
+estensione
+Controllo effettuato
+Inst. Display n.
+anno
+Data
+Ambito di controllo
+esami
+Ispezione visuale
+Selezione e disposizione corrette delle apparecchiature (tipo di stanza)
+Protezione di base (protezione contro il contatto diretto)
+Attenersi alla documentazione tecnica fornita dal produttore
+Dispositivo di spegnimento e disconnessione
+Linee guida di sicurezza / sistema e interruttore di revisione
+Presenza di paratie tagliafuoco
+Posa cavi (dimensionamento, disposizione, marcatura)
+Identificazione dei circuiti, interruttori di sovracorrente, ecc.
+Accessibilità delle risorse
+Sistema di protezione:
+TN-S
+TN-C
+Equipotenziale principale
+Elettrodo di terra
+fondazione
+acqua
+Collegamento equipotenziale protettivo aggiuntivo (locale)
+Disposizione dei dispositivi bus nel distributore (distanze)
+Linee bus / attuatori secondo la massima tensione
+Selezione e impostazione dei dispositivi di monitoraggio della protezione
+Presenza di schemi elettrici, segnali di avvertimento e divieto, schemi, legende, ecc.
+Test funzionale (e misurazione)
+Conduttività del conduttore di protezione, collegamento equipotenziale
+Spegnimento automatico in caso di guasto
+Campo rotante in senso orario delle prese trifase
+Funzione dell'interruttore differenziale
+Tensione di rete misurata [V]
+Osservazioni
+Misurazioni
+Dispositivi di misurazione utilizzati secondo IEC 61010
+Test effettuato dopo
+Misurazioni
+Modificare
+Modifica le misurazioni
+Circuito
+Luogo / gruppo quadro di sistema
+Linea / cavo
+Dispositivo di protezione da sovracorrente
+Misurazioni
+Dispositivo corrente residua
+No.
+designazione
+Tipo / tipo
+Capoufficio / Croce [mm <sup> 2 </sup>]
+Tipo / carattere
+I<sub>N</sub> [A]
+I<sub>K Anfang</sub> [A]
+I<sub>K Fine</sub> [A]
+R<sub>ISO</sub>[M&Omega;] I<sub>Leck</sub>[mA]
+Conduttiv. Schutzl. [&Omega;]
+I<sub>N</sub>/Art [A]
+I<sub>dN</sub> [mA]
+t<sub>pubbl.</sub> [ms]
+Risultato della prova
+Quadri e documentazione
+Gruppo quadro SK
+Senza amianto
+Contiene amianto
+Identificazione SK secondo
+Dichiarazione del produttore con test di routine
+SK inclusa nel controllo finale
+documentazione
+Consegnare la documentazione del sistema
+schema

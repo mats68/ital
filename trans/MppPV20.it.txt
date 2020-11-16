@@ -11,7 +11,7 @@ Numero civico.
 EGID
 Tipo di edificio
 Commento
-ZEV
+RCP
 Modello piano n.
 a partire dal
 Autentico. No.
@@ -26,7 +26,7 @@ Periodo / i di utilizzo e controllo
 Anni
 Indirizzi / Partner commerciali
 Modificare...
-contraente
+Contraente
 Idraulico
 controller
 Permesso n.
@@ -51,7 +51,7 @@ Organismo di controllo indipendente
 Controllo dell'accettazione
 Controllo periodico
 Controllo casuale (DSO)
-Data di controllo AK / PK / StK
+Data di controllo
 Motivo del test
 Nuova
 Impianto esistente

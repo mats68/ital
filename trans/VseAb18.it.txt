@@ -1,9 +1,9 @@
-Ordine dell'attrezzatura (Apparatebestellung)
-Ordine dell'attrezzatura (Apparatebestellung)
+Ordine apparecchi di misura e di comando
+Ordine apparecchi di misura e di comando
 Oggetto GRD n.
 IA no. / Anno
 Messaggio n. GRD
-Proprietario dell'impianto
+Ubicazione dell'impianto
 Posizione
 Comunità locale
 tracciare
@@ -34,41 +34,41 @@ Nuova
 Modifica / Estensione
 Smantellamento
 Collegamento dell'edificio
-Temporaneo
+Manifestazione
 area fieristica
 È necessario scegliere un'opzione. Diversi non sono possibili.
 Consumatori, produttori, negozi
 Elenco di consumatori, produttori, negozi
 Modificare
 Elenco secondo l'allegato
-numero
-Consum.
-Minerale.
-Spei.
-Designazione del consumatore, produttore, negozio
-Blocco GRD
-Acquisto <br /> di alimentazione dalla <br /> rete [kVA]
-Erogazione <br /> dell'alimentazione alla rete <br /> [kVA]
-Capacità <br /> di stoccaggio <br /> [kWh]
-Numero di <br /> conduttori <br /> esterni <br /> (1-3)
-Potenza Consumo totale dalla rete
-Uscita totale alla rete
-Carico massimo previsto totale
-controllo attivo GRD
+Quantità
+utilizz.
+Gen.
+Accum.
+Utilizzatori Generator Accumulator
+Regolazione del GRD
+Potenza <br /> assorbita <br /> dalla rete [kVA]
+Potenza <br /> erogata <br /> dalla rete [kVA]
+Capacità <br /> di accumulo <br /> [kWh]
+Numero  <br /> fasi <br /> (1-3)
+Potenza tot. assorbita dalla rete
+Potenza tot. errogata alla rete
+Carico totale previsto
+telecomando attivo GRD
 Partecipazione a servizi di sistema (controllo energia)
 con prova dell'origine (HKN)
 Dispositivi di misurazione e controllo
 Elenco dei dispositivi di misurazione e controllo
 Modificare
-Cliente e <br /> Indirizzo di fatturazione, utilizzo
+Cliente e <br /> Utilizzatore e Indirizzo della fattura
 Stockerk / <br /> Consumo <br /> punto GRD
-Numero <br /> stanza
+Local No.
 Tariffa GRD
-Te stesso. <br /> [A]
-Numero contatore <br /> GRD
-Mont. <br /> Posizione
-ZEV
-Numero di <br /> conduttori <br /> esterni <br /> (1-3)
+valvola <br /> [A]
+No contatore <br /> GRD
+Luogo di <br /> montaggio
+RCP
+Numero<br /> fasi
 Nuovo.
 esistente
 Selezionare

@@ -1,8 +1,8 @@
-Rapporto di misura e di collaudo
-Rapporto di misura e di collaudo
+Rapporto di prova e misura
+Rapporto di prova e misura
 No.
 Rapporto n.
-Proprietario dell'impianto
+Luogo dell'impianto
 Modificare...
 Posizione
 Comunità locale
@@ -22,13 +22,13 @@ Periodo / i di utilizzo e controllo
 Anni
 Indirizzi / Partner commerciali
 Modificare...
-Contraente
+Amministrazione
 Idraulico
 controller
 Permesso n.
 Cognome
 Indirizzo
-Cliente
+Proprietario dell'impianto
 Proprietario
 Amministrazione
 Cliente energia elettrica dell'impianto
@@ -48,7 +48,7 @@ Controllo dell'accettazione (AK)
 Controllo periodico
 Controlli a campione
 Data di controllo
-Motivo del test
+Controlli eseguiti
 Nuova
 Impianto esistente
 Impianto esistente
@@ -58,30 +58,30 @@ Ambito del controllo / installazione eseguita
 No. / anno, data
 Esami
 Ispezione visuale
-Selezione e disposizione corrette delle apparecchiature (condizioni ambientali)
-Protezione di base (protezione contro il contatto diretto)
-Attenersi alla Documentazione tecnica fornita dal produttore
-Dispositivi di spegnimento e disconnessione
-Dispositivi / sistemi di sicurezza e interruttori di revisione
-Disponibile barriera tagliafuoco
-Posa dei cavi (dimensionamento / disposizione / marcatura)
-Identificazione dei circuiti, dispositivo di protezione da sovracorrente. Eccetera.
-Accessibilità delle risorse
+Scelta e disposizione appropriate dei mezzi d'esercizio (condizioni ambientali)
+Protezione di base (Protezione contro il contatto)
+Rispetto delle documentazioni tecniche dei fabbricanti
+Dispositivi di interruzione e di sezionamento
+Dispositivi di sicurezza / Interruttori per impianti e di revisione
+Presenza di barriere tagliafuoco
+Posa delle linee (dimensionamento/disposizione/identificazione)
+Identificazione dei circuiti, dispositivi di protezione, ecc.
+Accessibilità ai mezzi di servizio
 Sistema di protezione
 TN-S
 TN-C
 TN-C-S
 Sch III
-Elettrodo di terra
-fondazione
-Verga di terra profonda
-Messa a terra a nastro
-Collegamento equipotenziale protettivo
-Collegamento equipotenziale di protezione locale aggiuntivo
-Disposizione dei dispositivi bus nel distributore (distanze)
-Linee bus / attuatori secondo la massima tensione
-Selezione e impostazione dei dispositivi di monitoraggio della protezione
-Presenza di schemi elettrici, segnali di avvertimento e divieto, schemi, legende, ecc.
+Dispersore di terra
+di fondazione
+a picchetto
+ad anello
+Collegamento equipotenziale principale
+Collegamento equipotenzi supplementare (locale)
+Disposizione degli apparecchi bus nel quadro (spazi)
+Linee bus / attuatori secondo la tensione massima
+Scelta e regolazione dispositivi di protezione e sorveglianza
+Presenza di schemi, simboli di avvertimento e di divieto, legende ecc.
 Test di funzionamento e misurazione
 Conduttività del conduttore di protezione, collegamento equipotenziale di protezione
 Spegnimento automatico in caso di guasto

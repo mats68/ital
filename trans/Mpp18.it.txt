@@ -82,13 +82,13 @@ Disposizione degli apparecchi bus nel quadro (spazi)
 Linee bus / attuatori secondo la tensione massima
 Scelta e regolazione dispositivi di protezione e sorveglianza
 Presenza di schemi, simboli di avvertimento e di divieto, legende ecc.
-Test di funzionamento e misurazione
-Conduttività del conduttore di protezione, collegamento equipotenziale di protezione
-Spegnimento automatico in caso di guasto
-Campo rotante in senso orario delle prese trifase
+Controllo del funzionamento e misurazione:
+Conduttività PE e CEP
+Interruzione automatica in caso di guasto
+Senso di rotazione orario di prese trifase
 Tensione di rete misurata [V]
-Funzione del dispositivo di corrente residua (RCD)
-Caduta di tensione osservata
+Prova dei dispositivi contro correnti di guasto (RCD)
+Osservanza della caduta di tensione
 Osservazioni
 Misurazioni
 Dispositivi di misurazione utilizzati
@@ -98,21 +98,21 @@ Test effettuato dopo
 Misurazioni
 Titolo della propria colonna
 Modificare
-Circuito
-Ubicazione / parte del sistema
-Linea / Cavo
+Circuito elettrico / IPL
+Luogo / Parte dell’impianto, 
+Conduttore / Cavo
 Dispositivo di protezione da sovracorrente
 Misure (valore misurato)
-Dispositivo corrente residua (RCD)
+Dispositivo protettivo a corrente di guasto RCD
 aggiuntivo
 Assemblaggio del quadro
 L-PE
 L-N
 No.
-Designazione
-Tipo gentile
-Dimensioni conduttore; / croce. [Mm²]
-Art Char.
+Denominazione
+Modo tipo
+Quantità conduttori/ / Sezione. [Mm²]
+Tipo Char.
 Io <sub> N </sub> [A]
 I <sub> K req. </sub> [A]
 I <sub> K end </sub> [A]

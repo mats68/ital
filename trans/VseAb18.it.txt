@@ -5,7 +5,7 @@ IA no. / Anno
 Messaggio n. GRD
 Ubicazione dell'impianto
 Posizione
-Comunità locale
+Luogo
 tracciare
 Assicurazione n.
 Tipo d'impianto
@@ -31,14 +31,14 @@ Telefono
 Lingua
 Installazione
 Nuova
-Modifica / Estensione
-Smantellamento
-Collegamento dell'edificio
+Ampliamento / modifica
+Riconstructione
+Cantiere
 Manifestazione
-area fieristica
+Allacciamento definitivo
 È necessario scegliere un'opzione. Diversi non sono possibili.
 Apparecchi di misura e di comando
-Elenco di consumatori, produttori, negozi
+Secondo la seguente lista
 Modificare
 Secondo la seguente lista
 Quantità

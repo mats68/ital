@@ -5,7 +5,7 @@ Rapporto n.
 Proprietario dell'impianto
 Modificare...
 Posizione
-Comunità locale
+Luogo
 Pacco n.
 Numero civico.
 EGID
@@ -22,12 +22,12 @@ Periodo / i di utilizzo e controllo
 Anni
 Indirizzi / Partner commerciali
 Modificare...
-Elettricista
-Permesso n.
+Installatore elettricista
+Aut.-no. K-
 Cognome
 Indirizzo
-Organismo di controllo indipendente
-Permesso n.
+Organo di controllo indipendente
+Aut.-no. K-
 Cognome
 Indirizzo
 Proprietario
@@ -61,7 +61,7 @@ Ambito del controllo / installazione eseguita
 I sigilli sono stati rimossi
 Inst. Display
 No. / anno, data
-Specifiche tecniche
+Dati tecnichi
 Sistema di protezione
 TN-S
 TN-C
@@ -82,11 +82,11 @@ R <sub> ISO </sub> / I <sub> Leak </sub>
 Particolarità
 Inserti e distributori
 Contorni
-Rapporto di misurazione + test
-Misurazione + rapporto di prova fotovoltaico
+Protocollo di prova e misura
+Protocollo di prova e misura - fotovoltaico
 Distributore
-RaSi + documenti aggiuntivi al Proprietario / amministratore.
-RaSi all'Operatore / ispettorato di rete
+RaSi e allegati al proprietario / all'amministrazione
+Gestore di rete / ESTI
 Operatore di rete / ispettorato
 Osservazioni
 Rilevante per la prossima PK

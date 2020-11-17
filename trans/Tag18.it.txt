@@ -2,7 +2,7 @@ Richiesta tecnica di allacciamento (RTA)
 Richiesta tecnica di allacciamento (RTA)
 Oggetto GRD n.
 Messaggio n. GRD
-Proprietario dell'impianto
+Ubicazione dell'impianto
 Modificare...
 Posizione
 Comunità locale
@@ -17,7 +17,7 @@ A
 Nuovo
 esistente
 Indirizzi / Partner commerciali
-Azienda di presentazione
+Nome e indirizzo del richiedente
 Cognome
 Indirizzo
 Impiegato
@@ -25,7 +25,7 @@ Cognome
 E-Mail
 Telefono
 Fax
-Proprietario (imprenditore)
+Nome e indirizzo del proprietario (gestore)
 Cognome
 Indirizzo
 E-Mail
@@ -36,7 +36,7 @@ Fr
 It
 Eventi
 Messa in servizio prevista
-Attrezzature
+Apparecchi
 Riscaldamento elettrico/pompe di calore (PDC)
 Nuova
 Modifica / Estensione
@@ -44,35 +44,35 @@ Permesso cantonale disponibile
 Sì
 Tipo d’apparecchio/impianto
 Fabbricante apparecchio
-Tipo di operazione
-monovalente
-bivalente
+Tipo d'impianto
+Monovalente
+Bivalente
 Tipo apparecchio
-Dati dell’apparecchio lato AC Caratteristiche tecniche lato AC
+Caratteristiche tecniche lato AC
 Raccordo
 3x400V
 1x230V
 Altro
-Dispositivo corrente nominale
+Corrente nominale apparecchio
 A
 Corrente d’avviamento apparec. (10ms)
 A
 Numero di apparecchi 
 Pz
-Potenza nominale dell’apparecchio
+Potenza nominale dell'apparecchio
 kW / kVA
 Potenza nominale totale
 kW / kVA
 Potenza max. erogata alla rete
 kW / kVA
-Specifiche
-Tipo d’avviamento
+Specificazioni
+Tipo d'avviamento
 Avviamento diretto
 Avviamento a resistenza
 Inverter
 Convertitore di frequenza
 Avviamento progressivo
-Riscaldamento elettrico aggiuntivo
+Resistenza el. addizionale
 No
 Sì
 Se Sì, potenza
@@ -81,12 +81,12 @@ Acqua salina / acqua
 Acqua / acqua
 Aria / aria
 Aria / acqua
-Tipo di riscaldamento dell'acqua
+Tipo di produzione acqua calda
 Elettrico
 Bollitore a pompa di calore
 Pompa di calore
 Collettori solari
-Serbatoio dell'acqua calda
+Bollitori ad accumulazione
 Numero
 Pz
 Contenuto
@@ -100,10 +100,10 @@ Tipo d'apparecchio / impianto
 Fabbricante apparecchio
 Modalità d’esercizio
 Racc. alla rete
-Esercizio in isola 
+Funz. in isola 
 Gruppo di soccorso
 Tipo apparecchio
-autoconsumo
+Autoconsumo
 No
 Sì
 Se Si,
@@ -124,18 +124,18 @@ Partecipazione alle prestazioni di servizio
 No
 Sì
 Fornitori
-Dati dell’apparecchio lato AC Caratteristiche tecniche lato AC
+Caratteristiche tecniche lato AC
 Raccordo
 3x400V
 1x230V
 Altro
 Numero di apparecchi
-Pc
-Dispositivo di potenza nominale
+Pz
+Potenza nominale dell’apparecchio
 kVA
 Potenza nominale totale
 kVA
-* Max. Potenza in uscita alla rete
+*Potenza max. erogata alla rete 
 kVA
 (*Sistema completo, con potenze già installate ed eventuali accumulatori con immissione in rete di distribuzione)
 Limitazione dell’immissione
@@ -157,23 +157,23 @@ Modifica / Estensione
 Tipo d’apparecchio/impianto
 Fabbricante apparecchio
 Tipo apparecchio
-Dati dell’apparecchio lato AC Caratteristiche tecniche lato AC
+Caratteristiche tecniche lato AC
 Raccordo
 3x400V
 1x230V
 Altro
-Dispositivo corrente nominale
+Corrente nominale apparecchio
 A
-Avvio del dispositivo corrente (10 ms)
+Corrente d’avviamento apparecchio (10ms)
 A
 Numero di apparecchi
 Pz
-Numero Avvia al min.
+N° d’avviamenti per min.
 Potenza nominale apparecchio 
 kVA
 Potenza nominale totale
 kVA
-Potenza max. erogata alla rete
+Potenza di punta totale
 kVA
 cos Φ in servizio
 Specifiche
@@ -204,12 +204,12 @@ Sì
 Commutazione rete/soccorso
 No
 Sì
-Dati dell’apparecchio lato AC Caratteristiche tecniche lato AC
+Caratteristiche tecniche lato AC
 Raccordo
 3x400V
 1x230V
 Solo DC
-Dispositivo corrente nominale
+Corrente nominale dell’app.
 A
 Numero di apparecchi
 Pc
@@ -217,7 +217,7 @@ Potenza nominale apparecchio
 kVA
 Potenza nominale totale
 kVA
-Potenza max. erogata alla rete
+Potenza di punta totale
 kVA
 cos Φ in servizio
 Specifiche
@@ -247,7 +247,7 @@ Tipo di operazione
 Carica con cavo
 Carica induttiva
 Tipo apparecchio
-Dati dell’apparecchio lato AC Caratteristiche tecniche lato AC
+Caratteristiche tecniche lato AC
 Raccordo
 3x400V
 1x230V
@@ -285,37 +285,37 @@ No
 Sì
 Altri dati generali
 Osservazioni del richiedente
-Decisione del DSO
-Calore elettrico / HP
+Decisione del GRD
+Riscaldamento elettrico/(PDC)
 Impianto approvato
-Impianto approvato con provvedimenti
+Impianto approvato con misure correttrici
 Osservazioni
-EEA
+IPE
 Impianto approvato
-Impianto approvato con provvedimenti
+Impianto approvato con misure correttrici
 cos Φ
 Altro
 Osservazioni
-Sistemi con perturbazioni di rete
+Impianti che possono generare perturbazioni
 Impianto approvato
-Impianto approvato con provvedimenti
+Impianto approvato con misure correttrici
 Osservazioni
 Accumulo di energia
 Impianto approvato
-Impianto approvato con provvedimenti
+Impianto approvato con misure correttrici
 Osservazioni
 Stazioni di ricarica per veicoli elettrici
 Impianto approvato
-Impianto approvato con provvedimenti
+Impianto approvato con misure correttrici
 Osservazioni
-Ulteriori commenti del DSO
+Osservazioni del GRD
 Frequenza di controllo ondulazione GRD
 Hz
 Potenza di cortocircuito nel punto di connessione SkV
 kVA
-Performance dell'impianto Sa
+Potenza apparente al DPS d’allacciamento
 kVA
 Osservazioni
-Firma del DSO
+Firma GRD
 Data
-firma
+Firma

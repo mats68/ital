@@ -388,7 +388,7 @@
                 <!-- #endregion -->
                 <!-- #region Verbraucher -->
                 <div class="form-group">
-                    <h2 class="subNavigationItem" id="section-4">@(trans.GetText("Verbraucher, Erzeuger, Speicher", "Consommateurs, producteurs, accumulateurs","Consumatori, produttori, negozi"))</h2>
+                    <h2 class="subNavigationItem" id="section-4">@(trans.GetText("Verbraucher, Erzeuger, Speicher", "Consommateurs, producteurs, accumulateurs","Apparecchi di misura e di comando"))</h2>
                 </div>
                 <!-- #region VerbrauList -->
                 <div class="form-group switchForm-group">
@@ -413,7 +413,7 @@
                                 <div class="col-xs-9 checkbox">
                                     <label>
                                         @Html.CheckBoxFor(a => a.VERBLIST)<span class="check"></span>
-                                        @Html.M2WebFormLabelFor2(a => a.VERBLIST, trans.GetText("Liste gemäss Beilage", "d'après la liste ci-jointe","Elenco secondo l'allegato"))
+                                        @Html.M2WebFormLabelFor2(a => a.VERBLIST, trans.GetText("Liste gemäss Beilage", "d'après la liste ci-jointe","Secondo la seguente lista"))
                                     </label>
                                 </div>
                             </div>
@@ -423,13 +423,13 @@
                                 <thead>
                                     <tr style="line-height:normal">
                                         <th>@Html.M2WebFormLabelFor2(a => vGListe.ANZAHL, trans.GetText("Anzahl", "Nombre","Quantità"), new { style = "font-size:small; text-align:center" })</th>
-                                        <th>@Html.M2WebFormLabelFor2(a => vGListe.VERBRAUCHER, trans.GetText("Verbr.", "Cons.","utilizz."), new { style = "font-size:small; text-align:center" })</th>
+                                        <th>@Html.M2WebFormLabelFor2(a => vGListe.VERBRAUCHER, trans.GetText("Verbr.", "Cons.","Utilizz."), new { style = "font-size:small; text-align:center" })</th>
                                         <th>@Html.M2WebFormLabelFor2(a => vGListe.ERZEUGER, trans.GetText("Erz.", "Prod.","Gen."), new { style = "font-size:small; text-align:center" })</th>
                                         <th>@Html.M2WebFormLabelFor2(a => vGListe.SPEICHER, trans.GetText("Spei.", "Accu.","Accum."), new { style = "font-size:small; text-align:center" })</th>
                                         <th>@Html.M2WebFormLabelFor2(a => vGListe.TEXT, trans.GetText("Bezeichnung des Verbrauchers, Erzeugers, Speichers", "Désignation des consommateurs, producteurs et<br />accumulateurs","Utilizzatori Generator Accumulator"), new { style = "font-size:small" })</th>
                                         <th>@Html.M2WebFormLabelFor2(a => vGListe.VNBSPERRE, trans.GetText("VNB Sperre", "Verrouillage GRD","Regolazione del GRD"), new { style = "font-size:small; text-align:center" })</th>
                                         <th>@Html.M2WebFormLabelFor2(a => vGListe.KVA, trans.GetText("Leistung<br />Bezug vom<br />Netz [kVA]", "Puissance<br />prélevée s.<br />le réseau<br />[kVA]","Potenza <br /> assorbita <br /> dalla rete [kVA]"), new { style = "font-size:small; text-align:center" })</th>
-                                        <th>@Html.M2WebFormLabelFor2(a => vGListe.KVA_ANS_NETZ, trans.GetText("Leistung<br />Abgabe ans<br />Netz [kVA]", "Puissance<br />fournie au<br />réseau<br />[kVA]","Potenza <br /> erogata <br /> dalla rete [kVA]"), new { style = "font-size:small; text-align:center" })</th>
+                                        <th>@Html.M2WebFormLabelFor2(a => vGListe.KVA_ANS_NETZ, trans.GetText("Leistung<br />Abgabe ans<br />Netz [kVA]", "Puissance<br />fournie au<br />réseau<br />[kVA]","Potenza <br /> erogata <br /> alla rete [kVA]"), new { style = "font-size:small; text-align:center" })</th>
                                         <th>@Html.M2WebFormLabelFor2(a => vGListe.SPEICH_KAP, trans.GetText("Speicher-<br />kapazität<br />[kWh]", "Capacité<br />de stockage<br />[kWh]","Capacità <br /> di accumulo <br /> [kWh]"), new { style = "font-size:small; text-align:center" })</th>
                                         <th>@Html.M2WebFormLabelFor2(a => vGListe.ANZ_AUSSENL, trans.GetText("Anz.<br />Aussen-<br />leiter<br />(1-3)", "Nbre de<br />cond. de<br />phases<br />(1-3)","Numero  <br /> fasi <br /> (1-3)"), new { style = "font-size:small; text-align:center" })</th>
                                     </tr>
@@ -505,7 +505,7 @@
                             <div class=" col-xs-12 checkbox">
                                 <label>
                                     @Html.CheckBoxFor(a => a.MITHKN)<span class="check"></span>
-                                    @Html.M2WebFormLabelFor2(a => a.MITHKN, trans.GetText("mit Herkunftsnachweis (HKN)", "avec garantie d'origine (GO)","con prova dell'origine (HKN)"))
+                                    @Html.M2WebFormLabelFor2(a => a.MITHKN, trans.GetText("mit Herkunftsnachweis (HKN)", "avec garantie d'origine (GO)","con GO (Garanzie d'origine)"))
                                 </label>
                             </div>
                         </div>

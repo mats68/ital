@@ -1,3 +1,8 @@
+INSERT [dbo].[temptable] ([Name], [Guid], [CreaDate], [CreaUser], [ModDate], [ModUser], [ContactAddressId], [PackName], [WerkName], [ActiveFromDate], [UrlName], [Aktiv], [IANrInst], [DAOhneEingeschrBew]) 
+  VALUES (N'Demo (it)', N'X37ADA7A-33A3-4A89-BEC3-0A53145FD17D', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', 31336, N'demo_d_q.evu', N'Demo (online)', CAST(N'2020-11-16T00:00:00.000' AS DateTime), N'demo', 1, 0, 0)
+
+
+
 USE [M2WEB]
 GO
 INSERT [dbo].[FormType] ( [Name], [Variant], [Version], [DisplayName], [FormEntityClassName], [ViewTemplateName], [CreaDate], [CreaUser], [ModDate], [ModUser], [AllowMultipleInstallations], [TemplateId], [SortCrit], [SysMlLangId], [LongName], [CompanyType], [PdfFormType], [FormTypeGUID]) 

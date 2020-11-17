@@ -40,15 +40,15 @@ area fieristica
 Apparecchi di misura e di comando
 Elenco di consumatori, produttori, negozi
 Modificare
-Elenco secondo l'allegato
+Secondo la seguente lista
 Quantità
-utilizz.
+Utilizz.
 Gen.
 Accum.
 Utilizzatori Generator Accumulator
 Regolazione del GRD
 Potenza <br /> assorbita <br /> dalla rete [kVA]
-Potenza <br /> erogata <br /> dalla rete [kVA]
+Potenza <br /> erogata <br /> alla rete [kVA]
 Capacità <br /> di accumulo <br /> [kWh]
 Numero  <br /> fasi <br /> (1-3)
 Potenza tot. assorbita dalla rete
@@ -56,7 +56,7 @@ Potenza tot. errogata alla rete
 Carico totale previsto
 telecomando attivo GRD
 Partecipazione a servizi di sistema (controllo energia)
-con prova dell'origine (HKN)
+con GO (Garanzie d'origine)
 Dispositivi di misurazione e controllo
 Elenco dei dispositivi di misurazione e controllo
 Modificare

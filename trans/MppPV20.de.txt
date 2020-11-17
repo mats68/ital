@@ -182,7 +182,7 @@ Warnhinweise gemäss
 vorhanden
 auf WR (Typ C)
 Solar-DC (Typ B)
-auf SGK / DPS (Typ A)
+auf SGK / HAK (Typ A)
 Informationen vor Ort vorhanden
 Prinzipschema
 Abschaltverfahren

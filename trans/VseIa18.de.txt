@@ -45,7 +45,7 @@ Kabel
 Freileitung
 Bisher. AS-Überstromunterbr.
 Modell
-DPS integriert
+HAK integriert
 (H)AK-Nr.
 keine Änderung
 muss verstärkt werden
@@ -54,8 +54,8 @@ keine Änderung
 muss verstärkt werden
 muss ausgewechselt werden
 Erford. AS-Überstromunterbr.
-potenza d'allacciomanento max
-potenza maxy errogata alla rete
+max. Netzbezugsleistung
+max. Netzeinspeiseleistung
 Verbraucher, Erzeuger, Speicher
 Liste der Verbraucher, Erzeuger, Speicher
 Bearbeiten

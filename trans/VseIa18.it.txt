@@ -59,14 +59,14 @@ Potenza max. d’alimentazione alla rete
 Apparecchi di misura e di comando
 Lista di apparecchi e di misura e di comando
 Modificare
-Elenco secondo l'allegato
+Secondo la seguente lista
 Quantità
 Utilizz.
 Minerale.
 Accum.
-Uttilizatori Generatori Accumulator
-richiesta <br /> technica di <br /> (RaSi)
-potenzua <br /> assorbita <br />  della rete [kVA]
+Uttilizatori Generatori Accumulatori
+Regolazione <br /> del <br /> (RaSi)
+potenza <br /> assorbita <br />  della rete [kVA]
 Potenza <br /> errogata <br /> della rete [kVA]
 Capacità <br /> di accumulo <br /> [kWh]
 Numero <br /> fasi <br /> (1-3)

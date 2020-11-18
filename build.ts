@@ -2,8 +2,9 @@
 
 var fs = require('fs')
 const lineReader = require('line-reader');
-
-var input_files = ['Mpp18', 'MppPV20', 'Sina18', 'VseAb18', 'VseIa18', 'MppVse1']
+//tag
+// var input_files = ['Tag18', 'Mpp18', 'MppPV20', 'Sina18', 'VseAb18', 'VseIa18', 'MppVse1']
+var input_files = ['MppPV20']
 
 input_files.forEach(file => {
     var input_file = file + '.cshtml'

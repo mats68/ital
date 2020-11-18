@@ -111,7 +111,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            @Html.M2WebFormLabelFor2(a => a.GEMEINDE, trans.GetText("Gemeinde", "Commune","Comunità locale"), new { @class = "col-xs-4 control-label labelPadding" })
+                            @Html.M2WebFormLabelFor2(a => a.GEMEINDE, trans.GetText("Gemeinde", "Commune","Luogo"), new { @class = "col-xs-4 control-label labelPadding" })
                             <div class="col-xs-8">
                                 @Html.M2WebDisplayTextFor(a => a.GEMEINDE)
                             </div>
@@ -350,13 +350,13 @@
                             <div class=" col-xs-4 checkbox">
                                 <label>
                                     @Html.CheckBoxFor(a => a.I_EXTENT, new { @class = "inst-beschrieb" })<span class="check"></span>
-                                    @Html.M2WebFormLabelFor2(a => a.I_EXTENT, trans.GetText("Änderung/Erweit.", "Extension/modif.","Modifica / Estensione"))
+                                    @Html.M2WebFormLabelFor2(a => a.I_EXTENT, trans.GetText("Änderung/Erweit.", "Extension/modif.","Ampliamento / modifica"))
                                 </label>
                             </div>
                             <div class=" col-xs-4 checkbox">
                                 <label>
                                     @Html.CheckBoxFor(a => a.I_REMOVE, new { @class = "inst-beschrieb" })<span class="check"></span>
-                                    @Html.M2WebFormLabelFor2(a => a.I_REMOVE, trans.GetText("Rückbau", "Suppression","Smantellamento"))
+                                    @Html.M2WebFormLabelFor2(a => a.I_REMOVE, trans.GetText("Rückbau", "Suppression","Riconstructione"))
                                 </label>
                             </div>
                         </div>
@@ -364,7 +364,7 @@
                             <div class=" col-xs-4 checkbox">
                                 <label>
                                     @Html.CheckBoxFor(a => a.I_PROV, new { @class = "inst-beschrieb" })<span class="check"></span>
-                                    @Html.M2WebFormLabelFor2(a => a.I_PROV, trans.GetText("Bauanschluss", "Raccord. chantier","Collegamento dell'edificio"))
+                                    @Html.M2WebFormLabelFor2(a => a.I_PROV, trans.GetText("Bauanschluss", "Raccord. chantier","Cantiere"))
                                 </label>
                             </div>
                             <div class=" col-xs-4 checkbox">
@@ -376,7 +376,7 @@
                             <div class=" col-xs-4 checkbox">
                                 <label>
                                     @Html.CheckBoxFor(a => a.I_AREA, new { @class = "inst-beschrieb" })<span class="check"></span>
-                                    @Html.M2WebFormLabelFor2(a => a.I_AREA, trans.GetText("Festplatz", "Place de fête","area fieristica"))
+                                    @Html.M2WebFormLabelFor2(a => a.I_AREA, trans.GetText("Festplatz", "Place de fête","Allacciamento definitivo"))
                                 </label>
                             </div>
                         </div>
@@ -393,7 +393,7 @@
                 <!-- #region VerbrauList -->
                 <div class="form-group switchForm-group">
                     <div class="col-xs-10 ">
-                        <h3>@(trans.GetText("Liste der Verbraucher, Erzeuger, Speicher", "Liste des consommateurs, producteurs et accumulateurs","Elenco di consumatori, produttori, negozi"))</h3>
+                        <h3>@(trans.GetText("Liste der Verbraucher, Erzeuger, Speicher", "Liste des consommateurs, producteurs et accumulateurs","Secondo la seguente lista"))</h3>
                     </div>
                     <div class="col-xs-2 text-right">
                         @*<span class="glyphicon glyphicon-info-sign" id="InfoForSwitchVerbrauList"></span>*@

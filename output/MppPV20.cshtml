@@ -10,7 +10,7 @@
     var projectDisplayName = Model.InstallationDocuments.First().Installation.Project.DisplayName;
     var installationId = Model.InstallationDocuments.First().InstallationId;
     var trans = new FormTrans(documentCultureInfo);
-    ViewBag.Title = trans.GetText("Mess- und Prüfprotokoll PV", "Protocole d'essais - mesures PV","Protocollo di misura e test PV");
+    ViewBag.Title = trans.GetText("Mess- und Prüfprotokoll PV", "Protocole d'essais - mesures PV","FV - Rapporto di misura e di collaudo");
     bool fixiert = ViewBag.Fixed;
 }
 
@@ -55,7 +55,7 @@
             <div class="form-group">
                 <div class="row">
                     <div class=" col-xs-9">
-                        <h1 class="col-xs-12 formTitle">@(trans.GetText("Mess- und Prüfprotokoll PV", "Protocole d'essais - mesures PV","Protocollo di misura e test PV"))</h1>
+                        <h1 class="col-xs-12 formTitle">@(trans.GetText("Mess- und Prüfprotokoll PV", "Protocole d'essais - mesures PV","FV - Rapporto di misura e di collaudo"))</h1>
                     </div>
                     <div class=" col-xs-3">
                         @*VNB-Logo hier nicht anzeigen*@
@@ -206,7 +206,7 @@
                     </div>
                     <div class="col-xs-6 flexcontainer">
                         @Html.TextBoxFor(a => a.PLANVORNR, new { @class = "form-control", style = "inputflex-left" })
-                        @Html.M2WebLabel(trans.GetText("vom", "du","a partire dal"), new { @class = "control-label sub-label", style = "width:7.2em; padding-right: 1em; text-align: right;" })
+                        @Html.M2WebLabel(trans.GetText("vom", "du","da"), new { @class = "control-label sub-label", style = "width:7.2em; padding-right: 1em; text-align: right;" })
                         <div class="input-group date" style="width:14em">
                             @Html.TextBoxFor(a => a.PLANVORDATUM.Date, new { @class = "form-control" })<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                         </div>
@@ -222,7 +222,7 @@
                     </div>
                     <div class="col-xs-6 flexcontainer">
                         @Html.TextBoxFor(a => a.BEGLAUBIGNR, new { @class = "form-control", style = "inputflex-left" })
-                        @Html.M2WebLabel(trans.GetText("vom", "du","a partire dal"), new { @class = "control-label sub-label", style = "width:7.2em; padding-right: 1em; text-align: right;" })
+                        @Html.M2WebLabel(trans.GetText("vom", "du","da"), new { @class = "control-label sub-label", style = "width:7.2em; padding-right: 1em; text-align: right;" })
                         <div class="input-group date" style="width:14em">
                             @Html.TextBoxFor(a => a.BEGLAUBIGDATUM.Date, new { @class = "form-control" })<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                         </div>
@@ -373,7 +373,7 @@
             </div>
             <div class="form-group switchForm-group">
                 <div class="col-xs-12">
-                    <h3>@(trans.GetText("Auftragnehmer", "Entrepreneur","Contraente"))</h3>
+                    <h3>@(trans.GetText("Auftragnehmer", "Entrepreneur","Amministrazione"))</h3>
                 </div>
             </div>
             <div class="form-group">
@@ -453,7 +453,7 @@
             </div>
             <div class="form-group switchForm-group">
                 <div class="col-xs-12">
-                    <h3>@(trans.GetText("Auftraggeber", "Maître d'oeuvre","Cliente"))</h3>
+                    <h3>@(trans.GetText("Auftraggeber", "Maître d'oeuvre","Proprietario dell'impianto"))</h3>
                 </div>
             </div>
             <div class="form-group">
@@ -593,7 +593,7 @@
             {
                 <div class="form-group switchForm-group">
                     <div class="col-xs-12">
-                        <h3>@(trans.GetText("Unabhängiges Kontrollorgan", "Organe de contrôle indépendant","Organismo di controllo indipendente"))</h3>
+                        <h3>@(trans.GetText("Unabhängiges Kontrollorgan", "Organe de contrôle indépendant","Organo di controllo indipendente"))</h3>
                     </div>
                 </div>
                 <div class="form-group">
@@ -727,7 +727,7 @@
             <!-- #endregion -->
             <!-- #region Prüfergebnis Kategorie 1 -->
             <div class="form-group">
-                <h2 class="subNavigationItem" id="section-5">@(trans.GetText("Prüfergebnis Kategorie 1", "Résultat de test catégorie 1","Risultato del test categoria 1"))</h2>
+                <h2 class="subNavigationItem" id="section-5">@(trans.GetText("Prüfergebnis Kategorie 1", "Résultat de test catégorie 1","Risultati del controllo categoria 1"))</h2>
             </div>
             <div class="form-group">
                 <div class="row">
@@ -753,7 +753,7 @@
                     </div>
                     <div class="col-xs-6">
                         <a href="#section-11">
-                            @Html.M2WebLabel(trans.GetText("Die Funktionsprüfungen und Messungen der Kategorie 1 sind bei jeder PVA zwingend vorzunehmen (s. Funktionsprüfungen).", "Contr. fonctionnement et mesures catégorie 1 doivent être exécutés impérativement pour chaque PV.(cf. Contr. fonctionnement)","I test funzionali e le misurazioni della categoria 1 sono obbligatori per ogni PVA (vedi test funzionali)."), new { @class = "control-label sub-label", style = "color:#49BDA3; cursor:pointer" })
+                            @Html.M2WebLabel(trans.GetText("Die Funktionsprüfungen und Messungen der Kategorie 1 sind bei jeder PVA zwingend vorzunehmen (s. Funktionsprüfungen).", "Contr. fonctionnement et mesures catégorie 1 doivent être exécutés impérativement pour chaque PV.(cf. Contr. fonctionnement)","Una prova funzionale e delle misure di categoria 1 sono obbligatori per un FV."), new { @class = "control-label sub-label", style = "color:#49BDA3; cursor:pointer" })
                         </a>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -765,7 +765,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.PE1_KEINMANGEL)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.PE1_KEINMANGEL, trans.GetText("Keine Mängel festgestellt", "Pas de défauts","Nessun difetto riscontrato"))
+                            @Html.M2WebFormLabelFor2(a => a.PE1_KEINMANGEL, trans.GetText("Keine Mängel festgestellt", "Pas de défauts","Nessun difetto"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -813,7 +813,7 @@
             <!-- #endregion -->
             <!-- #region Prüfergebnis Kategorie 2 -->
             <div class="form-group">
-                <h2 class="subNavigationItem" id="section-6">@(trans.GetText("Prüfergebnis Kategorie 2", "Résultat de test catégorie 2","Risultato del test categoria 2"))</h2>
+                <h2 class="subNavigationItem" id="section-6">@(trans.GetText("Prüfergebnis Kategorie 2", "Résultat de test catégorie 2","Risultati del controllo categoria 2"))</h2>
             </div>
             <div class="form-group">
                 <div class="row">
@@ -838,7 +838,7 @@
                     <div class="col-xs-3 text-right">
                     </div>
                     <div class="col-xs-6">
-                        @Html.M2WebLabel(trans.GetText("Zusätzliche Funktionsprüfungen und Messungen der Kategorie 2 (folgender Abschnitt) sind fakultativ und mit dem Eigentümer zu vereinbaren. ", "Contr. fonctionnement supplémentaires et mesures de la catégorie 2 (paragraphe suivant) sont facultatifs et à convenir avec propriéraire.","Ulteriori prove funzionali e misurazioni di categoria 2 (sezione successiva) sono facoltative e da concordare con il Proprietario"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Zusätzliche Funktionsprüfungen und Messungen der Kategorie 2 (folgender Abschnitt) sind fakultativ und mit dem Eigentümer zu vereinbaren. ", "Contr. fonctionnement supplémentaires et mesures de la catégorie 2 (paragraphe suivant) sont facultatifs et à convenir avec propriéraire.","Prove funzionali supplementari e misure di categoria 2 (paragrafo seguente) sono facoltativi e da concordare con il proprietario."), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-3 text-right">
                     </div>
@@ -847,7 +847,7 @@
                     <div class="col-xs-3 text-right">
                     </div>
                     <div class="col-xs-6">
-                        @Html.M2WebLabel(trans.GetText("Prüfergebnis Ergänzungen Kategorie 1", "Résultat de test compléments catégorie 1","Aggiunte dei risultati del test categoria 1"), new { @class = "control-label sub-label", style = "font-weight: bold;" })
+                        @Html.M2WebLabel(trans.GetText("Prüfergebnis Ergänzungen Kategorie 1", "Résultat de test compléments catégorie 1","Risultati del controllo completamenti categoria 1"), new { @class = "control-label sub-label", style = "font-weight: bold;" })
                     </div>
                     <div class="col-xs-3 text-right">
                     </div>
@@ -858,7 +858,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.PE2_UIKENNLINIE)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.PE2_UIKENNLINIE, trans.GetText("Aufnahme U/I-Kennlinie (Bericht beiliegend)", "Visualisation courbe U/I (rapport ci-joint)","Registrare la curva caratteristica U / I (rapporto allegato)"))
+                            @Html.M2WebFormLabelFor2(a => a.PE2_UIKENNLINIE, trans.GetText("Aufnahme U/I-Kennlinie (Bericht beiliegend)", "Visualisation courbe U/I (rapport ci-joint)","Visualizzazione curva U/I (Rapporto in allegato)"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -871,7 +871,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.PE2_IRVERFAHREN)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.PE2_IRVERFAHREN, trans.GetText("Aufnahme mit IR-Verfahren (Bericht beiliegend)", "Visualisation: analyse par IR (rapport ci-joint)","Registrazione con procedura IR (report allegato)"))
+                            @Html.M2WebFormLabelFor2(a => a.PE2_IRVERFAHREN, trans.GetText("Aufnahme mit IR-Verfahren (Bericht beiliegend)", "Visualisation: analyse par IR (rapport ci-joint)","Visualizzazione: analisi IR (Rapporto in allegato)"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -884,7 +884,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.PE2_ELVERFAHREN)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.PE2_ELVERFAHREN, trans.GetText("Aufnahme mit EL-Verfahren (Bericht beiliegend)", "Visualisation: analyse par électroluminescence (rapport ci-joint)","Registrazione con metodo EL (report allegato)"))
+                            @Html.M2WebFormLabelFor2(a => a.PE2_ELVERFAHREN, trans.GetText("Aufnahme mit EL-Verfahren (Bericht beiliegend)", "Visualisation: analyse par électroluminescence (rapport ci-joint)","Visualizzazione: analisi con elettroluminescenza (Rapporto in allegato)"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -907,7 +907,7 @@
                     <div class="col-xs-3 text-right">
                     </div>
                     <div class="col-xs-6">
-                        @Html.M2WebLabel(trans.GetText("Prüfergebnis zusätzliche Kategorien", "Résultat de test catégories supplémentaires","Risultati del test categorie aggiuntive"), new { @class = "control-label sub-label", style = "font-weight: bold;" })
+                        @Html.M2WebLabel(trans.GetText("Prüfergebnis zusätzliche Kategorien", "Résultat de test catégories supplémentaires","Risultato del collaudo categorie supplementarie"), new { @class = "control-label sub-label", style = "font-weight: bold;" })
                     </div>
                     <div class="col-xs-3 text-right">
                     </div>
@@ -918,7 +918,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.PE2_SPANNUNG)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.PE2_SPANNUNG, trans.GetText("Prüfung Spannung gegen Erde (Bericht beiliegend)", "Vérification mise à terre (rapport ci-joint)","Tensione di prova verso terra (rapporto allegato)"))
+                            @Html.M2WebFormLabelFor2(a => a.PE2_SPANNUNG, trans.GetText("Prüfung Spannung gegen Erde (Bericht beiliegend)", "Vérification mise à terre (rapport ci-joint)","Collaudo messa a terra (Rapporto in allegato)"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -931,7 +931,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.PE2_SPERRDIODEN)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.PE2_SPERRDIODEN, trans.GetText("Prüfung Sperrdioden (Bericht beiliegend)", "Vérification diode de blocage (rapport ci-joint)","Verifica diodi di blocco (rapporto allegato)"))
+                            @Html.M2WebFormLabelFor2(a => a.PE2_SPERRDIODEN, trans.GetText("Prüfung Sperrdioden (Bericht beiliegend)", "Vérification diode de blocage (rapport ci-joint)","Collaudo diodo di blocco (Rapporto in allegato)"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -944,7 +944,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.PE2_RISO)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.PE2_RISO, trans.GetText("Prüfung Riso im Nasszustand (Bericht beiliegend)", "Vérification Riso en état humide (rapport ci-joint)","Test di Riso allo stato umido (rapporto allegato)"))
+                            @Html.M2WebFormLabelFor2(a => a.PE2_RISO, trans.GetText("Prüfung Riso im Nasszustand (Bericht beiliegend)", "Vérification Riso en état humide (rapport ci-joint)","Collaudo Riso allo stato umido (Rapporto in allegato)"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1008,15 +1008,15 @@
                     <div class="col-xs-6 flexcontainer flexwrap">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.ANL_FLACHDACH)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.ANL_FLACHDACH, trans.GetText("Flachdach", "Toit plat","Tetto a terrazza"))
+                            @Html.M2WebFormLabelFor2(a => a.ANL_FLACHDACH, trans.GetText("Flachdach", "Toit plat","Tetto piano"))
                         </span>
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.ANL_SCHRAEGDACH)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.ANL_SCHRAEGDACH, trans.GetText("Schrägdach", "Toit incliné","Tetto spiovente"))
+                            @Html.M2WebFormLabelFor2(a => a.ANL_SCHRAEGDACH, trans.GetText("Schrägdach", "Toit incliné","Tetto a falda"))
                         </span>
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.ANL_FASSADE)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.ANL_FASSADE, trans.GetText("Fassade", "Façade","facciata"))
+                            @Html.M2WebFormLabelFor2(a => a.ANL_FASSADE, trans.GetText("Fassade", "Façade","Facciata"))
                         </span>
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.ANL_DACHINTEG)<span class="check"></span>
@@ -1024,7 +1024,7 @@
                         </span>
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.ANL_FREI)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.ANL_FREI, trans.GetText("freistehend", "indépendant","indipendente"))
+                            @Html.M2WebFormLabelFor2(a => a.ANL_FREI, trans.GetText("freistehend", "indépendant","libero"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1037,7 +1037,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("Ausrichtung", "Alignement","Allineamento"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Ausrichtung", "Alignement","Orientamento"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6">
                         <div class="input-group" style="width:8em">
@@ -1051,7 +1051,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("Neigung", "Inclinaison","Inclinazione"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Neigung", "Inclinaison","Pendenza"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6">
                         <div class="input-group" style="width:8em">
@@ -1065,16 +1065,16 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("Anlagentyp", "Type installation :","Tipo di pianta"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Anlagentyp", "Type installation :","Tipo di impianto"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6 flexcontainer flexwrap">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.ANL_VERBUND)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.ANL_VERBUND, trans.GetText("Netzverbund", "en réseau","Rete"))
+                            @Html.M2WebFormLabelFor2(a => a.ANL_VERBUND, trans.GetText("Netzverbund", "en réseau","Connesso alla rete "))
                         </span>
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.ANL_INSEL)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.ANL_INSEL, trans.GetText("Inselanlage", "en îlot","Sistema ad isola"))
+                            @Html.M2WebFormLabelFor2(a => a.ANL_INSEL, trans.GetText("Inselanlage", "en îlot","Impianto isolato"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1115,13 +1115,13 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("Montagezeitraum von", "Période du montage du","Periodo di montaggio dal"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Montagezeitraum von", "Période du montage du","Periodo di montaggio da"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6 flexcontainer">
                         <div class="input-group date" style="width:9em">
                             @Html.TextBoxFor(a => a.MONTAGEVON.Date, new { @class = "form-control" })<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                         </div>
-                        @Html.M2WebLabel(trans.GetText("bis", "au","per"), new { @class = "control-label sub-label", style = "padding-left:1em; padding-right:1em;" })
+                        @Html.M2WebLabel(trans.GetText("bis", "au","a"), new { @class = "control-label sub-label", style = "padding-left:1em; padding-right:1em;" })
                         <div class="input-group date" style="width:9em">
                             @Html.TextBoxFor(a => a.MONTAGEBIS.Date, new { @class = "form-control" })<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                         </div>
@@ -1165,7 +1165,7 @@
                         <thead>
                             <tr>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Typ Nr.", "Type N°","Tipo n."))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Hersteller", "Fabricant","Produttore"))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Hersteller", "Fabricant","Fabbricante"))</th>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Modultyp", "Type de module","Tipo di modulo"))</th>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("P<sub>mpp</sub><br>[W]", "P<sub>mpp</sub><br>[W]","P <sub> mpp </sub> <br> [W]"))</th>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("U<sub>mpp</sub><br>[V]", "U<sub>mpp</sub><br>[V]","U <sub> mpp </sub> <br> [V]"))</th>
@@ -1198,7 +1198,7 @@
                 <!-- #endregion -->
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("Total Nennleistung", "Puissance nominale total","Potenza nominale totale"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Total Nennleistung", "Puissance nominale total","Totale"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6">
                         <div class="input-group" style="width:8em">
@@ -1229,7 +1229,7 @@
             <!-- #region Angaben Wechselrichter / Leistungsoptimierer -->
             <div class="form-group switchForm-group">
                 <div class="col-xs-10">
-                    <h3>@(trans.GetText("Angaben Wechselrichter / Mikrowechselrichter / Leistungsoptimierer", "Indications onduleur / micro-onduleur / optimiseur de performance","Informazioni su inverter / microinverter / ottimizzatore di potenza"))</h3>
+                    <h3>@(trans.GetText("Angaben Wechselrichter / Mikrowechselrichter / Leistungsoptimierer", "Indications onduleur / micro-onduleur / optimiseur de performance","Dati inverter / Dispositivo di ottimizzazzione di potenza"))</h3>
                 </div>
                 <div class="col-xs-2 text-right">
                     <input id="switchAngWechs" name="bootstrapSwitch" type="checkbox" data-size="mini" />
@@ -1251,11 +1251,11 @@
                         <thead>
                             <tr>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Typ Nr.", "Type N°","Tipo n."))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Hersteller", "Fabricant","Produttore"))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Modell", "Modèle","modello"))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("(freies Feld)", "(champ libre)","(campo vuoto)"))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Hersteller", "Fabricant","Fabbricante"))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Modell", "Modèle","Modello"))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("(freies Feld)", "(champ libre)","(casella libera)"))</th>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("P<sub>AC</sub><br>[kVA]", "P<sub>AC</sub><br>[kVA]","P <sub> AC </sub> <br> [kVA]"))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Galv. Trenn.", "Sép. Galv.","Galv. Separazione"))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Galv. Trenn.", "Sép. Galv.","Separ. Galv."))</th>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Hybrid", "Hybride","Ibrido"))</th>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Anzahl<br>[St.]", "Nombre","Numero di [St.]"))</th>
                             </tr>
@@ -1280,7 +1280,7 @@
                 <!-- #endregion -->
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("Total Nennleistung", "Puissance nominale total","Potenza nominale totale"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Total Nennleistung", "Puissance nominale total","Totale"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6">
                         <div class="input-group" style="width:8em">
@@ -1311,7 +1311,7 @@
             <!-- #region Angaben zum PV-Array und PV-Strang -->
             <div class="form-group switchForm-group">
                 <div class="col-xs-10">
-                    <h3>@(trans.GetText("Angaben zum PV-Array und PV-Strang", "Indications sur générateur et circuit PV","Informazioni sul generatore FV e sulla stringa FV"))</h3>
+                    <h3>@(trans.GetText("Angaben zum PV-Array und PV-Strang", "Indications sur générateur et circuit PV","Dati generatore e circuito FV"))</h3>
                 </div>
                 <div class="col-xs-2 text-right">
                     <input id="switchAngPVArray" name="bootstrapSwitch" type="checkbox" data-size="mini" />
@@ -1333,13 +1333,13 @@
                                 <th class="gridHeader3" colspan="2" style="width:30%">@Html.M2WebLabel(trans.GetText("Angaben zum Strang", "Indications circuit","Dettagli del filo"))</th>
                             </tr>
                             <tr>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Strang Nr.", "Circuit n°","Strand no."))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Strang Nr.", "Circuit n°","Stringa no."))</th>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Modultyp Nr.", "N° type module","Modulo tipo n."))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Anz. Module<BR>je Strang", "N°de modules<BR>par circuit","Numero Moduli <BR> per filo"))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Verschaltet<BR>auf WR Nr.", "Couplé à<BR>l'onduleur n°","Interconnessa <BR> a INV n."))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Teilarray Nr.<BR>(S/O/N/W)", "Circuit partiel<BR>(S/E/N/O)","Part array no. <BR> (S / O / N / W)"))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Typ", "Type","genere"))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Querschnitt<BR>[mm²]", "Section<BR>[mm²]","Sezione trasversale <BR> [mm²]"))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Anz. Module<BR>je Strang", "N°de modules<BR>par circuit","Quantità moduli/stringa"))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Verschaltet<BR>auf WR Nr.", "Couplé à<BR>l'onduleur n°","Accoppiato <BR> all'inverter no."))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Teilarray Nr.<BR>(S/O/N/W)", "Circuit partiel<BR>(S/E/N/O)","Stringa parz. no. <BR> (S / O / N / W)"))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Typ", "Type","Tipo"))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Querschnitt<BR>[mm²]", "Section<BR>[mm²]","Sezione <BR> [mm²]"))</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1382,7 +1382,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("Geforderte Blitzschutzklasse", "Classe de protection exigée","Classe di protezione contro i fulmini richiesta"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Geforderte Blitzschutzklasse", "Classe de protection exigée","Classe di parafulmine richiesta"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6 flexcontainer flexwrap">
                         <span class="checkbox">
@@ -1410,7 +1410,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.BLITZ_KONZEPT_X)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.BLITZ_KONZEPT_X, trans.GetText("Überspannungs- und Blitzschutzkonzept vorhanden gemäss", "Concept protection contre la foudre/ les surtensions existant selon ","Concetto di protezione da sovratensioni e fulmini disponibile in conformità con"))
+                            @Html.M2WebFormLabelFor2(a => a.BLITZ_KONZEPT_X, trans.GetText("Überspannungs- und Blitzschutzkonzept vorhanden gemäss", "Concept protection contre la foudre/ les surtensions existant selon ","Concetto parafulmine/protezione contra le sovratens. esistente secondo"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1436,7 +1436,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.BLITZ_GENLPS)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.BLITZ_GENLPS, trans.GetText("Direkte Anbindung Generator an LPS", "Liaison directe du générateur à la PCF","Collegamento diretto del generatore all'LPS"))
+                            @Html.M2WebFormLabelFor2(a => a.BLITZ_GENLPS, trans.GetText("Direkte Anbindung Generator an LPS", "Liaison directe du générateur à la PCF","Connessione diretta generatore a LPS"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1447,14 +1447,14 @@
             <!-- #endregion -->
             <!-- #region Sichtprüfung des Systems (Ziffer 5.2) -->
             <div class="form-group">
-                <h2 class="subNavigationItem" id="section-10">@(trans.GetText("Sichtprüfung des Systems (Ziffer 5.2)", "Contrôle visuel de l'installation (chiffre 5.2)","Ispezione visiva del sistema (sezione 5.2)"))</h2>
+                <h2 class="subNavigationItem" id="section-10">@(trans.GetText("Sichtprüfung des Systems (Ziffer 5.2)", "Contrôle visuel de l'installation (chiffre 5.2)","Controllo a vista del sistema (cifra 5.2)"))</h2>
             </div>
             <div class="form-group">
                 <div class="row">
                     <div class="col-xs-3">
                     </div>
                     <div class="col-xs-6">
-                        @Html.M2WebLabel(trans.GetText("Besichtigung Gleichstromseite", "Inspection du côté courant continu","Ispezione del lato DC"), new { @class = "control-label sub-label", style = "font-weight:bold;" })
+                        @Html.M2WebLabel(trans.GetText("Besichtigung Gleichstromseite", "Inspection du côté courant continu","Controllo parte DC"), new { @class = "control-label sub-label", style = "font-weight:bold;" })
                     </div>
                     <div class="col-xs-3 text-right">
                     </div>
@@ -1465,7 +1465,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_1)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_1, trans.GetText("Richtige Auswahl und Anordnung aller Systemkomponenten und Montagesysteme (Umgebungsbedingungen)", "Choix et mise en place correcte de tous les composants de l'installation et des systèmes de montage (conditions ambiantes)","Selezione e disposizione corrette di tutti i componenti del sistema e dei sistemi di assemblaggio (condizioni ambientali)"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_1, trans.GetText("Richtige Auswahl und Anordnung aller Systemkomponenten und Montagesysteme (Umgebungsbedingungen)", "Choix et mise en place correcte de tous les composants de l'installation et des systèmes de montage (conditions ambiantes)","Scelta e disposizione giusta di tutti i componenti del sistema e dei sistemi di montaggio (condizioni ambientali)"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1478,7 +1478,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_2)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_2, trans.GetText("Dachbefestigungsteile und Kabeleinführung witterungsbeständig", "Composants fixation toit/entrée de câbles résistants aux intemperies","Parti di montaggio sul tetto e ingresso cavi resistenti alle intemperie"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_2, trans.GetText("Dachbefestigungsteile und Kabeleinführung witterungsbeständig", "Composants fixation toit/entrée de câbles résistants aux intemperies","Componenti fissaggio tetto/passaggi di cavi resistenti alla corrosione"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1491,7 +1491,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_3)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_3, trans.GetText("Vorgaben BSM / STP eingehalten (Konstruktion/Material)", "Conforme Guide protection AEAI/PCF (construction/matériel)","Specifiche BSM / STP rispettate (costruzione / materiale)"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_3, trans.GetText("Vorgaben BSM / STP eingehalten (Konstruktion/Material)", "Conforme Guide protection AEAI/PCF (construction/matériel)","Confor.Promemo. antincendio AICAA/PCF construzio./materia"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1507,7 +1507,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_4)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_4, trans.GetText("Installierte Schutz- und SPA-Leiter parallel und nahe DC-Leitungen", "Cond.de protection et PE posés en parallèle et proches des circuits DC","Conduttori di protezione e SPA installati in parallelo e vicino alle linee CC"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_4, trans.GetText("Installierte Schutz- und SPA-Leiter parallel und nahe DC-Leitungen", "Cond.de protection et PE posés en parallèle et proches des circuits DC","Conduttore di protezione e PE parallo presso linee DC"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1516,7 +1516,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("Querschnitt SPA für PVA", "Section PE pour PV","Sezione SPA per PVA"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Querschnitt SPA für PVA", "Section PE pour PV","Sezione PE per FV"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6 flexcontainer">
                         <div class="input-group" style="width:8em">
@@ -1531,7 +1531,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("Querschnitt Haupt-SPA", "Section PE principal","Sezione trasversale della SPA principale"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Querschnitt Haupt-SPA", "Section PE principal","Sezione PE principale"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6">
                         <div class="input-group" style="width:8em">
@@ -1552,7 +1552,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_5)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_5, trans.GetText("Installierte Überspannungs-Schutzeinrichtungen entsprechen dem Schutzkonzept", "Les dispositifs de protection contre les surintensités et les surtensions correspondent au concept de protection","I dispositivi di protezione da sovratensione installati corrispondono al concetto di protezione"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_5, trans.GetText("Installierte Überspannungs-Schutzeinrichtungen entsprechen dem Schutzkonzept", "Les dispositifs de protection contre les surintensités et les surtensions correspondent au concept de protection","Disposizione degli scaricatori di sovratensione è conforme al concetto di protezione"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1565,7 +1565,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_6)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_6, trans.GetText("Minimale Fläche der Leitungsschleifen sichergestellt", "Superficie minimale des boucles de ligne respectée","Area minima dei loop di linea garantita"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_6, trans.GetText("Minimale Fläche der Leitungsschleifen sichergestellt", "Superficie minimale des boucles de ligne respectée","Area minima occupata dal cablaggio di stringa"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1578,7 +1578,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_7)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_7, trans.GetText("Trennungsabstände eingehalten", "Distance de séparation respectée","Distanze di separazione osservate"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_7, trans.GetText("Trennungsabstände eingehalten", "Distance de séparation respectée","Distanze di separazione rispettate"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1594,7 +1594,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_8)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_8, trans.GetText("Alle DC-Komponenten für Dauerbetrieb mit Umax/Imax ausgelegt", "Compos.DC conçues pour un fonctionnement continu avec Umax/Imax","Tutti i componenti CC progettati per il funzionamento continuo con Umax / Imax"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_8, trans.GetText("Alle DC-Komponenten für Dauerbetrieb mit Umax/Imax ausgelegt", "Compos.DC conçues pour un fonctionnement continu avec Umax/Imax","Tutti componenti DC per funzionamento continuo Umax/Imax"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1607,7 +1607,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_10)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_10, trans.GetText("PV-Module für Systemspannung bemessen (Uocmax)", " Modules PV calculés pour tension de système (Uocmax)","Moduli FV dimensionati per la tensione di sistema (Uocmax)"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_10, trans.GetText("PV-Module für Systemspannung bemessen (Uocmax)", " Modules PV calculés pour tension de système (Uocmax)","Moduli FV calcolati per tensione di sistema (Uocmax)"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1620,7 +1620,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_9)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_9, trans.GetText("Trennvorrichtungen für PV-Arraystränge und Teilarrays vorhanden", "Dispositifs de sectionnement pour générateurs PV et circuits partiels","Sono disponibili dispositivi di separazione per stringhe di array FV e sotto-array"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_9, trans.GetText("Trennvorrichtungen für PV-Arraystränge und Teilarrays vorhanden", "Dispositifs de sectionnement pour générateurs PV et circuits partiels","Dispositivi seziamento per stringa FV e stringa parziale"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1633,7 +1633,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_11)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_11, trans.GetText("DC-Lasttrennschalter vorhanden", "Présence de l'interrupteur-sectionneur DC","Disponibile sezionatore DC"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_11, trans.GetText("DC-Lasttrennschalter vorhanden", "Présence de l'interrupteur-sectionneur DC","Interruttore sezionatore DC"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1647,7 +1647,7 @@
                     <div class="col-xs-3">
                     </div>
                     <div class="col-xs-6">
-                        @Html.M2WebLabel(trans.GetText("Besichtigung Wechselstromseite", "Inspection du côté courant alternatif","Visita il lato AC"), new { @class = "control-label sub-label", style = "font-weight:bold;" })
+                        @Html.M2WebLabel(trans.GetText("Besichtigung Wechselstromseite", "Inspection du côté courant alternatif","Controllo parte AC"), new { @class = "control-label sub-label", style = "font-weight:bold;" })
                     </div>
                     <div class="col-xs-3 text-right">
                     </div>
@@ -1658,7 +1658,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_12)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_12, trans.GetText("Anschluss aller Trenn- und Schalteinrichtungen korrekt (PV-Installation = Last / Netz = Einspeisung)", "Raccordement correct de tous les dispositifs de sectionnement et de commutation (installation PV = charge / réseau = alimentation)","Collegamento corretto di tutti i dispositivi di isolamento e commutazione (installazione FV = carico / rete = alimentazione)"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_12, trans.GetText("Anschluss aller Trenn- und Schalteinrichtungen korrekt (PV-Installation = Last / Netz = Einspeisung)", "Raccordement correct de tous les dispositifs de sectionnement et de commutation (installation PV = charge / réseau = alimentation)","Disposizione corretta di disinserimento e sezionamento (impianto FV=carico/rete=alimentazione)"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1684,7 +1684,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_14)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_14, trans.GetText("RCD Typ B vorhanden", "Présence d'un RCD type B","RCD di tipo B disponibile"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_14, trans.GetText("RCD Typ B vorhanden", "Présence d'un RCD type B","RCD tipo B"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1697,7 +1697,7 @@
                     <div class="col-xs-6 flexcontainer">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_15X)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_15X, trans.GetText("RCD Typ", "RCD du type","Tipo di RCD"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_15X, trans.GetText("RCD Typ", "RCD du type","RCD tipo "))
                         </span>
                         <div class="flexcontainer">
                             @Html.TextBoxFor(a => a.SP_15XTEXT, new { @class = "form-control", style = "width:2em;" })
@@ -1715,7 +1715,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_16)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_16, trans.GetText("Schutz durch RCD im WR eingebaut", "RCD installé dans l'onduleur","Protezione RCD integrata nell'inverter"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_16, trans.GetText("Schutz durch RCD im WR eingebaut", "RCD installé dans l'onduleur","Protezione RCD inverter"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1728,7 +1728,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_17)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_17, trans.GetText("Betriebs- und Schutzparameter WR gemäss separatem Blatt (Einstellungen NA-Schutz)", "Paramètre de fonctionnement et de protection de l'onduleur selon fiche séparée (paramètres prot. du réseau et de l'installation)","Parametri di funzionamento e protezione WR secondo foglio separato (Impostazioni per protezione NS)"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_17, trans.GetText("Betriebs- und Schutzparameter WR gemäss separatem Blatt (Einstellungen NA-Schutz)", "Paramètre de fonctionnement et de protection de l'onduleur selon fiche séparée (paramètres prot. du réseau et de l'installation)","Parametri operativi e protettivi inverter secondo foglio separato (disposizione protezione rete e impianto)"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1742,7 +1742,7 @@
                     <div class="col-xs-3">
                     </div>
                     <div class="col-xs-6">
-                        @Html.M2WebLabel(trans.GetText("Besichtigung Aufschriften und Kennzeichnung", "Inspection étiquettes et signalétique","Ispezione di etichette e marcatura"), new { @class = "control-label sub-label", style = "font-weight:bold;" })
+                        @Html.M2WebLabel(trans.GetText("Besichtigung Aufschriften und Kennzeichnung", "Inspection étiquettes et signalétique","Controllo iscrizioni e segnatura"), new { @class = "control-label sub-label", style = "font-weight:bold;" })
                     </div>
                     <div class="col-xs-3 text-right">
                     </div>
@@ -1753,7 +1753,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_18)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_18, trans.GetText("Alle Stromkreise, Schutzeinrichtungen, Schalter und Anschlussklemmen mit dauerhaften Aufschriften (Kleber) gem. NIN versehen", "Circuits él., dispositifs prot., interrupteurs et bornes de raccordement avec des étiquettes résistantes (autocollant) selon NIBT","Tutti i circuiti, dispositivi di protezione, interruttori e terminali di collegamento con etichette permanenti (adesive) in conformità con NIN fornito"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_18, trans.GetText("Alle Stromkreise, Schutzeinrichtungen, Schalter und Anschlussklemmen mit dauerhaften Aufschriften (Kleber) gem. NIN versehen", "Circuits él., dispositifs prot., interrupteurs et bornes de raccordement avec des étiquettes résistantes (autocollant) selon NIBT","Tutti i circuiti, disposizione di protezione, interruttori e connessioni con iscrizione resistente (adesivo) secondo NIBT"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1784,15 +1784,15 @@
                     <div class="col-xs-6 flexcontainer flexwrap">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_19)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_19, trans.GetText("auf WR (Typ C)", "sur onduleur (type C)","su WR (tipo C)"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_19, trans.GetText("auf WR (Typ C)", "sur onduleur (type C)","Inverter tipo C"))
                         </span>
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_20)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_20, trans.GetText("Solar-DC (Typ B)", "Solaire DC (type B)","Solar DC (Tipo B)"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_20, trans.GetText("Solar-DC (Typ B)", "Solaire DC (type B)","FV DC tipo B"))
                         </span>
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_21)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_21, trans.GetText("auf SGK / HAK (Typ A)", "ense.appareillage/coffret d'intro.(type A)","su SGK / DPS (tipo A)"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_21, trans.GetText("auf SGK / HAK (Typ A)", "ense.appareillage/coffret d'intro.(type A)","apparecchiat.assiemate/allacciamento tipo A"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1812,11 +1812,11 @@
                         </span>
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_23)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_23, trans.GetText("Abschaltverfahren", "Mécan. d'interruption","Procedura di spegnimento"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_23, trans.GetText("Abschaltverfahren", "Mécan. d'interruption","Disattivazione"))
                         </span>
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.SP_24)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.SP_24, trans.GetText("Kontaktdaten Installateur", "Coordonnés de l'installateur","Dettagli di contatto installatore"))
+                            @Html.M2WebFormLabelFor2(a => a.SP_24, trans.GetText("Kontaktdaten Installateur", "Coordonnés de l'installateur","Recapiti istallatore"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1835,7 +1835,7 @@
             <!-- #region Funktionsprüfung und Messungen Kategorie 1 -->
             <div class="form-group switchForm-group">
                 <div class="col-xs-10">
-                    <h3>@(trans.GetText("Funktionsprüfung und Messungen Kategorie 1", "Tests de fonctionnement et mesures catégorie 1:","Test e misurazioni funzionali Categoria 1"))</h3>
+                    <h3>@(trans.GetText("Funktionsprüfung und Messungen Kategorie 1", "Tests de fonctionnement et mesures catégorie 1:","Prova di funzionamento e misura categoria 1:"))</h3>
                 </div>
                 <div class="col-xs-2 text-right">
                     <input id="switchFP" name="bootstrapSwitch" type="checkbox" data-size="mini" />
@@ -1857,7 +1857,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("Zeit", "Heure","tempo"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Zeit", "Heure","Ora"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6">
                         @Html.TextBoxFor(a => a.UM_ZEIT, new { @class = "form-control", style = "width:9em;" })
@@ -1868,7 +1868,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("Umgebungsbedingungen / Wetter", "Conditions ambiantes / météo","Condizioni ambientali / meteorologiche"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Umgebungsbedingungen / Wetter", "Conditions ambiantes / météo","Condizioni ambientali / tempo"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6 flexcontainer flexwrap">
                         <span class="checkbox">
@@ -1919,7 +1919,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("Temperatur", "Température","temperatura"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Temperatur", "Température","Temperatura"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6">
                         <div class="input-group" style="width:8em">
@@ -1935,28 +1935,28 @@
                     <div class="col-xs-3 text-right">
                     </div>
                     <div class="col-xs-6">
-                        @Html.M2WebLabel(trans.GetText("Gleichstromseite", "Côté courant continu","Lato DC"), new { @class = "control-label sub-label", style = "font-weight:bold;" })
+                        @Html.M2WebLabel(trans.GetText("Gleichstromseite", "Côté courant continu","Parte DC"), new { @class = "control-label sub-label", style = "font-weight:bold;" })
                     </div>
                     <div class="col-xs-3 text-right">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-3 text-right">
-                        @Html.M2WebLabel(trans.GetText("El. Durchgängigkeit geprüft", "Continuité électrique vérifiée","El. Consistenza controllata"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("El. Durchgängigkeit geprüft", "Continuité électrique vérifiée","Conduttività verificata"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-6 flexcontainer flexwrap">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.FP_1)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.FP_1, trans.GetText("Schutzleiter DC", "Conducteur de protection DC","Conduttore di protezione DC"))
+                            @Html.M2WebFormLabelFor2(a => a.FP_1, trans.GetText("Schutzleiter DC", "Conducteur de protection DC","Conduttore protettivo DC"))
                         </span>
                         @Html.M2WebLabel(trans.GetText("und/oder", "et/ou","e o"), new { @class = "control-label sub-label", style = "padding-right:1em;" })
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.FP_2)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.FP_2, trans.GetText("SPA-Leiter", "Conducteur prot. PE","Responsabile SPA"))
+                            @Html.M2WebFormLabelFor2(a => a.FP_2, trans.GetText("SPA-Leiter", "Conducteur prot. PE","Conduttore PE"))
                         </span>
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.FP_3)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.FP_3, trans.GetText("SPA Array-Rahmen", "PE cadre circuit","Cornice array SPA"))
+                            @Html.M2WebFormLabelFor2(a => a.FP_3, trans.GetText("SPA Array-Rahmen", "PE cadre circuit","Stringa PE"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1969,7 +1969,7 @@
                     <div class="col-xs-3 text-right">
                     </div>
                     <div class="col-xs-6">
-                        @Html.M2WebLabel(trans.GetText("Maximale Generatorspannung unter Berücksichtigung der Umgebungsbedingungen; Bestimmung mit Hilfe von", "Tension maximale du générateur en considération des conditions ambiantes; détermination à l'aide de","Tensione massima del generatore tenendo conto delle condizioni ambientali; Determinazione con l'aiuto di"), new { @class = "control-label sub-label" })
+                        @Html.M2WebLabel(trans.GetText("Maximale Generatorspannung unter Berücksichtigung der Umgebungsbedingungen; Bestimmung mit Hilfe von", "Tension maximale du générateur en considération des conditions ambiantes; détermination à l'aide de","Tensione massima del generatore tenendo in considerazione le condizioni ambientali, definita mediante"), new { @class = "control-label sub-label" })
                     </div>
                     <div class="col-xs-3 text-right">
                     </div>
@@ -1980,7 +1980,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.TK_MODUL)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.TK_MODUL, trans.GetText("modulspezifischem Temperaturkoeffizient /", "Coefficient de tempér. spécifique du module /","coefficiente di temperatura specifico del modulo /"))
+                            @Html.M2WebFormLabelFor2(a => a.TK_MODUL, trans.GetText("modulspezifischem Temperaturkoeffizient /", "Coefficient de tempér. spécifique du module /","Coefficiente di temperatura specifico del modulo /"))
                         </span>
                         <span class="flexcontainer">
                             <span class="checkbox">
@@ -2011,9 +2011,9 @@
                     <table class="edo-table" name="tblFP">
                         <thead>
                             <tr>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Strang Nr.", "Circuit n°","Strand no."))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Polarität<br>geprüft", "Polarité<br>vérifiée","Polarità <br> controllata"))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Verpolung<br>GAK", "Inversion polarité<br>coffret intro.","Inversione di polarità <br> GAK"))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Strang Nr.", "Circuit n°","Stringa no."))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Polarität<br>geprüft", "Polarité<br>vérifiée","Polarità <br> verificata"))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Verpolung<br>GAK", "Inversion polarité<br>coffret intro.","Inversione di polarità <br> allacciamento"))</th>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("U<sub>OC Gen. max</sub><br>n x U<sub>OC</sub> x T<sub>k</sub>", "U<sub>OC gén. max</sub><br>n x U<sub>OC</sub> x T<sub>k</sub>","U <sub> OC Gen. max </sub> <br> n x U <sub> OC </sub> x T <sub> k </sub>"))</th>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("I<sub>SC STC</sub><br>x 1.25", "I<sub>SC STC</sub><br>x 1.25","I <sub> SC STC </sub> <br> x 1.25"))</th>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("U<sub>OC</sub><br>[V]", "U<sub>OC</sub><br>[V]","U <sub> OC </sub> <br> [V]"))</th>
@@ -2051,7 +2051,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.FP_4)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.FP_4, trans.GetText("Funktionsprüfung Schaltgeräte DC-Seite erfolgt", "Test fonctionnement commutation point sép. DC","Viene eseguito il test di funzionamento dei dispositivi di commutazione sul lato CC"))
+                            @Html.M2WebFormLabelFor2(a => a.FP_4, trans.GetText("Funktionsprüfung Schaltgeräte DC-Seite erfolgt", "Test fonctionnement commutation point sép. DC","Controllo funzione apparecchiature assiemate DC "))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -2064,7 +2064,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.FP_5)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.FP_5, trans.GetText("Funktionsprüfung andere Steuereinrichtungen DC-Seite erfolgt", "Test de fonctionnement des autres dispositifs de commande côté DC","Viene eseguito il test funzionale di altri dispositivi di controllo sul lato DC"))
+                            @Html.M2WebFormLabelFor2(a => a.FP_5, trans.GetText("Funktionsprüfung andere Steuereinrichtungen DC-Seite erfolgt", "Test de fonctionnement des autres dispositifs de commande côté DC","Controllo funzione altri dispositivi di comando DC"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -2076,7 +2076,7 @@
             <!-- #region Wechselstromseite -->
             <div class="form-group switchForm-group">
                 <div class="col-xs-10">
-                    <h3>@(trans.GetText("Wechselstromseite", "Côté du courant alternatif","Lato AC"))</h3>
+                    <h3>@(trans.GetText("Wechselstromseite", "Côté du courant alternatif","Parte AC"))</h3>
                 </div>
                 <div class="col-xs-2 text-right">
                     <input id="switchWRSeite" name="bootstrapSwitch" type="checkbox" data-size="mini" />
@@ -2094,11 +2094,11 @@
                     <table class="edo-table" name="tblWRSeite">
                         <thead>
                             <tr>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("WR Nr.", "Circuit N°","WR No."))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Zuordnung Stränge", "Ordre des circuits","Assegnazione di trefoli"))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Seriennummer", "Numéro de série","numero di serie"))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Eingestellter Gridcode", "Gridcode réglé ","Imposta codice rete"))</th>
-                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Prüfung Netzausfall", "Vérification panne rés.","Controllare l'interruzione di corrente"))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("WR Nr.", "Circuit N°","Circuito No."))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Zuordnung Stränge", "Ordre des circuits","Attribuzione stringhe "))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Seriennummer", "Numéro de série","No. di serie"))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Eingestellter Gridcode", "Gridcode réglé ","Gridcode regolato"))</th>
+                                <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Prüfung Netzausfall", "Vérification panne rés.","Controllo guasto della rete"))</th>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Blindleist. Einstellung", "Réglage puiss. réactive","Potere reattivo atteggiamento"))</th>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Blindleist. Wert", "Valeur p. réactive","Potere reattivo valore"))</th>
                                 <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Bemerkungen", "Remarques","Osservazioni"))</th>
@@ -2364,7 +2364,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.MAC_1)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.MAC_1, trans.GetText("ab Anlagenschalter AC (NIV Art. 14)", "depuis interrupteur principal AC (OIBT art. 14)","da interruttore di sistema AC (NIV Art. 14)"))
+                            @Html.M2WebFormLabelFor2(a => a.MAC_1, trans.GetText("ab Anlagenschalter AC (NIV Art. 14)", "depuis interrupteur principal AC (OIBT art. 14)","da interruttore principale AC (OIBT art. 14)"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -2377,7 +2377,7 @@
                     <div class="col-xs-6">
                         <span class="checkbox">
                             @Html.CheckBoxFor(a => a.MAC_2)<span class="check"></span>
-                            @Html.M2WebFormLabelFor2(a => a.MAC_2, trans.GetText("vollständige Installation (NIV Art. 7/9)", "installation complète  (OIBT art. 7/9)","installazione completa (NIV Art. 7/9)"))
+                            @Html.M2WebFormLabelFor2(a => a.MAC_2, trans.GetText("vollständige Installation (NIV Art. 7/9)", "installation complète  (OIBT art. 7/9)","Installazione completa (OIBT art. 7/9)"))
                         </span>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -2408,12 +2408,12 @@
                 <table class="edo-table">
                     <thead>
                         <tr>
-                            <th class="gridHeader1">@Html.M2WebLabel(trans.GetText("Stromkreis", "Circuit / DDR","Circuito"))</th>
-                            <th class="gridHeader1">@Html.M2WebLabel(trans.GetText("Ort / Anlageteil", "Lieu / Partie d'inst.","Posizione / parte del sistema"))</th>
-                            <th class="gridHeader1" colspan="2">@Html.M2WebLabel(trans.GetText("Leitung / Kabel", "Ligne / Câble","Linea / Cavo"))</th>
-                            <th class="gridHeader1" colspan="2">@Html.M2WebLabel(trans.GetText("Überstromschutzeinr.", "Coupe - surintensité","Dispositivo di protezione da sovracorrente"))</th>
-                            <th class="gridHeader1" colspan="6">@Html.M2WebLabel(trans.GetText("Messungen (gemessener Wert)", "Mesures (valeurs mesurées)","Misure (valore misurato)"))</th>
-                            <th class="gridHeader1" colspan="3">@Html.M2WebLabel(trans.GetText("Fehlerstromschutzeinrichtung (RCD)", "Dispositif à courant différentiel-résiduel DDR","Dispositivo corrente residua (RCD)"))</th>
+                            <th class="gridHeader1">@Html.M2WebLabel(trans.GetText("Stromkreis", "Circuit / DDR","Circuito / RCD"))</th>
+                            <th class="gridHeader1">@Html.M2WebLabel(trans.GetText("Ort / Anlageteil", "Lieu / Partie d'inst.","Luogo / Parte d'impianto Apparecchiat. assiem."))</th>
+                            <th class="gridHeader1" colspan="2">@Html.M2WebLabel(trans.GetText("Leitung / Kabel", "Ligne / Câble","Conduttura / Cavo"))</th>
+                            <th class="gridHeader1" colspan="2">@Html.M2WebLabel(trans.GetText("Überstromschutzeinr.", "Coupe - surintensité","Protezione sovraintensità"))</th>
+                            <th class="gridHeader1" colspan="6">@Html.M2WebLabel(trans.GetText("Messungen (gemessener Wert)", "Mesures (valeurs mesurées)","Misure (dati misurati)"))</th>
+                            <th class="gridHeader1" colspan="3">@Html.M2WebLabel(trans.GetText("Fehlerstromschutzeinrichtung (RCD)", "Dispositif à courant différentiel-résiduel DDR","protezione a corrente di guasto (RCD)"))</th>
                             <th class="gridHeader1">@Html.M2WebLabel(trans.GetText("Weiteres", "Autre","aggiuntivo"))</th>
                         </tr>
                         <tr>
@@ -2430,9 +2430,9 @@
                         <tr>
                             <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Nr.", "N°","No."))</th>
                             <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Bezeichnung", "Désignation","Designazione"))</th>
-                            <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Art/Typ", "Genre/Type","Tipo / tipo"))</th>
-                            <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Leiteranz.&nbsp;/ Quer.[mm²]", "Nbre cond. Sect.[mm²]","Dimensione conduttore & nbsp; / croce. [Mm²]"))</th>
-                            <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Art Charakt.", "Type Caract.","Art Char."))</th>
+                            <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Art/Typ", "Genre/Type","Genere / Tipo"))</th>
+                            <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Leiteranz.&nbsp;/ Quer.[mm²]", "Nbre cond. Sect.[mm²]","No. condutt. & nbsp; / Sezione [Mm²]"))</th>
+                            <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("Art Charakt.", "Type Caract.","Genere Char."))</th>
                             <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("I<sub>N</sub> [A]", "I<sub>N</sub> [A]","Io <sub> N </sub> [A]"))</th>
                             <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("I<sub>K Anf.</sub> [A]", "I<sub>cc déb.</sub> [A]","I <sub> K req. </sub> [A]"))</th>
                             <th class="gridHeader3">@Html.M2WebLabel(trans.GetText("I<sub>K Ende</sub> [A]", "I<sub>cc fin</sub> [A]","I <sub> K end </sub> [A]"))</th>

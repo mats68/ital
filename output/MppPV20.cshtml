@@ -1217,7 +1217,7 @@
                     <div class="col-xs-6">
                         <div class="input-group" style="width:8em">
                             @Html.TextBoxFor(a => a.PVTOT_ANZ, new { @class = "form-control", @readonly = "true", style = "width:8em" })
-                            @Html.M2WebLabel(trans.GetText("Stück", ""), new { @class = ","pezzo"input-group-addon control-label" })
+                            @Html.M2WebLabel(trans.GetText("Stück", "","pezzo"), new { @class = "input-group-addon control-label" })
                         </div>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1299,7 +1299,7 @@
                     <div class="col-xs-6">
                         <div class="input-group" style="width:8em">
                             @Html.TextBoxFor(a => a.WRTOT_ANZ, new { @class = "form-control", @readonly = "true", style = "width:8em" })
-                            @Html.M2WebLabel(trans.GetText("Stück", ""), new { @class = ","pezzo"input-group-addon control-label" })
+                            @Html.M2WebLabel(trans.GetText("Stück", "","pezzo"), new { @class = "input-group-addon control-label" })
                         </div>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1701,7 +1701,7 @@
                         </span>
                         <div class="flexcontainer">
                             @Html.TextBoxFor(a => a.SP_15XTEXT, new { @class = "form-control", style = "width:2em;" })
-                            @Html.M2WebLabel(trans.GetText("vorhanden", ""), new { @class = ","a disposizione"control-label sub-label", style = "padding-left: 1em;" })
+                            @Html.M2WebLabel(trans.GetText("vorhanden", "","a disposizione"), new { @class = "control-label sub-label", style = "padding-left: 1em;" })
                         </div>
                     </div>
                     <div class="col-xs-3 text-right">
@@ -1771,7 +1771,7 @@
                                     data-value="@Model.SP_NORMTEXT"
                                     data-autocompleteurl="@Url.Action("AutocompleteForm", "Autocomplete", new { catalogkey = "MppPV20.SP_NORMTEXT", vnbid = ViewBag.VnbId, lang = documentLang, maxentities = 100 })"
                                     style=""></select>
-                            @Html.M2WebLabel(trans.GetText("vorhanden", ""), new { @class = ","a disposizione"control-label sub-label", style = "padding-left: 1em;" })
+                            @Html.M2WebLabel(trans.GetText("vorhanden", "","a disposizione"), new { @class = "control-label sub-label", style = "padding-left: 1em;" })
                         </div>
                     </div>
                     <div class="col-xs-3 text-right">

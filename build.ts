@@ -2,7 +2,6 @@
 
 var fs = require('fs')
 const lineReader = require('line-reader');
-//tag
 // var input_files = ['Tag18', 'Mpp18', 'MppPV20', 'Sina18', 'VseAb18', 'VseIa18', 'MppVse1']
 var input_files = ['MppPV20']
 
@@ -52,10 +51,11 @@ input_files.forEach(file => {
             const find = arr_de.findIndex(d => d === german)
             if (find > -1) {
                 const ind3 = line.indexOf('"', ind2 + 1) + 1
-                const ind4 = line.indexOf('"', ind3 + 1) + 1
+                const ind4 = line.indexOf('"', ind3) + 1
                 const str_before = line.substring(0, ind4)
                 const str_after = line.substring(ind4)
                 newLine = str_before + ',"' + arr_it[find] + '"' + str_after
+                // if (arr_it[find] === 'pezzo') 
                 // console.log(newLine)
             } else {
                 console.log('Translation not found: ', german, 'File: ', trans_file_de)

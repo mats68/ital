@@ -21,9 +21,6 @@ VALUES (N'SINA18_IT', N'Allgemein', 2, N'SiNa', N'Brunner.M2Web.Entities.FormEnt
 INSERT [dbo].[FormType] ( [Name], [Variant], [Version], [DisplayName], [FormEntityClassName], [ViewTemplateName], [CreaDate], [CreaUser], [ModDate], [ModUser], [AllowMultipleInstallations], [TemplateId], [SortCrit], [SysMlLangId], [LongName], [CompanyType], [PdfFormType], [FormTypeGUID]) 
 VALUES (N'MPPPV20_IT', N'Allgemein', 2, N'PV MPP', N'Brunner.M2Web.Entities.FormEntities.MppPV20', N'MppPV20.cshtml', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:11.200' AS DateTime), N'Matthias', 0, N'2155', 200, 4, N'Rapporto di misura e di collaudo fotovoltaico', N'installer;controller;ownerwithnumber;', N'installer;controller;ownerwithnumber;', N'2BF08225-D0ED-486B-B432-060E5E7F77A5')
 
-INSERT [dbo].[FormType] ( [Name], [Variant], [Version], [DisplayName], [FormEntityClassName], [ViewTemplateName], [CreaDate], [CreaUser], [ModDate], [ModUser], [AllowMultipleInstallations], [TemplateId], [SortCrit], [SysMlLangId], [LongName], [CompanyType], [PdfFormType], [FormTypeGUID]) 
-VALUES (N'MPP_IT', N'Allgemein', 1, N'MPP', N'Brunner.M2Web.Entities.FormEntities.MppVse1', N'MppVse1.cshtml', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:11.200' AS DateTime), N'Matthias', 0, N'2119', 200, 4, N'Rapporto di misura e di collaudo', N'installer;controller;', N'*', N'EA6F4538-34C6-4115-978C-7C39100CDE38')
-
 DECLARE @ID_VNB INT;
 SELECT @ID_VNB = Id from Vnb  where Name = 'Demo (it)'
 
@@ -46,7 +43,4 @@ INSERT FormChoice ( [VnbId], [FormTypeId], [CreaDate], [CreaUser], [ModDate], [M
 
 SELECT @ID_FormType = Id from FormType where Name = 'MPPPV20_IT' and SysMlLangId = 4 
 INSERT FormChoice ( [VnbId], [FormTypeId], [CreaDate], [CreaUser], [ModDate], [ModUser]) VALUES  ( @ID_VNB,  @ID_FormType, CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias')
-
-SELECT @ID_FormType = Id from FormType where Name = 'MPP_IT' and SysMlLangId = 4 
-INSERT FormChoice ( [VnbId], [FormTypeId], [CreaDate], [CreaUser], [ModDate], [ModUser]) VALUES   (@ID_VNB,  @ID_FormType, CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias', CAST(N'2020-11-16T09:28:03.373' AS DateTime), N'Matthias')
 

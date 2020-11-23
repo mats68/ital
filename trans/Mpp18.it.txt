@@ -57,7 +57,7 @@ Estensione
 Ambito del controllo / installazione eseguita
 No. / anno, data
 Esami
-Ispezione visuale
+Controllo visivo
 Scelta e disposizione appropriate dei mezzi d'esercizio (condizioni ambientali)
 Protezione di base (Protezione contro il contatto)
 Rispetto delle documentazioni tecniche dei fabbricanti
@@ -99,7 +99,7 @@ Misurazioni
 Titolo della propria colonna
 Modificare
 Circuito elettrico / IPL
-Luogo / Parte dell’impianto, 
+Luogo / Parte dell’impianto
 Conduttore / Cavo
 Dispositivo di protezione da sovracorrente
 Misure (valore misurato)

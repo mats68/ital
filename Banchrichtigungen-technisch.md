@@ -1,8 +1,8 @@
 # Technische Umsetzung für Benachrichtigungen
 
-Dieses Dokument beschreibt die technische Umsetzung für Benachrichtigungen.  
-Auslösende Ereignisse werden sowohl intern in der Datenbank gespeichert und auf dem GUI angezeigt. 
-Ereignisse werden auch auf andern Kanälen falls gewünscht und per Konfiguration versendet  
+Dieses Dokument beschreibt die technische Umsetzung für das Brunner Informatik Benachrichtigungs-System.  
+Auslösende Ereignisse werden intern in der Datenbank gespeichert und auf dem GUI angezeigt.   
+Ereignisse werden auch auf andern Kanälen per gewünschter Konfiguration versendet  
 z.B. E-Mail, Whatsapp, Teams, Telegramm, Push-Nachrichten.
 
 ## Server für interne Nachrichten
@@ -36,7 +36,7 @@ z.B. E-Mail, Whatsapp, Teams, Telegramm, Push-Nachrichten.
      ![Neue Nachrticht](bilder/NeueNachricht.png)    
   
 - Benachrichtigungs-Postausgang
-  - Ereignisse, die ich selbst auslöse, können im Postausgang eingesehen werden.
+  - Ereignisse, die ich selbst auslgeöst habe, können im Postausgang eingesehen werden.
   - dient als Protokoll was der Benutzer gemacht hat
   - Link im Benachrichtigungs Body, z.B auf das Formular  
 
